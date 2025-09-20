@@ -501,17 +501,17 @@ async function _insertHdrTable(expTask, msg, msgBody, msgBodyType, extraHeaders)
     bccList = _encodeSpecialTextToHTML(bccList);
 
     let hdrRows = "";
-    hdrRows += `<tr><td style='padding-right: 10px'><b>Subject:</b></td><td>${extraHeaders.fullSubject}</td></tr>`;
-    hdrRows += `<tr><td style='padding-right: 10px'><b>From:</b></td><td>${msg.author}</td></tr>`;
-    hdrRows += `<tr><td style='padding-right: 10px'><b>To:</b></td><td>${recipients}</td></tr>`;
-    hdrRows += `<tr><td style='padding-right: 10px'><b>Date:</b></td><td>${msg.date}</td></tr>`;
+    hdrRows += `<tr><td style='padding-right: 10px'><b>${hdrSubject}:</b></td><td>${extraHeaders.fullSubject}</td></tr>`;
+    hdrRows += `<tr><td style='padding-right: 10px'><b>${hdrFrom}:</b></td><td>${msg.author}</td></tr>`;
+    hdrRows += `<tr><td style='padding-right: 10px'><b>${hdrTo}:</b></td><td>${recipients}</td></tr>`;
+    hdrRows += `<tr><td style='padding-right: 10px'><b>${hdrDate}:</b></td><td>${msg.date}</td></tr>`;
 
     if (ccList != "") {
-      hdrRows += `<tr><td style='padding-right: 10px'><b>Cc:</b></td><td>${ccList}</td></tr>`;
+      hdrRows += `<tr><td style='padding-right: 10px'><b>${hdrCc}:</b></td><td>${ccList}</td></tr>`;
     }
 
     if (bccList != "") {
-      hdrRows += `<tr><td style='padding-right: 10px'><b>Bcc:</b></td><td>${bccList}</td></tr>`;
+      hdrRows += `<tr><td style='padding-right: 10px'><b>${hdrBcc}:</b></td><td>${bccList}</td></tr>`;
     }
 
     let hdrTable = `\n<table border-collapse="true" border=0>${hdrRows}</table><br>\n`;
@@ -532,16 +532,16 @@ async function _insertHdrTable(expTask, msg, msgBody, msgBodyType, extraHeaders)
 
 
   let hdr = "";
-  hdr += `Subject:  ${extraHeaders.fullSubject}\r\n`;
-  hdr += `From :  ${msg.author}\r\n`;
-  hdr += `To:  ${recipients}\r\n`;
-  hdr += `Date:  ${msg.date}\r\n`;
+  hdr += `${hdrSubject}:  ${extraHeaders.fullSubject}\r\n`;
+  hdr += `${hdrFrom} :  ${msg.author}\r\n`;
+  hdr += `${hdrTo}:  ${recipients}\r\n`;
+  hdr += `${Date}:  ${msg.date}\r\n`;
 
   if (ccList != "") {
-    hdr += `Cc:  ${ccList}\r\n`;
+    hdr += `${hdrCc}:  ${ccList}\r\n`;
   }
   if (bccList != "") {
-    hdr += `Bcc:  ${bccList}\r\n`;
+    hdr += `${hdrBcc}:  ${bccList}\r\n`;
   }
 
   return `${hdr}\r\n}${msgBody}`;
