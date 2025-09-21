@@ -535,7 +535,7 @@ async function _insertHdrTable(expTask, msg, msgBody, msgBodyType, extraHeaders)
   hdr += `${hdrSubject}:  ${extraHeaders.fullSubject}\r\n`;
   hdr += `${hdrFrom} :  ${msg.author}\r\n`;
   hdr += `${hdrTo}:  ${recipients}\r\n`;
-  hdr += `${Date}:  ${msg.date}\r\n`;
+  hdr += `${hdrDate}:  ${msg.date}\r\n`;
 
   if (ccList != "") {
     hdr += `${hdrCc}:  ${ccList}\r\n`;
@@ -544,7 +544,7 @@ async function _insertHdrTable(expTask, msg, msgBody, msgBodyType, extraHeaders)
     hdr += `${hdrBcc}:  ${bccList}\r\n`;
   }
 
-  return `${hdr}\r\n}${msgBody}`;
+  return `${hdr}\r\n${msgBody}`;
 }
 
 function convertCharsetToUTF8(charset, string) {
