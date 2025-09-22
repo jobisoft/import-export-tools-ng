@@ -420,10 +420,10 @@ function extendedFormatCheck(el) {
         document.getElementById("part1").setAttribute("disabled", "true");
         document.getElementById("part2").setAttribute("disabled", "true");
         document.getElementById("part3").setAttribute("disabled", "true");
-        document.getElementById("addPrefix").setAttribute("disabled", "true");
-        document.getElementById("prefixText").setAttribute("disabled", "true");
-        document.getElementById("addSuffix").setAttribute("disabled", "true");
-        document.getElementById("suffixText").setAttribute("disabled", "true");
+        //document.getElementById("addPrefix").setAttribute("disabled", "true");
+        //document.getElementById("prefixText").setAttribute("disabled", "true");
+        //document.getElementById("addSuffix").setAttribute("disabled", "true");
+        //document.getElementById("suffixText").setAttribute("disabled", "true");
         document.getElementById("extendedFormat").removeAttribute("disabled");
         document.getElementById("extendedFormatLabel").removeAttribute("disabled");
 
