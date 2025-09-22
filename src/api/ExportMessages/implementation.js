@@ -7,6 +7,8 @@ var { ExtensionParent } = ChromeUtils.importESModule(
   "resource://gre/modules/ExtensionParent.sys.mjs"
 );
 
+const emitter = new ExtensionCommon.EventEmitter();
+
 var ietngExtension = ExtensionParent.GlobalManager.getExtension(
   "ImportExportToolsNG@cleidigh.kokkini.net"
 );
@@ -56,7 +58,7 @@ var ExportMessages = class extends ExtensionCommon.ExtensionAPI {
           //console.log(new Date());
           //console.log(expTask)
 
-          return exportMessages.exportMessagesES6(expTask, self.context);
+          return exportMessages.exportMessagesES6(expTask, self.context, emitter);
         },
 
         getMsgHdrs: async function (msgId, msgHdrItems) {
@@ -99,38 +101,6 @@ var ExportMessages = class extends ExtensionCommon.ExtensionAPI {
           expTask.index.directory = indexDir;
           return indexDir;
         },
-
-
-        // read file from within the XPI package
-        // from John Beiling
-        _fetchFile: async function (aURL) {
-          return new Promise((resolve, reject) => {
-            let uri = Services.io.newURI(aURL);
-            let channel = Services.io.newChannelFromURI(uri,
-              null,
-              Services.scriptSecurityManager.getSystemPrincipal(),
-              null,
-              Components.interfaces.nsILoadInfo.SEC_REQUIRE_SAME_ORIGIN_INHERITS_SEC_CONTEXT,
-              Components.interfaces.nsIContentPolicy.TYPE_OTHER);
-            console.log("bef f")
-
-            NetUtil.asyncFetch(channel, (inputStream, status) => {
-              if (!Components.isSuccessCode(status)) {
-                reject(status);
-                return;
-              }
-
-              try {
-                let data = NetUtil.readInputStreamToString(inputStream, inputStream.available());
-                console.log(data)
-                resolve(data);
-              } catch (ex) {
-                reject(ex);
-              }
-            });
-          });
-        },
-
 
         async createExportContainer(expTask) {
           let dateStr = strftime.strftime("%Y%m%d-%H%M", new Date());
@@ -184,9 +154,23 @@ var ExportMessages = class extends ExtensionCommon.ExtensionAPI {
           return resultObj;
         },
 
+        // Event functions
+        onExportFolderUpdate: new ExtensionCommon.EventManager({
+          context,
+          name: "ExportMessages.onExportMessagesUpdate",
+          register(fire) {
+            function callback(event, folderName, msgCount) {
+              // The event sends the current folder and message count .
+              return fire.async(folderName, msgCount);
+            }
 
+            emitter.on("exportMessages-update", callback);
+            return function () {
+              emitter.off("exportMessages-update", callback);
+            };
+          },
+        }),
       },
-
     };
   }
 
@@ -280,5 +264,4 @@ var ExportMessages = class extends ExtensionCommon.ExtensionAPI {
     file.initWithPath(path);
     return file;
   }
-
 };

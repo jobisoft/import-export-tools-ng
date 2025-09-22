@@ -43,15 +43,17 @@ const pdfWriteMutex = new MutexAsync({ warnOnOverlap: true });
 export var exportMessages = {
   self: this,
   context: null,
+  emitter: null,
   folder: null,
   expDirFile: w3p.getPredefinedFolder(1),
 
-  exportMessagesES6: async function (expTask, context) {
+  exportMessagesES6: async function (expTask, context, emitter) {
 
 
     console.log("start exptask id", expTask.id)
 
     this.context = context;
+    this.emitter = emitter;
     var self = this;
     var fileStatusList = [];
     var errors = [];
@@ -220,6 +222,11 @@ export var exportMessages = {
           });
         }
         writePromises.push(writePromise);
+      }
+
+      // send msg count update for ui
+      if (!(index %= 10)) {
+        emitter.emit("exportMessages-update", expTask.selectedFolder, index);
       }
     }
 

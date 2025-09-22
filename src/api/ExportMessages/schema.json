@@ -118,7 +118,26 @@
           }
         ]
       }
-    
+    ],
+    "events": [
+      {
+        "name": "onExportMessagesUpdate",
+        "type": "function",
+        "description": "Fires when ExportMessages has a status update.",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "folderName",
+            "description": "The folder name."
+          },
+          {
+            "type": "integer",
+            "name": "msgCount",
+            "minimum": 0,
+            "description": "The number of messages exported in the current batch."
+          }
+        ]
+      }
     ]
   }
 ]

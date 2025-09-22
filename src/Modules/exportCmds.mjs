@@ -51,6 +51,13 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     var total = 0;
     var times = [];
 
+    // ev listener
+    
+    browser.ExportMessages.onExportMessagesUpdate.addListener(async function (folderName, msgCount) {
+      console.log(msgCount)
+    });
+
+
     for (let index = 0; index < runs; index++) {
 
       //await new Promise(r => setTimeout(r, 12000));
@@ -236,7 +243,7 @@ async function _getprocessedMsg(expTask, msgId, msg) {
 
       if (expTask.expType == "eml") {
         let rawMsg = await browser.messages.getRaw(msgId);
-        console.log(rawMsg)
+        //console.log(rawMsg)
         if (rawMsg.decryptionStatus == "fail") {
           resolve({ msgBody: "decryption failed", msgBodyType: "text/plain", inlineParts: [], attachmentParts: [], extraHeaders: extraHeaders });
           return;
