@@ -121,7 +121,7 @@
     ],
     "events": [
       {
-        "name": "onExportMessagesUpdate",
+        "name": "onExpUpdate",
         "type": "function",
         "description": "Fires when ExportMessages has a status update.",
         "parameters": [

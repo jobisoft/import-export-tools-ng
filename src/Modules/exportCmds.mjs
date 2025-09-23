@@ -53,8 +53,8 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     // ev listener
     
-    browser.ExportMessages.onExportMessagesUpdate.addListener(async function (folderName, msgCount) {
-      console.log(msgCount)
+    browser.ExportMessages.onExpUpdate.addListener(async function (folderName, msgCount) {
+      console.log(folderName, msgCount)
     });
 
 

@@ -155,24 +155,34 @@ var ExportMessages = class extends ExtensionCommon.ExtensionAPI {
         },
 
         // Event functions
-        onExportFolderUpdate: new ExtensionCommon.EventManager({
+        onExpUpdate: new ExtensionCommon.EventManager({
           context,
-          name: "ExportMessages.onExportMessagesUpdate",
+          name: "ExportMessages.onExpUpdate",
           register(fire) {
             function callback(event, folderName, msgCount) {
               // The event sends the current folder and message count .
+              console.log("fire async")
               return fire.async(folderName, msgCount);
             }
 
-            emitter.on("exportMessages-update", callback);
+            emitter.on("export-update", callback);
             return function () {
-              emitter.off("exportMessages-update", callback);
+              emitter.off("export-update", callback);
             };
           },
-        }),
+        }).api(),
       },
     };
   }
+
+onShutdown(isAppShutdown) {
+      // This function is called if the extension is disabled or removed, or
+      // Thunderbird closes. We usually do not have to do any cleanup, if
+      // Thunderbird is shutting down entirely.
+      if (isAppShutdown) {
+        return;
+      }
+    }
 
   // private msg processing functions
 

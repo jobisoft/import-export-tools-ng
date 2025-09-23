@@ -225,8 +225,9 @@ export var exportMessages = {
       }
 
       // send msg count update for ui
-      if (!(index %= 10)) {
-        emitter.emit("exportMessages-update", expTask.selectedFolder, index);
+      if (index % 10 == 0) {
+        console.log("fire event", index)
+        emitter.emit("export-update", "inbox", index);
       }
     }
 
