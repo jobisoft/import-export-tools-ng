@@ -50,7 +50,7 @@ export var exportMessages = {
   exportMessagesES6: async function (expTask, context, emitter) {
 
 
-    console.log("start exptask id", expTask.id)
+    console.log("start exptask id", expTask.id, expTask.msgList.length)
 
     this.context = context;
     this.emitter = emitter;
@@ -225,10 +225,15 @@ export var exportMessages = {
       }
 
       // send msg count update for ui
-      if (index % 10 == 0) {
-        console.log("fire event", index)
-        emitter.emit("export-update", "inbox", index);
+      if ((index + 1) % 10 == 0 && index != 0) {
+        //console.log("fire taskid:", expTask.id)
+        emitter.emit("export-update", "inbox", 10);
+      } else if(index == msgListLen - 1) {
+        //console.log("fire event end", expTask.id, index)
+        emitter.emit("export-update", "inbox", (index + 1) % 10);
+
       }
+      //console.log("idx", expTask.id, index)
     }
 
     //console.log("expId", expTask.id, "wp final total", writePromises.length)

@@ -161,7 +161,6 @@ var ExportMessages = class extends ExtensionCommon.ExtensionAPI {
           register(fire) {
             function callback(event, folderName, msgCount) {
               // The event sends the current folder and message count .
-              console.log("fire async")
               return fire.async(folderName, msgCount);
             }
 

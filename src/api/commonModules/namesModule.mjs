@@ -67,8 +67,8 @@ export var names = {
         recipientEmail = "[No Recipient Email]";
       }
     } catch (ex) {
-      console.log(ex, expTask.msgList[index])
-      console.log(ex, expTask.msgList[index].recipients)
+      //console.log(ex, expTask.msgList[index])
+      //console.log(ex, expTask.msgList[index].recipients)
       recipientEmail = "[No Recipient Email]";
 
     }

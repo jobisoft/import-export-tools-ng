@@ -53,8 +53,13 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     // ev listener
     
+    var folderMsgCount;
+    var totalMsgCount;
+
     browser.ExportMessages.onExpUpdate.addListener(async function (folderName, msgCount) {
-      console.log(folderName, msgCount)
+      folderMsgCount += msgCount;
+
+      console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     });
 
 
@@ -71,7 +76,8 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       // create export container
       expTask.exportContainer.directory = await browser.ExportMessages.createExportContainer(expTask);
       expTask.selectedFolder = ctxEvent.selectedFolder;
-
+      folderMsgCount = 0;
+      totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
       var exportStatus = await msgIterateBatch(expTask);
       _createIndex(expTask, exportStatus.msgListLog);
 
