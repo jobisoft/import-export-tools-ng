@@ -1,2 +1,6 @@
-/* UI windows css */
+/* UI expStatus windows css */
 
+.body {
+  min-width: 300px;
+  min-height: 100px;
+}
