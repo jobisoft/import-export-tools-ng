@@ -3,5 +3,5 @@
 import { strftime } from "./strftime.mjs";
 
 export async function createExportStatusWindow(title) {
-
+  await browser.windows.create()
 }
