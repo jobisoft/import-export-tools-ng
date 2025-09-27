@@ -3,6 +3,7 @@
 import { createExportTask } from "./importExportTasks.mjs";
 import * as prefs from "./prefCmds.mjs";
 import { strftime } from "./strftime.mjs";
+import * as ui from "./ui.mjs";
 
 console.log(strftime)
 import { Ci } from "/Modules/CiConstants.js";
@@ -78,6 +79,10 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       expTask.selectedFolder = ctxEvent.selectedFolder;
       folderMsgCount = 0;
       totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
+
+      await ui.createExportStatusWindow("Export HTML");
+      return
+      
       var exportStatus = await msgIterateBatch(expTask);
       _createIndex(expTask, exportStatus.msgListLog);
 
