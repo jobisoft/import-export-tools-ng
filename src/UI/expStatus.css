@@ -26,8 +26,8 @@
 }
 
 body {
-  background-color: aqua;
-	/* background-color: var(--dialog-bgcolor); */
+  /* background-color: antiquewhite; */
+	background-color: var(--dialog-bgcolor);
 	font-family: 'Roboto', sans-serif;
 	color: var(--dialog-text-color);
   min-width: 320px;
@@ -35,6 +35,18 @@ body {
 }
 
 table { 
-  min-width: 320px;
+	border-collapse: collapse;
 
+}
+
+td:nth-child(1) {
+	padding-right: 20px;
+}
+tr, td {
+	border: 1px solid black;
+}
+
+.numright {
+	text-align: right;
+	width: 40px;
 }
