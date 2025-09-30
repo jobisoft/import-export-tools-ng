@@ -80,8 +80,8 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       folderMsgCount = 0;
       totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
 
-      await ui.createExportStatusWindow("Export HTML");
-      return
+      //await ui.createExportStatusWindow("Export HTML");
+      //return
       
       var exportStatus = await msgIterateBatch(expTask);
       _createIndex(expTask, exportStatus.msgListLog);

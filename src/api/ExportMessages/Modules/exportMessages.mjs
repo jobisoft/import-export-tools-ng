@@ -176,6 +176,8 @@ export var exportMessages = {
               attachmentPart.name = "message.txt";
             }
             let attachmentBody = await this.fileToUint8Array(attachmentPart.partBody)
+            //attachmentBody = this._convertCharsetToUTF8("windows-1252", attachmentBody)
+
             //console.log(attsDir.length, `"${attsDir}"`)
             //console.log(attachmentPart.name.slice(0, maxFilePathLen - 5))
             let unqFilename = await IOUtils.createUniqueFile(attDirs.attachmentsDir, attachmentPart.name.slice(0, maxFilePathLen - 5));
@@ -689,6 +691,21 @@ export var exportMessages = {
     printSettings.toFileName = pdfFilename;
     return printSettings;
   },
+
+  _convertCharsetToUTF8: function (charset, string) {
+  try {
+    const encoder = new TextEncoder();
+    const decoder = new TextDecoder(charset);
+    const encoded = encoder.encode(string);
+    const decoded = decoder.decode(encoded);
+    console.log("Converted to utf-8 from:", charset);
+
+    return decoded;
+  } catch (e) {
+    console.error("Error converting to utf-8", e);
+    return string;
+  }
+},
 
 };
 
