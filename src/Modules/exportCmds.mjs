@@ -55,11 +55,11 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     // ev listener
     
     var folderMsgCount;
-    var totalMsgCount;
+    var totalMsgCount = 0;
 
     browser.ExportMessages.onExpUpdate.addListener(async function (folderName, msgCount) {
       folderMsgCount += msgCount;
-
+      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     });
 
@@ -80,7 +80,9 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       folderMsgCount = 0;
       totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
 
-      //await ui.createExportStatusWindow("Export HTML");
+      await ui.createExportStatusWindow("Export HTML");
+      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", msgCount: totalMsgCount})
+
       //return
       
       var exportStatus = await msgIterateBatch(expTask);
@@ -330,6 +332,7 @@ async function _getprocessedMsg(expTask, msgId, msg) {
           if (part.headers["content-disposition"] && part.headers["content-disposition"][0].includes("attachment")) {
 
             let attachmentBody = await browser.messages.getAttachmentFile(msgId, part.partName);
+            console.log(attachmentBody)
             attachmentParts.push({ partType: "attachment", contentType: part.contentType, partBody: attachmentBody, name: part.name });
             //console.log("push  att", attachmentParts)
           }

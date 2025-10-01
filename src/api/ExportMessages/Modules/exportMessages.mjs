@@ -176,7 +176,21 @@ export var exportMessages = {
               attachmentPart.name = "message.txt";
             }
             let attachmentBody = await this.fileToUint8Array(attachmentPart.partBody)
-            //attachmentBody = this._convertCharsetToUTF8("windows-1252", attachmentBody)
+           /*
+            console.log(attachmentBody)
+            function bytesToString(buffer) {
+              var string = "";
+              for (var i = 0; i < buffer.length; i++) {
+                string += String.fromCharCode(buffer[i]);
+              }
+              return string;
+            }
+            attachmentBody = bytesToString(attachmentBody)
+            console.log(attachmentBody)
+
+            attachmentBody = this._convertCharsetToUTF8("Windows-1252", attachmentBody)
+            console.log(attachmentBody)
+*/
 
             //console.log(attsDir.length, `"${attsDir}"`)
             //console.log(attachmentPart.name.slice(0, maxFilePathLen - 5))
@@ -230,7 +244,7 @@ export var exportMessages = {
       if ((index + 1) % 10 == 0 && index != 0) {
         //console.log("fire taskid:", expTask.id)
         emitter.emit("export-update", "inbox", 10);
-      } else if(index == msgListLen - 1) {
+      } else if (index == msgListLen - 1) {
         //console.log("fire event end", expTask.id, index)
         emitter.emit("export-update", "inbox", (index + 1) % 10);
 
@@ -693,19 +707,19 @@ export var exportMessages = {
   },
 
   _convertCharsetToUTF8: function (charset, string) {
-  try {
-    const encoder = new TextEncoder();
-    const decoder = new TextDecoder(charset);
-    const encoded = encoder.encode(string);
-    const decoded = decoder.decode(encoded);
-    console.log("Converted to utf-8 from:", charset);
+    try {
+      const encoder = new TextEncoder();
+      const decoder = new TextDecoder(charset);
+      const encoded = encoder.encode(string);
+      const decoded = decoder.decode(encoded);
+      console.log("Converted to utf-8 from:", charset);
 
-    return decoded;
-  } catch (e) {
-    console.error("Error converting to utf-8", e);
-    return string;
-  }
-},
+      return decoded;
+    } catch (e) {
+      console.error("Error converting to utf-8", e);
+      return string;
+    }
+  },
 
 };
 
