@@ -176,21 +176,21 @@ export var exportMessages = {
               attachmentPart.name = "message.txt";
             }
             let attachmentBody = await this.fileToUint8Array(attachmentPart.partBody)
-           /*
-            console.log(attachmentBody)
-            function bytesToString(buffer) {
-              var string = "";
-              for (var i = 0; i < buffer.length; i++) {
-                string += String.fromCharCode(buffer[i]);
-              }
-              return string;
-            }
-            attachmentBody = bytesToString(attachmentBody)
-            console.log(attachmentBody)
-
-            attachmentBody = this._convertCharsetToUTF8("Windows-1252", attachmentBody)
-            console.log(attachmentBody)
-*/
+            /*
+             console.log(attachmentBody)
+             function bytesToString(buffer) {
+               var string = "";
+               for (var i = 0; i < buffer.length; i++) {
+                 string += String.fromCharCode(buffer[i]);
+               }
+               return string;
+             }
+             attachmentBody = bytesToString(attachmentBody)
+             console.log(attachmentBody)
+ 
+             attachmentBody = this._convertCharsetToUTF8("Windows-1252", attachmentBody)
+             console.log(attachmentBody)
+ */
 
             //console.log(attsDir.length, `"${attsDir}"`)
             //console.log(attachmentPart.name.slice(0, maxFilePathLen - 5))
@@ -292,7 +292,7 @@ export var exportMessages = {
       try {
         //console.log(expTask.msgList[index])
         if (fileType == "message") {
-          let hdrs = {
+          var hdrs = {
             subject: expTask.msgList[index].msgData.extraHeaders.fullSubject,
             recipients: expTask.msgList[index].recipients,
             author: expTask.msgList[index].author,
@@ -329,7 +329,16 @@ export var exportMessages = {
         }
       } catch (ex) {
         console.log("err expId", expTask.id, unqName, ex)
+        expTask.msgList[index].msgData.msgBody = await _createErrMessage(index, ex, currentFileType, currentFileName);
+        expTask.msgList[index].msgData.error = { error: "error", index: index, ex: ex, msg: ex.message, stack: ex.stack };
+        fileStatusList.push({
+          index: index, fileType: fileType, id: expTask.msgList[index].id,
+          filePath: unqName, headers: hdrs, hasAttachments: expTask.msgList[index].msgData.attachmentParts.length,
+          attachmentFilenames: attachmentFilenames
+        });
         errors.push({ index: index, ex: ex, msg: ex.message, stack: ex.stack });
+        writePromise = IOUtils.writeUTF8(unqName, expTask.msgList[index].msgData.msgBody)
+
         return writePromise;
       }
 
