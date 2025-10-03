@@ -57,13 +57,17 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     var folderMsgCount;
     var totalMsgCount = 0;
 
-    browser.ExportMessages.onExpUpdate.addListener(async function (folderName, msgCount) {
+    async function _updateListener(folderName, msgCount) {
+
       folderMsgCount += msgCount;
       browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
-    });
+    }
 
-
+    var _updateListenerRef =_updateListener;
+    
+    browser.ExportMessages.onExpUpdate.addListener(_updateListener);
+  
     for (let index = 0; index < runs; index++) {
 
       //await new Promise(r => setTimeout(r, 12000));
@@ -81,6 +85,8 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
 
       await ui.createExportStatusWindow("Export HTML");
+      await new Promise(r => setTimeout(r, 10));
+
       browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", msgCount: totalMsgCount})
 
       //return
@@ -102,16 +108,18 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     exportMessage += `Messages exported: ${exportStatus.msgCount}\n`;
     exportMessage += `Error count: ${exportStatus.errCount}\n\n`;
     exportMessage += `Average time: ${(total / runs) / 1000}s\n`;
+    browser.ExportMessages.onExpUpdate.removeListener(_updateListener);
 
-    let rv = await browser.AsyncPrompts.asyncAlert("Folder Export", `${exportMessage}`);
+    //let rv = await browser.AsyncPrompts.asyncAlert("Folder Export", `${exportMessage}`);
 
   } catch (ex) {
     let rv = await browser.AsyncPrompts.asyncAlert(browser.i18n.getMessage("warning.msg"), `${ex.message}\n\n${ex.stack}`);
     console.log(ex);
-
     console.log(ex.stack);
+    browser.ExportMessages.onExpUpdate.removeListener(_updateListenerRef);
   }
 }
+
 
 
 async function msgIterateBatch(expTask) {

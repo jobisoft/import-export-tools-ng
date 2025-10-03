@@ -8,3 +8,5 @@ browser.runtime.onMessage.addListener(update => {
   progressBar.value = update.msgCount;
 
 });
+
+console.log("listener set")
