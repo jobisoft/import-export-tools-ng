@@ -1206,7 +1206,7 @@ async function invalidSelection() {
 // update for store type, attachments, page type
 async function menusUpdate(info, tab) {
 
-  //console.log(info)
+  console.log(info)
 
   // toggle copyToClipboard visibility
   // toggle msgCtx visibility - #459
