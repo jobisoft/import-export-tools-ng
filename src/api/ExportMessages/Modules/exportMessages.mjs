@@ -331,6 +331,9 @@ export var exportMessages = {
         console.log("err expId", expTask.id, unqName, ex)
         expTask.msgList[index].msgData.msgBody = await _createErrMessage(index, ex, currentFileType, currentFileName);
         expTask.msgList[index].msgData.error = { error: "error", index: index, ex: ex, msg: ex.message, stack: ex.stack };
+        if (hdrs.subject == undefined || hdrs.subject == null) {
+          hdrs.subject = expTask.msgList[index].subject;
+        }
         fileStatusList.push({
           index: index, fileType: fileType, id: expTask.msgList[index].id,
           filePath: unqName, headers: hdrs, hasAttachments: expTask.msgList[index].msgData.attachmentParts.length,
