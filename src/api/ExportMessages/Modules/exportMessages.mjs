@@ -84,13 +84,14 @@ export var exportMessages = {
         expTask.expType != "pdf"
       ) {
         //console.log(index, "no msgData", expTask.msgList[index])
-        expTask.msgList[index].msgData = {};
+        
         expTask.msgList[index].msgData.inlineParts = [];
         expTask.msgList[index].msgData.attachmentParts = [];
         let rawMsgBody = await this._getRawMessage(expTask.msgList[index].id, true, context);
         //console.log(rawMsgBody)
         expTask.msgList[index].msgData.msgBody = this._convertToUnicode(rawMsgBody);
         expTask.msgList[index].msgData.msgBodyType = "text/html";
+        
       }
 
       //console.log(expTask.msgList[index].msgData)
@@ -329,7 +330,6 @@ export var exportMessages = {
         }
       } catch (ex) {
         console.log("err expId", expTask.id, unqName, ex)
-        console.log(hdrs)
         expTask.msgList[index].msgData.msgBody = await _createErrMessage(index, ex, currentFileType, currentFileName);
         expTask.msgList[index].msgData.error = { error: "error", index: index, ex: ex, msg: ex.message, stack: ex.stack };
         if (hdrs.subject == undefined || hdrs.subject == null) {

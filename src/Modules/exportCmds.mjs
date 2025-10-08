@@ -60,7 +60,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     async function _updateListener(folderName, msgCount) {
 
       folderMsgCount += msgCount;
-      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
+      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", folderName: folderName, msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     }
 
@@ -85,9 +85,9 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
 
       await ui.createExportStatusWindow("Export HTML");
-      await new Promise(r => setTimeout(r, 10));
+      await new Promise(r => setTimeout(r, 100));
 
-      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", msgCount: totalMsgCount})
+      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
 
       //return
       
@@ -169,11 +169,7 @@ async function msgIterateBatch(expTask) {
 
             for (let index = 0; index < getBodySettledPromises.length; index++) {
               expTask.msgList[index].msgData = getBodySettledPromises[index].value;
-              if (0 && !expTask.msgList[index].msgData) {
-                console.log(index, expTask.msgList[index])
-                break;
-              }
-              //console.log(index, expTask.msgList[index].id, expTask.msgList[index].msgData)
+              //console.log(index, expTask.msgList[index].id, expTask.msgList[index])
             }
             expTask.id = expId++;
             //console.log("ExpId", expTask.id, "numMsgs", expTask.msgList.length)
@@ -261,7 +257,6 @@ async function _getprocessedMsg(expTask, msgId, msg) {
     try {
 
       var extraHeaders = await browser.ExportMessages.getMsgHdrs(msgId, ["fullSubject"]);
-
       if (expTask.expType == "eml") {
         let rawMsg = await browser.messages.getRaw(msgId);
         //console.log(rawMsg)
@@ -340,7 +335,6 @@ async function _getprocessedMsg(expTask, msgId, msg) {
           if (part.headers["content-disposition"] && part.headers["content-disposition"][0].includes("attachment")) {
 
             let attachmentBody = await browser.messages.getAttachmentFile(msgId, part.partName);
-            console.log(attachmentBody)
             attachmentParts.push({ partType: "attachment", contentType: part.contentType, partBody: attachmentBody, name: part.name });
             //console.log("push  att", attachmentParts)
           }
@@ -421,8 +415,6 @@ async function _preprocessBody(expTask, msg, body, msgBodyType, extraHeaders) {
 
   let processedMsgBody;
 
-  console.log(msg)
-  //console.log(extraHeaders)
   switch (expTask.expType) {
     case "eml":
       //processedMsgBody = await _processBodyForEML(expTask, index);

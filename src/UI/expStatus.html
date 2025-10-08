@@ -10,28 +10,29 @@
 </head>
 
 <body>
-  <table id="table1" style="border: 1px solid black">
+  <table id="table1" style2="border: 1px solid black">
     <tr>
       <td>Current Folder:</td>
-      <td id="current-folder" colspan="2">Inbljjjjxxxxxc</td>
+      <td id="current-folder" colspan="2"></td>
     </tr>
     <tr>
       <td>Message Count:</td>
-      <td id="message-count" class="numright">980</td>
+      <td id="total-folder-msg-count" class="numright"></td>
       <td></td>
     </tr>
     <tr>
       <td>Total Errors:</td>
-      <td id="total-errors" class="numright">20</td>
+      <td id="total-errors" class="numright">0</td>
       <td></td>
 
     </tr>
   </table>
   <br>
-  <div>Messages Exported:</div><br>
-  <div>
-    <progress id="msg-progress" max="0" value="0" ></progress>980
+  <div>Messages Exported:</div>
+  <div class="progress">
+    <progress id="msg-progress" max="0" value="0" ></progress>
   </div>
+  <!-- <div id="msg-progress-max-label"></div> -->
 
 	<script type="application/javascript" src="./expStatus.js"></script>
 
