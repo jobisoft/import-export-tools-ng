@@ -292,13 +292,13 @@ export var exportMessages = {
       try {
         //console.log(expTask.msgList[index])
         if (fileType == "message") {
-          var hdrs = {
-            subject: expTask.msgList[index].msgData.extraHeaders.fullSubject,
-            recipients: expTask.msgList[index].recipients,
-            author: expTask.msgList[index].author,
-            date: expTask.msgList[index].date,
-            size: expTask.msgList[index].size,
-          };
+          var hdrs = {};
+          hdrs.recipients = expTask.msgList[index].recipients;
+          hdrs.author = expTask.msgList[index].author;
+          hdrs.date = expTask.msgList[index].date;
+          hdrs.size = expTask.msgList[index].size;
+          hdrs.subject = expTask.msgList[index].msgData.extraHeaders.fullSubject;
+
           fileStatusList.push({
             index: index, fileType: fileType, id: expTask.msgList[index].id,
             filePath: unqName, headers: hdrs, hasAttachments: expTask.msgList[index].msgData.attachmentParts.length,
@@ -329,6 +329,7 @@ export var exportMessages = {
         }
       } catch (ex) {
         console.log("err expId", expTask.id, unqName, ex)
+        console.log(hdrs)
         expTask.msgList[index].msgData.msgBody = await _createErrMessage(index, ex, currentFileType, currentFileName);
         expTask.msgList[index].msgData.error = { error: "error", index: index, ex: ex, msg: ex.message, stack: ex.stack };
         if (hdrs.subject == undefined || hdrs.subject == null) {
