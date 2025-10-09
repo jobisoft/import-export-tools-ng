@@ -17,3 +17,7 @@ browser.runtime.onMessage.addListener(update => {
 });
 
 console.log("listener set")
+
+document.addEventListener('DOMContentLoaded', () => {
+  i18n.updateDocument();
+}, { once: true });

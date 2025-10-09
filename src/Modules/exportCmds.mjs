@@ -23,7 +23,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         return;
       }
     }
-    //console.log(ctxInfo, params);
+    console.log(ctxEvent, functionParams);
 
     // we do all main logic, folder and message iteration
     // and UI interactions in wext side
@@ -60,7 +60,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     async function _updateListener(folderName, msgCount) {
 
       folderMsgCount += msgCount;
-      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", folderName: folderName, msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
+      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     }
 

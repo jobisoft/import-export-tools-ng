@@ -32,6 +32,7 @@ body {
 	color: var(--dialog-text-color);
   min-width: 320px;
   min-height: 150px;
+	margin: 10px;
 }
 
 table { 
@@ -57,4 +58,17 @@ tr, td {
 .progress::after {
 	padding-left: 5px;
   content: attr(max);
+}
+
+#buttons {
+	text-align: right;
+}
+
+button {
+	padding: 2px;
+	min-width: 60px;
+}
+
+#okButton {
+	margin-right: 15px;
 }
