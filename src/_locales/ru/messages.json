@@ -998,14 +998,15 @@
     "virtualfolder": {
         "message": "Это — виртуальная папка. Чтобы экспортировать сообщения из неё, вы должны\\nскопировать их в обычную папку и экспортировать эту папку.",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Сообщения с вложениями и индексом"
 	},
 
 	"OK.button": {
-		"message": "ХОРОШО"
+		"message": "OK"
 	},
 
 	"Cancel.button": {

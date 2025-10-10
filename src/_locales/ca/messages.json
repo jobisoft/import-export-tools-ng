@@ -1000,14 +1000,15 @@
     "virtualfolder": {
         "message": "Aquesta és una carpeta virtual, per exportar els missatgs heu de copiar-los a una carpeta normal i exportar aquesta carpeta normal",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Missatges amb fitxers adjunts i índex"
 	},
 
 	"OK.button": {
-		"message": "D&#39;acord"
+		"message": "OK"
 	},
 
 	"Cancel.button": {
