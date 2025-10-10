@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Meddelanden med bilagor och index"
+	},
+
+	"OK.button": {
+		"message": "OK"
+	},
+
+	"Cancel.button": {
+		"message": "Avboka"
 	}
 }

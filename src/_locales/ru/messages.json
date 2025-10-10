@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Сообщения с вложениями и индексом"
+	},
+
+	"OK.button": {
+		"message": "ХОРОШО"
+	},
+
+	"Cancel.button": {
+		"message": "Отмена"
 	}
 }

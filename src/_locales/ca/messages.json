@@ -1004,5 +1004,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Missatges amb fitxers adjunts i índex"
+	},
+
+	"OK.button": {
+		"message": "D&#39;acord"
+	},
+
+	"Cancel.button": {
+		"message": "Cancel·la"
 	}
 }

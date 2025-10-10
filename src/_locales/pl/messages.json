@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Wiadomości z załącznikami i indeksem"
+	},
+
+	"OK.button": {
+		"message": "OK"
+	},
+
+	"Cancel.button": {
+		"message": "Anulować"
 	}
 }

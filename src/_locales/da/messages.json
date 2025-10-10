@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Beskeder med vedhæftede filer og indeks"
+	},
+
+	"OK.button": {
+		"message": "Okay"
+	},
+
+	"Cancel.button": {
+		"message": "Ophæve"
 	}
 }

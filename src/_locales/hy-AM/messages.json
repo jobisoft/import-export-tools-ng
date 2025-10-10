@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Հաղորդագրություններ՝ կից ֆայլերով և ինդեքսով"
+	},
+
+	"OK.button": {
+		"message": "Լավ"
+	},
+
+	"Cancel.button": {
+		"message": "Չեղարկել"
 	}
 }

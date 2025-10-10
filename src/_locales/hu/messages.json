@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Mellékletekkel és indexszel rendelkező üzenetek"
+	},
+
+	"OK.button": {
+		"message": "RENDBEN"
+	},
+
+	"Cancel.button": {
+		"message": "Mégsem"
 	}
 }

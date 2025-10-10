@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "添付ファイルとインデックス付きのメッセージ"
+	},
+
+	"OK.button": {
+		"message": "わかりました"
+	},
+
+	"Cancel.button": {
+		"message": "キャンセル"
 	}
 }

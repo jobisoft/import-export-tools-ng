@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Messaggi con allegati e indice"
+	},
+
+	"OK.button": {
+		"message": "OK"
+	},
+
+	"Cancel.button": {
+		"message": "Cancellare"
 	}
 }

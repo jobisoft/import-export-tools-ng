@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Messages avec pièces jointes et index"
+	},
+
+	"OK.button": {
+		"message": "D&#39;ACCORD"
+	},
+
+	"Cancel.button": {
+		"message": "Annuler"
 	}
 }

@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Μηνύματα με συνημμένα και ευρετήριο"
+	},
+
+	"OK.button": {
+		"message": "ΕΝΤΑΞΕΙ"
+	},
+
+	"Cancel.button": {
+		"message": "Ματαίωση"
 	}
 }

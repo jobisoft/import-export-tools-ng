@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "带有附件和索引的消息"
+	},
+
+	"OK.button": {
+		"message": "好的"
+	},
+
+	"Cancel.button": {
+		"message": "取消"
 	}
 }

@@ -999,5 +999,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Zprávy s přílohami a indexem"
+	},
+
+	"OK.button": {
+		"message": "OK"
+	},
+
+	"Cancel.button": {
+		"message": "Zrušit"
 	}
 }

@@ -1002,5 +1002,13 @@
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "첨부 파일 및 인덱스가 있는 메시지"
+	},
+
+	"OK.button": {
+		"message": "좋아요"
+	},
+
+	"Cancel.button": {
+		"message": "취소"
 	}
 }
