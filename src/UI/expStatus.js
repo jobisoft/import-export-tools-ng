@@ -18,6 +18,26 @@ browser.runtime.onMessage.addListener(update => {
 
 console.log("listener set")
 
+async function cancelClick() {
+console.log("cancel")
+
+}
 document.addEventListener('DOMContentLoaded', () => {
   i18n.updateDocument();
 }, { once: true });
+
+async function onLoad() {
+  console.log("load")
+
+}
+
+function onUnload() {
+  console.log("close")
+
+}
+
+
+window.addEventListener("beforeunload", (event) => {
+  console.log("close")
+});
+
