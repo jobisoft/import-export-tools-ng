@@ -13,6 +13,8 @@ var osPathSeparator = os.includes("win")
   ? "\\"
   : "/";
 
+var abort = false;
+
 export async function exportFolders(ctxEvent, tab, functionParams) {
 
   try {
@@ -52,22 +54,41 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
     var total = 0;
     var times = [];
 
+    // UI listener
+    browser.runtime.onMessage.addListener(msg => {
+      if (msg.command != "UI_EVENT") {
+        return null;
+      }
+
+      if (msg.source == "expStatusWin") {
+        switch (msg.srcEvent) {
+          case "cancelClick":
+            console.log("cancel")
+            // we are aborting current export
+            abort = true;
+            break;
+        }
+      }
+    });
+
     // ev listener
-    
+
     var folderMsgCount;
     var totalMsgCount = 0;
 
     async function _updateListener(folderName, msgCount) {
-
+      if (abort) {
+        return;
+      }
       folderMsgCount += msgCount;
-      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
+      browser.runtime.sendMessage({ command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     }
 
-    var _updateListenerRef =_updateListener;
-    
+    var _updateListenerRef = _updateListener;
+
     browser.ExportMessages.onExpUpdate.addListener(_updateListener);
-  
+
     for (let index = 0; index < runs; index++) {
 
       //await new Promise(r => setTimeout(r, 12000));
@@ -87,11 +108,14 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       await ui.createExportStatusWindow("Export HTML");
       await new Promise(r => setTimeout(r, 100));
 
-      browser.runtime.sendMessage({command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount})
+      browser.runtime.sendMessage({ command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
 
       //return
-      
+
       var exportStatus = await msgIterateBatch(expTask);
+      if (abort) {
+        break;
+      }
       _createIndex(expTask, exportStatus.msgListLog);
 
       //console.log(new Date());
@@ -123,7 +147,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
 
 async function msgIterateBatch(expTask) {
-
+  console.log(abort)
   // 1522 msgs 50MB
   // 20 run avg 1800msms
 
@@ -143,6 +167,9 @@ async function msgIterateBatch(expTask) {
 
   try {
     do {
+      if (abort) {
+        break;
+      }
       if (!msgListPage) {
         msgListPage = await messenger.messages.list(expTask.folders[expTask.currentFolderIndex].id);
       } else {
@@ -156,6 +183,9 @@ async function msgIterateBatch(expTask) {
 
       for (let index = 0; index < messagesLen; index++) {
 
+        if (abort) {
+          break;
+        }
         expTask.msgList.push(msgListPage.messages[index]);
         let msgId = msgListPage.messages[index].id;
 
