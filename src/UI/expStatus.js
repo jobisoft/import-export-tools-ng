@@ -9,16 +9,8 @@ var cancelHandled = false;
 
 // button listeners
 async function okButtonListener(event) {
-  messenger.runtime
-    .sendMessage({
-      command: "UI_EVENT",
-      source: "expStatusWin",
-      srcEvent: "OkClick",
-    })
-    .then(async () => {
-      let window = await messenger.windows.getCurrent();
-      messenger.windows.remove(window.id);
-    });
+  let window = await messenger.windows.getCurrent();
+  messenger.windows.remove(window.id);
 }
 
 async function cancelButtonListener(event) {
@@ -40,23 +32,38 @@ async function cancel() {
 }
 
 browser.runtime.onMessage.addListener(msg => {
-  console.log(msg)
-  currentFolder.innerText = msg.folderName;
-  totalFolderMsgCount.innerText = msg.maxMsgCount;
-  currentFolderProgress.max = msg.maxMsgCount;
-  currentFolderProgress.value = msg.msgCount;
-  //progressBarMaxLabel.innerText = update.maxMsgCount;
-
+  if (msg.target != "expStatusWin") {
+    return;
+  }
+  switch (msg.command) {
+    case "UI_UPDATE":
+      console.log(msg)
+      currentFolder.innerText = msg.folderName;
+      totalFolderMsgCount.innerText = msg.maxMsgCount;
+      currentFolderProgress.max = msg.maxMsgCount;
+      currentFolderProgress.value = msg.msgCount;
+      break;
+    case "UI_CMD":
+      switch (msg.subCommand) {
+        case "closeWin":
+          cancel();
+          break;
+        case "finished":
+          okButton.removeAttribute("disabled");
+          cancelButton.setAttribute("disabled", "");
+          break;
+      }
+  }
 });
 
 console.log("listener set")
 
 document.addEventListener('DOMContentLoaded', () => {
   i18n.updateDocument();
-  //okButton.addEventListener("click", okButtonListener);
+  okButton.addEventListener("click", okButtonListener);
   cancelButton.addEventListener("click", cancelButtonListener);
 
-  
+
 }, { once: true });
 
 window.addEventListener("beforeunload", (event) => {

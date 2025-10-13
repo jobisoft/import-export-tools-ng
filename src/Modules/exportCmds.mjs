@@ -16,7 +16,8 @@ var osPathSeparator = os.includes("win")
 var abort = false;
 
 export async function exportFolders(ctxEvent, tab, functionParams) {
-
+  abort = false;
+  
   try {
     // for now only deal with a single folder for prototype
     if (ctxEvent.selectedFolders && ctxEvent.selectedFolders.length > 1) {
@@ -81,7 +82,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         return;
       }
       folderMsgCount += msgCount;
-      browser.runtime.sendMessage({ command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
+      browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatusWin", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     }
 
@@ -108,7 +109,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       await ui.createExportStatusWindow("Export HTML");
       await new Promise(r => setTimeout(r, 100));
 
-      browser.runtime.sendMessage({ command: "UI_CMD", window: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
+      browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
 
       //return
 
@@ -117,6 +118,9 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         break;
       }
       _createIndex(expTask, exportStatus.msgListLog);
+
+      // tell expStatus window we are done
+      browser.runtime.sendMessage({ command: "UI_CMD", target: "expStatusWin", subCommand: "finished" })
 
       //console.log(new Date());
 
