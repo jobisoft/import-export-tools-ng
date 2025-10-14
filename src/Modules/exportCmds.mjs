@@ -17,9 +17,9 @@ var abort = false;
 
 export async function exportFolders(ctxEvent, tab, functionParams) {
   abort = false;
-  
+
   try {
-    
+
     // for now only deal with a single folder for prototype
     /*
     if (ctxEvent.selectedFolders && ctxEvent.selectedFolders.length > 1) {
@@ -104,25 +104,32 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       let st = new Date();
       console.log(new Date());
 
+      var folderMsgCount = 0;
 
-      // create export container
-      expTask.exportContainer.directory = await browser.ExportMessages.createExportContainer(expTask);
-      expTask.selectedFolder = ctxEvent.selectedFolder;
-      folderMsgCount = 0;
-      totalMsgCount = (await browser.folders.getFolderInfo(expTask.selectedFolder.id)).totalMessageCount;
+      // this is our folder loop
+      for (let folderIndex = 0; folderIndex < expTask.folders.length; folderIndex++) {
+        expTask.currentFolderIndex = folderIndex;
+        expTask.currentFolderPath = expTask.folders[folderIndex].path;
+        folderMsgCount = 0;
 
-      await ui.createExportStatusWindow("Export HTML");
-      await new Promise(r => setTimeout(r, 100));
+        // create export container
+        expTask.exportContainer.directory = await browser.ExportMessages.createExportContainer(expTask);
 
-      browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatus", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
+        // create the status window on first folder
+        if (folderIndex == 0) {
+          await ui.createExportStatusWindow("Export HTML");
+          await new Promise(r => setTimeout(r, 100));
+        }
 
-      //return
+        // send initial ui status
+        browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatus", folderName: expTask.folders[folderIndex].name, msgCount: folderMsgCount, maxMsgCount: expTask.folders[folderIndex].totalMsgCount })
 
-      var exportStatus = await msgIterateBatch(expTask);
-      if (abort) {
-        break;
+        var exportStatus = await msgIterateBatch(expTask);
+        if (abort) {
+          break;
+        }
+        _createIndex(expTask, exportStatus.msgListLog);
       }
-      _createIndex(expTask, exportStatus.msgListLog);
 
       // tell expStatus window we are done
       browser.runtime.sendMessage({ command: "UI_CMD", target: "expStatusWin", subCommand: "finished" })
@@ -154,6 +161,10 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 }
 
 async function getFolderSet(selectedFolders, functionParams) {
+  // add folder totalMsgCount 
+  for (let folder of selectedFolders) {
+    selectedFolders.totalMsgCount = (await browser.folders.getFolderInfo(folder.id)).totalMessageCount;
+  }
   return selectedFolders;
 }
 
