@@ -82,22 +82,22 @@ const baseExpTask = {
 };
 
 
-export async function createExportTask(params, ctxEvent) {
+export async function createExportTask(params, ctxEvent, folderSet) {
   try {
     let expTask = baseExpTask;
 
     switch (params.expType) {
       case "eml":
-        expTask = await _build_EML_expTask(expTask, params, ctxEvent);
+        expTask = await _build_EML_expTask(expTask, params, ctxEvent, folderSet);
         break;
       case "html":
-        expTask = await _build_HTML_expTask(expTask, params, ctxEvent);
+        expTask = await _build_HTML_expTask(expTask, params, ctxEvent, folderSet);
         break;
       case "pdf":
-        expTask = await _build_PDF_expTask(expTask, params, ctxEvent);
+        expTask = await _build_PDF_expTask(expTask, params, ctxEvent, folderSet);
         break;
       case "plaintext":
-        expTask = await _build_Plaintext_expTask(expTask, params, ctxEvent);
+        expTask = await _build_Plaintext_expTask(expTask, params, ctxEvent, folderSet);
         break;
     }
     return expTask;
@@ -106,11 +106,11 @@ export async function createExportTask(params, ctxEvent) {
   }
 }
 
-async function _build_EML_expTask(expTask, params, ctxEvent) {
+async function _build_EML_expTask(expTask, params, ctxEvent, folderSet) {
   // hack setup
   console.log(params)
   expTask.expType = params.expType;
-  expTask.folders = [ctxEvent.selectedFolder];
+  expTask.folders = folderSet;
   expTask.currentFolderPath = expTask.folders[0].path;
   expTask.generalConfig.exportDirectory = "";
   expTask.exportContainer.create = true;
@@ -151,10 +151,10 @@ async function _build_EML_expTask(expTask, params, ctxEvent) {
 
 }
 
-async function _build_HTML_expTask(expTask, params, ctxEvent) {
+async function _build_HTML_expTask(expTask, params, ctxEvent, folderSet) {
   // hack setup
   expTask.expType = params.expType;
-  expTask.folders = [ctxEvent.selectedFolder];
+  expTask.folders = folderSet;
   expTask.currentFolderPath = expTask.folders[0].path;
   expTask.generalConfig.exportDirectory = params.exportDirectory;
   expTask.exportContainer.create = true;
@@ -197,10 +197,10 @@ async function _build_HTML_expTask(expTask, params, ctxEvent) {
   return expTask;
 }
 
-async function _build_PDF_expTask(expTask, params, ctxEvent) {
+async function _build_PDF_expTask(expTask, params, ctxEvent, folderSet) {
   // hack setup
   expTask.expType = params.expType;
-  expTask.folders = [ctxEvent.selectedFolder];
+  expTask.folders = folderSet;
   expTask.currentFolderPath = expTask.folders[0].path;
   expTask.generalConfig.exportDirectory = params.exportDirectory;
   expTask.exportContainer.create = true;
@@ -241,10 +241,10 @@ async function _build_PDF_expTask(expTask, params, ctxEvent) {
   return expTask;
 }
 
-async function _build_Plaintext_expTask(expTask, params, ctxEvent) {
+async function _build_Plaintext_expTask(expTask, params, ctxEvent, folderSet) {
   // hack setup
   expTask.expType = params.expType;
-  expTask.folders = [ctxEvent.selectedFolder];
+  expTask.folders = folderSet;
   expTask.currentFolderPath = expTask.folders[0].path;
   expTask.generalConfig.exportDirectory = params.exportDirectory;
   expTask.exportContainer.create = true;

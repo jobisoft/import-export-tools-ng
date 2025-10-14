@@ -19,19 +19,26 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
   abort = false;
   
   try {
+    
     // for now only deal with a single folder for prototype
+    /*
     if (ctxEvent.selectedFolders && ctxEvent.selectedFolders.length > 1) {
       let rv = await browser.AsyncPrompts.asyncAlert(browser.i18n.getMessage("multipleFolders.title"), browser.i18n.getMessage("multipleFolders.AlertMsg") + functionParams.toString());
       if (!rv) {
         return;
       }
     }
-    console.log(ctxEvent, functionParams);
+      */
+
+    // check for multiple folders selected
+    var folderSet = await getFolderSet(ctxEvent.selectedFolders, functionParams);
+
+    console.log(ctxEvent, functionParams, folderSet);
 
     // we do all main logic, folder and message iteration
     // and UI interactions in wext side
 
-    var expTask = await createExportTask(functionParams, ctxEvent);
+    var expTask = await createExportTask(functionParams, ctxEvent, folderSet);
 
     // warnings
 
@@ -90,15 +97,13 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     browser.ExportMessages.onExpUpdate.addListener(_updateListener);
 
+    // this outer loop is for performance testing 
     for (let index = 0; index < runs; index++) {
 
       //await new Promise(r => setTimeout(r, 12000));
-
       let st = new Date();
-
       console.log(new Date());
 
-      //      let rv = await browser.AsyncPrompts.asyncAlert(browser.i18n.getMessage("warning.msg"), src);
 
       // create export container
       expTask.exportContainer.directory = await browser.ExportMessages.createExportContainer(expTask);
@@ -148,7 +153,9 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
   }
 }
 
-
+async function getFolderSet(selectedFolders, functionParams) {
+  return selectedFolders;
+}
 
 async function msgIterateBatch(expTask) {
   console.log(abort)
