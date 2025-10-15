@@ -89,7 +89,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         return;
       }
       folderMsgCount += msgCount;
-      browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatusWin", folderName: expTask.selectedFolder.name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
+      browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatusWin", folderName: expTask.folders[folderIndex].name, msgCount: folderMsgCount, maxMsgCount: totalMsgCount })
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     }
 
@@ -107,7 +107,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       var folderMsgCount = 0;
 
       // this is our folder loop
-      for (let folderIndex = 0; folderIndex < expTask.folders.length; folderIndex++) {
+      for (var folderIndex = 0; folderIndex < expTask.folders.length; folderIndex++) {
         expTask.currentFolderIndex = folderIndex;
         expTask.currentFolderPath = expTask.folders[folderIndex].path;
         folderMsgCount = 0;
