@@ -713,6 +713,19 @@ var folderCtxMenuSet = [
       functionParams: { expType: "html", saveAttachments: "all", index: false }
     }
   },
+
+  {
+    menuDef: {
+      parentId: folderCtxMenu_Exp_HTMLFormat_Id,
+      id: "folderCtxMenu_HTML_subfolders_newexp",
+      title: "(New) " + localizeMenuTitle("folderCtxMenu_Exp_HTMLFormatCreateIndexRecursive_Id.title"),    
+      onclick: menuFunctionDispatcher,
+    },
+    dispatchOptions: {
+      dispatchFunction: exportCmds.exportFolders,
+      functionParams: { expType: "html", saveAttachments: "all", index: false }
+    }
+  },
   {
     menuDef: {
       parentId: folderCtxMenu_Exp_HTMLFormat_Id,
