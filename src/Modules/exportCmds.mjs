@@ -193,7 +193,25 @@ async function getFolderSet(selectedFolders, functionParams) {
     await getSubFolders(folder);
   }
 
-  // get path of top folder 
+  // get path of shortest parent
+  var basePathIndex = 0;
+  for (let index = 0; index < fullFolderSet.length; index++) {
+    let parentfolder = await browser.folders.getParentFolders(fullFolderSet[index].id);
+    console.log(parentfolder)
+    console.log(parentfolder[0])
+    console.log(parentfolder[0]?.path)
+
+
+    if (parentfolder = []) {
+      parentfolder = [{}];
+      parentfolder[0].path = "/";
+    }
+    console.log(parentfolder[0])
+    console.log(index, fullFolderSet[index].path,parentfolder[0].path)
+    //if (fullFolderSet[])
+  }
+  
+  /*
   var pathRoot = "";
   var minPathLen = 100;
   for (let index = 0; index < fullFolderSet.length; index++) {
@@ -216,6 +234,7 @@ async function getFolderSet(selectedFolders, functionParams) {
     }
   }
   console.log(pathRoot)
+*/
 
   // add folder path and totalMsgCount 
   for (const [index, folder] of fullFolderSet.entries()) {
