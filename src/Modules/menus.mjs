@@ -723,7 +723,7 @@ var folderCtxMenuSet = [
     },
     dispatchOptions: {
       dispatchFunction: exportCmds.exportFolders,
-      functionParams: { expType: "html", saveAttachments: "all", index: false }
+      functionParams: { expType: "html", saveAttachments: "all", index: false, subfolders: true }
     }
   },
   {

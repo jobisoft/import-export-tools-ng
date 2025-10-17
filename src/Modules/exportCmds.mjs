@@ -32,6 +32,8 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     // check for multiple folders selected
     var folderSet = await getFolderSet(ctxEvent.selectedFolders, functionParams);
+    console.log(folderSet)
+    return
 
     console.log(ctxEvent, functionParams, folderSet);
 
@@ -89,9 +91,11 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         return;
       }
       folderMsgCount += msgCount;
-      browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatusWin",
+      browser.runtime.sendMessage({
+        command: "UI_UPDATE", target: "expStatusWin",
         folderName: expTask.folders[expTask.currentFolderIndex].name, msgCount: folderMsgCount,
-        maxMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount })
+        maxMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount
+      })
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
     }
 
@@ -163,11 +167,61 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 }
 
 async function getFolderSet(selectedFolders, functionParams) {
-  // add folder totalMsgCount 
-  for (const [index, folder] of selectedFolders.entries()) {
-    selectedFolders[index].totalMsgCount = (await browser.folders.getFolderInfo(folder.id)).totalMessageCount;
+  // if we are doing subfolders we need to prune then get all subfolders 
+  if (functionParams.subFolders) {
+    // pruning removes overlapping subfolders 
+    let prunedFolders = selectedFolders;
+    selectedFolders.forEach(folder => {
+      prunedFolders = prunedFolders.filter(pfolder => pfolder == folder || !pfolder.path.startsWith(folder.path))
+    });
+    selectedFolders = prunedFolders;
   }
-  return selectedFolders;
+  // add all subfolders under top folders
+  var fullFolderSet = selectedFolders;
+
+  async function getSubFolders(folder) {
+    let subFolders = await browser.folders.getSubFolders(folder.id);
+    fullFolderSet = fullFolderSet.concat(subFolders);
+    if (subFolders) {
+      for (const subFolder of subFolders) {
+        await getSubFolders(subFolder);
+      }
+    }
+  }
+  let topFolders = fullFolderSet;
+  for (const folder of topFolders) {
+    await getSubFolders(folder);
+  }
+
+  // get path of top folder 
+  var pathRoot = "";
+  var minPathLen = 100;
+  for (let index = 0; index < fullFolderSet.length; index++) {
+    let path = fullFolderSet[index].path.slice(1);
+    console.log(path)
+
+    let pathLen = path.split('/').length;
+    console.log(pathLen)
+
+    if (pathLen < minPathLen) {
+      minPathLen = pathLen;
+      if (pathLen == 1) {
+        pathRoot = path;
+        fullFolderSet[index].osFolderPath = pathRoot;
+        break;
+      }
+      pathRoot = path.split('/').slice(-1);
+      console.log(pathRoot)
+      
+    }
+  }
+  console.log(pathRoot)
+
+  // add folder path and totalMsgCount 
+  for (const [index, folder] of fullFolderSet.entries()) {
+    fullFolderSet[index].totalMsgCount = (await browser.folders.getFolderInfo(folder.id)).totalMessageCount;
+  }
+  return fullFolderSet;
 }
 
 async function msgIterateBatch(expTask) {
