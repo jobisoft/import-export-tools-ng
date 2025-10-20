@@ -194,47 +194,65 @@ async function getFolderSet(selectedFolders, functionParams) {
   }
 
   // get path of shortest parent
-  var basePathIndex = 0;
-  for (let index = 0; index < fullFolderSet.length; index++) {
-    let parentfolder = await browser.folders.getParentFolders(fullFolderSet[index].id);
-    console.log(parentfolder)
-    console.log(parentfolder[0])
-    console.log(parentfolder[0]?.path)
 
-
-    if (parentfolder = []) {
-      parentfolder = [{}];
-      parentfolder[0].path = "/";
-    }
-    console.log(parentfolder[0])
-    console.log(index, fullFolderSet[index].path,parentfolder[0].path)
-    //if (fullFolderSet[])
-  }
+  var firstParents = await browser.folders.getParentFolders(fullFolderSet[0].id)
+  let basePathLen = firstParents.length
   
   /*
-  var pathRoot = "";
-  var minPathLen = 100;
+  if (firstParents = []) {
+      firstParents = [{}];
+      firstParents[0].path = "/";
+    }
+      */
+     
+  let basePath = firstParents[0].path;
+
   for (let index = 0; index < fullFolderSet.length; index++) {
-    let path = fullFolderSet[index].path.slice(1);
-    console.log(path)
+    let parentfolders = await browser.folders.getParentFolders(fullFolderSet[index].id);
+    console.log(parentfolders)
+    console.log(parentfolders[0])
+    console.log(parentfolders[0]?.path)
 
-    let pathLen = path.split('/').length;
-    console.log(pathLen)
+    if (parentfolders = []) {
+      parentfolders = [{}];
+      parentfolders[0].path = "/";
+    }
 
-    if (pathLen < minPathLen) {
-      minPathLen = pathLen;
-      if (pathLen == 1) {
-        pathRoot = path;
-        fullFolderSet[index].osFolderPath = pathRoot;
+    if (parentfolders.length < basePathLen) {
+      basePathLen = parentfolders.length;
+      basePath = parentfolders[0].path;
+    }
+
+    console.log(parentfolders[0])
+    console.log(index, fullFolderSet[index].path, parentfolders[0].path)
+    //if (fullFolderSet[])
+  }
+
+  console.log("base", basePath)
+
+  for (const [index, folder] of fullFolderSet.entries()) {
+    let parentfolders = await browser.folders.getParentFolders(folder.id);
+      console.log(parentfolders)
+
+    fullFolderSet[index].exportPath = folder.name;
+    for (const [index2, folderParent] of parentfolders.entries()) {
+      if (parentfolders = []) {
+      parentfolders = [{}];
+      parentfolders[0].path = "/";
+      parentfolders[0].name = "";
+
+    }
+      console.log(parentfolders[index2].name)
+
+      if (folderParent.path == basePath) {
+        console.log("break")
         break;
       }
-      pathRoot = path.split('/').slice(-1);
-      console.log(pathRoot)
-      
+      fullFolderSet[index].exportPath = `${parentfolders[index2].name}/${fullFolderSet[index].exportPath}`;
+
     }
+
   }
-  console.log(pathRoot)
-*/
 
   // add folder path and totalMsgCount 
   for (const [index, folder] of fullFolderSet.entries()) {
