@@ -1703,6 +1703,14 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 
 											var attDirContainerClone = attDirContainer.clone();
 											attNameAscii = encodeURIComponent(att.name);
+
+											console.log("attdirname", attDirContainerClone.path, attDirContainerClone.path.length)
+											console.log("attname", attNameAscii, attNameAscii.length)
+											let totallen = attDirContainerClone.path.length + attNameAscii.length
+											console.log(totallen)
+											if (totallen > 248) {
+												console.log("LENGTH ERR")
+											}
 											attDirContainerClone.append(att.name);
 											attachments[i].file = attDirContainerClone;
 
