@@ -1710,6 +1710,7 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 											let totallen = attDirContainerClone.path.length + attNameAscii.length
 											console.log(totallen)
 											if (totallen > 248) {
+												let cutLen = totallen - 248.
 												console.log("LENGTH ERR")
 											}
 											attDirContainerClone.append(att.name);
