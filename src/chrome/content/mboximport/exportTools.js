@@ -1656,24 +1656,25 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 										if (navigator.platform.toLowerCase().includes("win")) {
 											console.log("iswin")
 										}
-										if(attDirContainer.path.length > 248){
+										if (attDirContainer.path.length > 248) {
 											console.log("isLong")
 
 										}
 
 										if (navigator.platform.toLowerCase().includes("win") && (attDirContainer.path.length > 248)) {
 											console.log("truncate ")
-										
+
 										}
 										if (navigator.platform.toLowerCase().includes("win") &&
-											attDirContainer.path.length > 248) {
-												let attName = PathUtils.filename(attDirContainer.path);
-												let attNameLen = attName.length;
-												let cutLen = (attDirContainer.path.length - 248) / 2;
-												attName = attName.slice(0, cutLen - 1);
-												console.log(PathUtils.parent(attDirContainer.path));
-												attDirContainer.initWithPath(PathUtils.join(PathUtils.parent(attDirContainer.path), attName));
-										console.log(attDirContainer.path)
+											attDirContainer.path.length > 220) {
+											let attName = PathUtils.filename(attDirContainer.path);
+											console.log(attName)
+											let cutLen = attName.length / 4;
+											attName = attName.slice(0, attName.length - cutLen);
+											attName = attName.trimEnd();
+											console.log(PathUtils.parent(attDirContainer.path));
+											attDirContainer.initWithPath(PathUtils.join(PathUtils.parent(attDirContainer.path), attName));
+											console.log(attDirContainer.path)
 										}
 										attDirContainer.createUnique(1, 0o755);
 										footer = '<br><hr><br><div style="font-size:16px;color:black;"><img src="data:image/gif;base64,R0lGODdhDwAPAOMAAP///zEwYmJlzQAAAPr6+vv7+/7+/vb29pyZ//39/YOBg////////////////////ywAAAAADwAPAAAESRDISUG4lQYr+s5bIEwDUWictA2GdBjhaAGDrKZzjYq3PgUw2co24+VGLYAAAesRLQklxoeiUDUI0qSj6EoH4Iuoq6B0PQJyJQIAOw==">\r\n<ul>';
@@ -1712,6 +1713,7 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 												console.log("LENGTH ERR")
 											}
 											attDirContainerClone.append(att.name);
+											console.log(attDirContainerClone.path)
 											attachments[i].file = attDirContainerClone;
 
 											let attPartName = att.url.match(/part=([.0-9]+)&?/)[1];
