@@ -1709,19 +1709,31 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 											console.log("attname", attNameAscii, attNameAscii.length)
 											let totallen = attDirContainerClone.path.length + attNameAscii.length
 											console.log(totallen)
+											var adjustedAttName = att.name;
+
 											if (totallen > 248) {
-												let cutLen = totallen - 248.
+												let cutLen = totallen - 248;
+												// separate name from extension so we can truncate name
+												let extension = att.name.split('.').pop();
+												let lastDotIndex = att.name.lastIndexOf('.');
+												if (lastDotIndex == -1) {
+													adjustedAttName = att.name;
+												} else {
+													adjustedAttName = `${att.name.substring(0, lastDotIndex - cutLen)}.${extension}`;
+												}
+
 												console.log("LENGTH ERR")
 											}
-											attDirContainerClone.append(att.name);
+											attDirContainerClone.append(adjustedAttName);
 											console.log(attDirContainerClone.path)
 											attachments[i].file = attDirContainerClone;
 
 											let attPartName = att.url.match(/part=([.0-9]+)&?/)[1];
 											let attFile = await getAttachmentFile(aMsgHdr, attPartName)
 											let fileData = await fileToUint8Array(attFile);
+											console.log("write", attDirContainerClone.path)
 											await IOUtils.write(attDirContainerClone.path, fileData);
-
+											console.log("done")
 										} catch (e) {
 											success = false;
 											console.debug('save attachment exception ' + att.name);
@@ -1730,7 +1742,7 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 									}
 
 									if (success)
-										footer = footer + '<li><a href="' + encodeURIComponent(attDirContainer.leafName) + "/" + attNameAscii + '">' + attDirContainerName + "/" + attName + '</li></a>';
+										footer = footer + '<li><a href="' + encodeURIComponent(attDirContainer.leafName) + "/" + encodeURIComponent(adjustedAttName) + '">' + attDirContainerName + "/" + attName + '</li></a>';
 								}
 								if (footer) {
 									footer = footer + "</ul></div><div class='' ></div></body>";
