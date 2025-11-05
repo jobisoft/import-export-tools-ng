@@ -1649,32 +1649,14 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 											let afname = constructAttachmentsFilename(1, hdr);
 											attDirContainer.append(afname);
 										}
-										console.log(attDirContainer.path)
-										console.log(attDirContainer.path.length)
 
-										console.log(navigator.platform.toLowerCase())
-										if (navigator.platform.toLowerCase().includes("win")) {
-											console.log("iswin")
-										}
-										if (attDirContainer.path.length > 248) {
-											console.log("isLong")
-
-										}
-
-										if (navigator.platform.toLowerCase().includes("win") && (attDirContainer.path.length > 248)) {
-											console.log("truncate ")
-
-										}
 										if (navigator.platform.toLowerCase().includes("win") &&
 											attDirContainer.path.length > 220) {
 											let attName = PathUtils.filename(attDirContainer.path);
-											console.log(attName)
 											let cutLen = attName.length / 4;
 											attName = attName.slice(0, attName.length - cutLen);
 											attName = attName.trimEnd();
-											console.log(PathUtils.parent(attDirContainer.path));
 											attDirContainer.initWithPath(PathUtils.join(PathUtils.parent(attDirContainer.path), attName));
-											console.log(attDirContainer.path)
 										}
 										attDirContainer.createUnique(1, 0o755);
 										footer = '<br><hr><br><div style="font-size:16px;color:black;"><img src="data:image/gif;base64,R0lGODdhDwAPAOMAAP///zEwYmJlzQAAAPr6+vv7+/7+/vb29pyZ//39/YOBg////////////////////ywAAAAADwAPAAAESRDISUG4lQYr+s5bIEwDUWictA2GdBjhaAGDrKZzjYq3PgUw2co24+VGLYAAAesRLQklxoeiUDUI0qSj6EoH4Iuoq6B0PQJyJQIAOw==">\r\n<ul>';
@@ -1705,11 +1687,12 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 											var attDirContainerClone = attDirContainer.clone();
 											attNameAscii = encodeURIComponent(att.name);
 
-											console.log("attdirname", attDirContainerClone.path, attDirContainerClone.path.length)
-											console.log("attname", attNameAscii, attNameAscii.length)
 											let totallen = attDirContainerClone.path.length + attNameAscii.length
-											console.log(totallen)
 											var adjustedAttName = att.name;
+
+											// while NTFS is supposed to support paths
+											// up to 255 chars, tests throw exceptions
+											// at 249 chars so we truncate there
 
 											if (totallen > 248) {
 												let cutLen = totallen - 248;
@@ -1721,19 +1704,14 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 												} else {
 													adjustedAttName = `${att.name.substring(0, lastDotIndex - cutLen)}.${extension}`;
 												}
-
-												console.log("LENGTH ERR")
 											}
 											attDirContainerClone.append(adjustedAttName);
-											console.log(attDirContainerClone.path)
 											attachments[i].file = attDirContainerClone;
 
 											let attPartName = att.url.match(/part=([.0-9]+)&?/)[1];
 											let attFile = await getAttachmentFile(aMsgHdr, attPartName)
 											let fileData = await fileToUint8Array(attFile);
-											console.log("write", attDirContainerClone.path)
 											await IOUtils.write(attDirContainerClone.path, fileData);
-											console.log("done")
 										} catch (e) {
 											success = false;
 											console.debug('save attachment exception ' + att.name);
@@ -1742,7 +1720,10 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 									}
 
 									if (success)
-										footer = footer + '<li><a href="' + encodeURIComponent(attDirContainer.leafName) + "/" + encodeURIComponent(adjustedAttName) + '">' + attDirContainerName + "/" + attName + '</li></a>';
+										footer = footer + '<li><a href="' +
+											encodeURIComponent(attDirContainer.leafName) +
+											"/" + encodeURIComponent(adjustedAttName) + '">' +
+											attDirContainerName + "/" + attName + '</li></a>';
 								}
 								if (footer) {
 									footer = footer + "</ul></div><div class='' ></div></body>";
