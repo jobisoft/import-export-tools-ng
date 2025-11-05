@@ -119,15 +119,15 @@
         "message": "Backup-Inhalt"
     },
     "backupWarning": {
-        "message": "Während dieser Operation kann die Anwendung\\neinige Minuten nicht ansprechbar sein.\\nMöchten Sie fortfahren?",
+        "message": "Während dieser Operation kann die Anwendung\neinige Minuten nicht ansprechbar sein.\nMöchten Sie fortfahren?",
         "src": "mboximport"
     },
     "badfolder": {
-        "message": "Importieren in diesen Ordner ist nicht möglich.\\n\\nVermutlich handelt es sich um ein IMAP-Konto oder eine Newsgruppe.",
+        "message": "Importieren in diesen Ordner ist nicht möglich.\n\nVermutlich handelt es sich um ein IMAP-Konto oder eine Newsgruppe.",
         "src": "mboximport"
     },
     "badfolder2": {
-        "message": "Importieren in diesen Ordner ist nicht möglich:\\n\\nVermutlich handelt es sich um ein IMAP-Konto, eine Newsgruppe oder einen virtuellen Ordner.",
+        "message": "Importieren in diesen Ordner ist nicht möglich:\n\nVermutlich handelt es sich um ein IMAP-Konto, eine Newsgruppe oder einen virtuellen Ordner.",
         "src": "mboximport"
     },
     "browse": {
@@ -354,7 +354,7 @@
         "src": "mboximport"
     },
     "fileexists": {
-        "message": "Exportieren nicht möglich\\:\\n\\nEs existiert bereits eine Datei gleichen Namens",
+        "message": "Exportieren nicht möglich\\:\n\nEs existiert bereits eine Datei gleichen Namens",
         "src": "mboximport"
     },
     "filenameCharset": {
@@ -493,15 +493,15 @@
         "message": "Ordnerverzeichnis öffnen"
     },
     "folderexists": {
-        "message": "Importieren nicht möglich\\:\\n\\nEs existiert bereits ein Ordner gleichen Namens",
+        "message": "Importieren nicht möglich\\:\n\nEs existiert bereits ein Ordner gleichen Namens",
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Beim Exportieren im HTML- und Reintext-Format werden keine Anhänge gespeichert.\\nWenn Sie die Anhänge ebenfalls speichern möchten, verwenden Sie bitte das EML-Format.\\nMöchten Sie fortfahren?",
+        "message": "Beim Exportieren im HTML- und Reintext-Format werden keine Anhänge gespeichert.\nWenn Sie die Anhänge ebenfalls speichern möchten, verwenden Sie bitte das EML-Format.\nMöchten Sie fortfahren?",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Wenn Sie dieses Format verwenden, ist es nicht möglich, die exportierten Nachrichten zu importieren.\\nMöchten Sie fortfahren?",
+        "message": "Wenn Sie dieses Format verwenden, ist es nicht möglich, die exportierten Nachrichten zu importieren.\nMöchten Sie fortfahren?",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Ungültige Ordnerauswahl"
     },
     "isEudora": {
-        "message": "Diese Mbox-Datei scheint von Eudora zu stammen.\\nZum Import nach Thunderbird bitte erst ins Standard-Mbox-Format konvertieren.",
+        "message": "Diese Mbox-Datei scheint von Eudora zu stammen.\nZum Import nach Thunderbird bitte erst ins Standard-Mbox-Format konvertieren.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Funktion nicht verfügbar:\\n\\nAus IMAP-Konten und Newsgruppen kann nur exportiert werden,\\nwenn der betreffende Ordner zum Offline-Lesen ausgewählt wurde.",
+        "message": "Funktion nicht verfügbar:\n\nAus IMAP-Konten und Newsgruppen kann nur exportiert werden,\nwenn der betreffende Ordner zum Offline-Lesen ausgewählt wurde.",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Diese Mbox-Datei verwendet ein anderes Format als das Thunderbird-Ordnerformat\\nund es ist möglich, dass Thunderbird damit nicht richtig umgehen kann.\\nMöchten Sie fortfahren?",
+        "message": "Diese Mbox-Datei verwendet ein anderes Format als das Thunderbird-Ordnerformat\nund es ist möglich, dass Thunderbird damit nicht richtig umgehen kann.\nMöchten Sie fortfahren?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -747,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Export nicht möglich.\\nDie gewählten Ordner sind verschiedenen Typs oder einer von ihnen ist ein virtueller Ordner.",
+        "message": "Export nicht möglich.\nDie gewählten Ordner sind verschiedenen Typs oder einer von ihnen ist ein virtueller Ordner.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Kein Nachrichtenordner ausgewählt:\\n\\n Bitte erstellen oder wählen Sie ein gültiges Konto oder einen Unterordner des lokalen Ordners.",
+        "message": "Kein Nachrichtenordner ausgewählt:\n\n Bitte erstellen oder wählen Sie ein gültiges Konto oder einen Unterordner des lokalen Ordners.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -791,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "scheint keine Mbox-Datei zu sein\\noder ist eine defekte Mbox-Datei",
+        "message": "scheint keine Mbox-Datei zu sein\noder ist eine defekte Mbox-Datei",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -802,7 +802,7 @@
         "src": "mboximport"
     },
     "nowritable": {
-        "message": "Exportieren nicht möglich\\:\\n\\nKeine Schreibrechte im Zielverzeichnis",
+        "message": "Exportieren nicht möglich\\:\n\nKeine Schreibrechte im Zielverzeichnis",
         "src": "mboximport"
     },
     "numEML": {
@@ -813,7 +813,7 @@
         "message": "Anzahl der aufzubewahrenden Sicherungen:"
     },
     "offlineWarning": {
-        "message": "Dieser Ordner ist offline.\\nEs werden nur die lokal gespeicherten Nachrichten exportiert. Möchten Sie fortfahren?",
+        "message": "Dieser Ordner ist offline.\nEs werden nur die lokal gespeicherten Nachrichten exportiert. Möchten Sie fortfahren?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -855,7 +855,7 @@
         "message": "${empfänger}"
     },
     "remoteWarning": {
-        "message": "Sie exportieren gerade die lokale Kopie eines IMAP- oder News-Ordners.\\nDie lokale Kopie enthält möglicherweise nicht alle Nachrichten des Original-Ordners.\\nMöchten Sie fortfahren?",
+        "message": "Sie exportieren gerade die lokale Kopie eines IMAP- oder News-Ordners.\nDie lokale Kopie enthält möglicherweise nicht alle Nachrichten des Original-Ordners.\nMöchten Sie fortfahren?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -951,7 +951,7 @@
         "message": "${suffix}"
     },
     "temp_error": {
-        "message": "Importieren nicht möglich:\\n\\nBeim Erstellen einer temporären Datei ist ein Fehler aufgetreten.",
+        "message": "Importieren nicht möglich:\n\nBeim Erstellen einer temporären Datei ist ein Fehler aufgetreten.",
         "src": "mboximport"
     },
     "textCharset": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Dies ist ein virtueller Ordner.\\nUm die darin enthaltenen Nachrichten exportieren zu können, müssen\\nsie in einen normalen Ordner kopiert und dieser dann exportiert werden.",
+        "message": "Dies ist ein virtueller Ordner.\nUm die darin enthaltenen Nachrichten exportieren zu können, müssen\nsie in einen normalen Ordner kopiert und dieser dann exportiert werden.",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Nachrichten mit Anhängen und Index"

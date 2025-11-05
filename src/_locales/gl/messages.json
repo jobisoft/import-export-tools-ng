@@ -119,7 +119,7 @@
         "message": "Contido da copia de seguranza"
     },
     "backupWarning": {
-        "message": "Durante esta operación, o programa pode \\\\nnon responder durante algúns minutos.\\\\nQuere continuar?\\\\n",
+        "message": "Durante esta operación, o programa pode \\\nnon responder durante algúns minutos.\\\nQuere continuar?\\\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -498,11 +498,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Exportando en formato HTML ou texto plano, os anexos non son gardados.\\\\nSe desexa gardalos, use o formato EML.\\\\nDesexa continuar?\\\\n",
+        "message": "Exportando en formato HTML ou texto plano, os anexos non son gardados.\\\nSe desexa gardalos, use o formato EML.\\\nDesexa continuar?\\\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "If you use this format, it will not be possible to import the exported messages.\\nDo you want to continue?\\n",
+        "message": "If you use this format, it will not be possible to import the exported messages.\nDo you want to continue?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -562,11 +562,11 @@
         "message": "A selección do cartafol non é válida"
     },
     "isEudora": {
-        "message": "Este ficheiro \"mbox\" parece vir de Euroda.\\nThunderbird non pode manexalo, ten convertelo a un formato \"mbox\" estándar.",
+        "message": "Este ficheiro \"mbox\" parece vir de Euroda.\nThunderbird non pode manexalo, ten convertelo a un formato \"mbox\" estándar.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Característica non dispoñíbel: é posíbel exportar dunha conta  IMAP\\\\nou noticias só se está establecido o uso fora de liña",
+        "message": "Característica non dispoñíbel: é posíbel exportar dunha conta  IMAP\\\nou noticias só se está establecido o uso fora de liña",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -574,7 +574,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\\nand it's possible that Thunderbird can't handle it properly.\\nDo you want to continue?",
+        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\nand it's possible that Thunderbird can't handle it properly.\nDo you want to continue?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -748,11 +748,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Non foi posíbel exportar.\\\\nOs cartafoles seleccionados son de diferentes tipos ou un deles é un cartafol virtual.",
+        "message": "Non foi posíbel exportar.\\\nOs cartafoles seleccionados son de diferentes tipos ou un deles é un cartafol virtual.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Non se seleccionou ningún cartafol de mensaxes:\\n\\n Crea ou selecciona unha conta válida ou unha subcarpeta de cartafol local.",
+        "message": "Non se seleccionou ningún cartafol de mensaxes:\n\n Crea ou selecciona unha conta válida ou unha subcarpeta de cartafol local.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -792,7 +792,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "non parece ser un ficheiro MBOX\\\\nou é un ficheiro MBOX danado",
+        "message": "non parece ser un ficheiro MBOX\\\nou é un ficheiro MBOX danado",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -814,7 +814,7 @@
         "message": "Número de copias de seguridade a conservar:"
     },
     "offlineWarning": {
-        "message": "Este cartafol está fora de liña.\\\\nSó se exportarán as mensaxes locais. Quere continuar?",
+        "message": "Este cartafol está fora de liña.\\\nSó se exportarán as mensaxes locais. Quere continuar?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -856,7 +856,7 @@
         "message": "${destinatario}"
     },
     "remoteWarning": {
-        "message": "Está a exportar a copia local dun cartafol IMAP ou de Novas.\\\\nPoidas que o cartafol non teña dodas as mensaxes do cartafol remoto.\\\\nQuere continuar?",
+        "message": "Está a exportar a copia local dun cartafol IMAP ou de Novas.\\\nPoidas que o cartafol non teña dodas as mensaxes do cartafol remoto.\\\nQuere continuar?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -999,7 +999,8 @@
     "virtualfolder": {
         "message": "Este é un cartafol virtual, para exportar estas mensaxes é preciso copiala nun cartafol normal e exportar este cartafol",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Mensaxes con anexos e índice"

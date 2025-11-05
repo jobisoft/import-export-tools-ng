@@ -119,7 +119,7 @@
         "message": "Zawartość kopii zapasowej"
     },
     "backupWarning": {
-        "message": "Podczas tej operacji program może nie odpowiadać\\nprzez kilka minut.\\nCzy chcesz kontynuować?\\n",
+        "message": "Podczas tej operacji program może nie odpowiadać\nprzez kilka minut.\nCzy chcesz kontynuować?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Podczas eksportu do formatu tekstowego lub HTML załączniki nie zostaną zapisane.\\nJeśli chcesz zapisać także załączniki, użyj formatu EML.\\nCzy chcesz kontynuować?\\n",
+        "message": "Podczas eksportu do formatu tekstowego lub HTML załączniki nie zostaną zapisane.\nJeśli chcesz zapisać także załączniki, użyj formatu EML.\nCzy chcesz kontynuować?\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "If you use this format, it will not be possible to import the exported messages.\\nDo you want to continue?\\n",
+        "message": "If you use this format, it will not be possible to import the exported messages.\nDo you want to continue?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Nieprawidłowy wybór folderu"
     },
     "isEudora": {
-        "message": "Ten plik mbox pochodzi z Eudory.\\nAby go obsłużyć, należy najpierw dokonać konwersji do standardowego formatu mbox.",
+        "message": "Ten plik mbox pochodzi z Eudory.\nAby go obsłużyć, należy najpierw dokonać konwersji do standardowego formatu mbox.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Funkcja nieobsługiwana – możliwość wyeksportowania z konta IMAP lub NEWS\\nistnieje tylko wtedy, gdy są dostępne w trybie offline",
+        "message": "Funkcja nieobsługiwana – możliwość wyeksportowania z konta IMAP lub NEWS\nistnieje tylko wtedy, gdy są dostępne w trybie offline",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\\nand it's possible that Thunderbird can't handle it properly.\\nDo you want to continue?",
+        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\nand it's possible that Thunderbird can't handle it properly.\nDo you want to continue?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -747,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Nie udało się wyeksportować.\\nWybrane foldery są różnego typu lub jeden z nich jest folderem wirtualnym.",
+        "message": "Nie udało się wyeksportować.\nWybrane foldery są różnego typu lub jeden z nich jest folderem wirtualnym.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Nie wybrano folderu wiadomości:\\n\\n Utwórz lub wybierz prawidłowe konto lub podfolder folderu lokalnego.",
+        "message": "Nie wybrano folderu wiadomości:\n\n Utwórz lub wybierz prawidłowe konto lub podfolder folderu lokalnego.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -813,7 +813,7 @@
         "message": "Liczba kopii zapasowych do zachowania:"
     },
     "offlineWarning": {
-        "message": "Ten folder jest niedostępny.\\nTylko wiadomości dostępne lokalnie zostaną wyeksportowane.\\nCzy chcesz kontynuować?",
+        "message": "Ten folder jest niedostępny.\nTylko wiadomości dostępne lokalnie zostaną wyeksportowane.\nCzy chcesz kontynuować?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -855,7 +855,7 @@
         "message": "${odbiorca}"
     },
     "remoteWarning": {
-        "message": "Eksportujesz lokalną kopię folderu IMAP lub NEWS.\\nFolder lokalny może nie zawierać wszystkich wiadomości znajdujących się w folderze zdalnym.\\nCzy chcesz kontynuować?",
+        "message": "Eksportujesz lokalną kopię folderu IMAP lub NEWS.\nFolder lokalny może nie zawierać wszystkich wiadomości znajdujących się w folderze zdalnym.\nCzy chcesz kontynuować?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "To jest folder wirtualny. Aby wyeksportować wiadomości w nim zawarte\\nmusisz skopiować je do zwykłego folderu i z niego wywołać funkcję eksportu.",
+        "message": "To jest folder wirtualny. Aby wyeksportować wiadomości w nim zawarte\nmusisz skopiować je do zwykłego folderu i z niego wywołać funkcję eksportu.",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Wiadomości z załącznikami i indeksem"

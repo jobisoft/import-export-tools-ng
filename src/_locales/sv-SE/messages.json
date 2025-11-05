@@ -119,7 +119,7 @@
         "message": "Säkerhetskopians innehåll"
     },
     "backupWarning": {
-        "message": "Under den här operationen kan programmet bli\\nokontaktbart under några minuter.\\nVill du fortsätta?\\n",
+        "message": "Under den här operationen kan programmet bli\nokontaktbart under några minuter.\nVill du fortsätta?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -565,7 +565,7 @@
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Funktionen är inte tillgänglig: Det är endast möjligt att exportera från ett IMAP-\\neller diskussionsgruppskonto om mappen har ställts in för offlineanvändning",
+        "message": "Funktionen är inte tillgänglig: Det är endast möjligt att exportera från ett IMAP-\neller diskussionsgruppskonto om mappen har ställts in för offlineanvändning",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -747,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Det gick inte att exportera.\\nDe valda mapparna är antingen av olika typ eller så är en av dem en virtuell mapp.",
+        "message": "Det gick inte att exportera.\nDe valda mapparna är antingen av olika typ eller så är en av dem en virtuell mapp.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Ingen meddelandemapp vald:\\n\\n Skapa eller välj ett giltigt konto eller en lokal mapp.",
+        "message": "Ingen meddelandemapp vald:\n\n Skapa eller välj ett giltigt konto eller en lokal mapp.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -791,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "verkar inte vara en MBOX-fil\\neller så är den en skadad MBOX-fil",
+        "message": "verkar inte vara en MBOX-fil\neller så är den en skadad MBOX-fil",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -813,7 +813,7 @@
         "message": "Antal säkerhetskopior att behålla:"
     },
     "offlineWarning": {
-        "message": "Denna mapp är offline.\\nEndast lokalt sparade meddelanden kommer att exporteras. Vill du fortsätta?",
+        "message": "Denna mapp är offline.\nEndast lokalt sparade meddelanden kommer att exporteras. Vill du fortsätta?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -855,7 +855,7 @@
         "message": "${mottagare}"
     },
     "remoteWarning": {
-        "message": "Du håller på att exportera den lokala kopian av en IMAP- eller diskussionsgruppsmapp.\\nDen lokala mappen kan inte innehålla alla meddelanden som finns i fjärrmappen.\\nVill du fortsätta?",
+        "message": "Du håller på att exportera den lokala kopian av en IMAP- eller diskussionsgruppsmapp.\nDen lokala mappen kan inte innehålla alla meddelanden som finns i fjärrmappen.\nVill du fortsätta?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Det här är en virtuell mapp. För att exportera dess meddelanden måste du\\nkopiera dem till en vanlig mapp och exportera den istället",
+        "message": "Det här är en virtuell mapp. För att exportera dess meddelanden måste du\nkopiera dem till en vanlig mapp och exportera den istället",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Meddelanden med bilagor och index"

@@ -119,7 +119,7 @@
         "message": "Zálohujte obsah"
     },
     "backupWarning": {
-        "message": "Během této operace může program\\nněkolik minut přestat reagovat.\\nChcete pokračovat?\\n",
+        "message": "Během této operace může program\nněkolik minut přestat reagovat.\nChcete pokračovat?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -494,11 +494,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Pokud exportujete v tomto formátu, přílohy se neuloží.\\nPokud chcete uložit i přílohy, vyberte jiný formát.\\nOpravdu chcete pokračovat?",
+        "message": "Pokud exportujete v tomto formátu, přílohy se neuloží.\nPokud chcete uložit i přílohy, vyberte jiný formát.\nOpravdu chcete pokračovat?",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Pokud použijete tento formát, nebude možné importovat exportované zprávy.\\nOpravdu chcete pokračovat?\\n",
+        "message": "Pokud použijete tento formát, nebude možné importovat exportované zprávy.\nOpravdu chcete pokračovat?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -558,7 +558,7 @@
         "message": "Neplatný výběr složky"
     },
     "isEudora": {
-        "message": "Zdá se, že tento soubor „Mbox“ pochází z Eudory.\\nThunderbird si s ním neporadí, a proto jej musíte převést do standardního formátu „Mbox“.",
+        "message": "Zdá se, že tento soubor „Mbox“ pochází z Eudory.\nThunderbird si s ním neporadí, a proto jej musíte převést do standardního formátu „Mbox“.",
         "src": "mboximport"
     },
     "isNewsgroup": {
@@ -570,7 +570,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Tento soubor „Mbox“ používá jiný formát než formát složky Thunderbird a je možné, že jej Thunderbird nedokáže správně zpracovat.\\nOpravdu chcete pokračovat?",
+        "message": "Tento soubor „Mbox“ používá jiný formát než formát složky Thunderbird a je možné, že jej Thunderbird nedokáže správně zpracovat.\nOpravdu chcete pokračovat?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -744,11 +744,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Nelze exportovat.\\nVybrané složky jsou různých typů nebo jedna z nich je virtuální složka.",
+        "message": "Nelze exportovat.\nVybrané složky jsou různých typů nebo jedna z nich je virtuální složka.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Není vybrána žádná složka zpráv:\\n\\nVytvořte nebo vyberte platný účet nebo podsložku Místní složka.",
+        "message": "Není vybrána žádná složka zpráv:\n\nVytvořte nebo vyberte platný účet nebo podsložku Místní složka.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -810,7 +810,7 @@
         "message": "Počet záloh k uchování:"
     },
     "offlineWarning": {
-        "message": "Tato složka je offline.\\nBudou exportovány pouze lokálně uložené zprávy. Jste si jistý, že chcete pokračovat?",
+        "message": "Tato složka je offline.\nBudou exportovány pouze lokálně uložené zprávy. Jste si jistý, že chcete pokračovat?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -852,7 +852,7 @@
         "message": "${recipient}"
     },
     "remoteWarning": {
-        "message": "Exportujete místní kopii složky IMAP nebo NEWS.\\nMístní složka nemůže obsahovat všechny zprávy ve vzdálené složce.\\nOpravdu chcete pokračovat?",
+        "message": "Exportujete místní kopii složky IMAP nebo NEWS.\nMístní složka nemůže obsahovat všechny zprávy ve vzdálené složce.\nOpravdu chcete pokračovat?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -993,9 +993,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Toto je virtuální složka, pro export jejích zpráv je musíte\\nzkopírovat do normální složky a exportovat tuto normální složku",
+        "message": "Toto je virtuální složka, pro export jejích zpráv je musíte\nzkopírovat do normální složky a exportovat tuto normální složku",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Zprávy s přílohami a indexem"

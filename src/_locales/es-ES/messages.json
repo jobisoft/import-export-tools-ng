@@ -119,7 +119,7 @@
         "message": "Contenido de la copia"
     },
     "backupWarning": {
-        "message": "Durante esta operación, el programa puede\\\\nno responder durante algunos minutos.\\\\n¿Quiere continuar?\\\\n",
+        "message": "Durante esta operación, el programa puede\\\nno responder durante algunos minutos.\\\n¿Quiere continuar?\\\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Al exportar en HTML o texto plano, no se guardan los adjuntos\\\\nSi quiere guardarlos, use el formato EML.\\\\n¿Quiere hacerlo?\\\\n",
+        "message": "Al exportar en HTML o texto plano, no se guardan los adjuntos\\\nSi quiere guardarlos, use el formato EML.\\\n¿Quiere hacerlo?\\\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "If you use this format, it will not be possible to import the exported messages.\\nDo you want to continue?\\n",
+        "message": "If you use this format, it will not be possible to import the exported messages.\nDo you want to continue?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Selección de carpeta no válida"
     },
     "isEudora": {
-        "message": "This \"mbox\" file seems to come from Eudora.\\nThunderbird can't handle it and so you must convert it in standard \"mbox\" format.",
+        "message": "This \"mbox\" file seems to come from Eudora.\nThunderbird can't handle it and so you must convert it in standard \"mbox\" format.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Opción no disponible: sólo es posible exportar de una cuenta IMAP\\\\no de noticias si está configurada para usarse en modo sin conexión.",
+        "message": "Opción no disponible: sólo es posible exportar de una cuenta IMAP\\\no de noticias si está configurada para usarse en modo sin conexión.",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\\nand it's possible that Thunderbird can't handle it properly.\\nDo you want to continue?",
+        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\nand it's possible that Thunderbird can't handle it properly.\nDo you want to continue?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -747,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "No se ha podido exportar.\\\\nLas carpetas seleccionadas son de tipo diferente o alguna es una carpeta virtual.",
+        "message": "No se ha podido exportar.\\\nLas carpetas seleccionadas son de tipo diferente o alguna es una carpeta virtual.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "No se seleccionó ninguna carpeta de mensajes:\\n\\n Cree o seleccione una cuenta válida o una subcarpeta de carpeta local.",
+        "message": "No se seleccionó ninguna carpeta de mensajes:\n\n Cree o seleccione una cuenta válida o una subcarpeta de carpeta local.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -791,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "no es un archivo mbox correcto\\\\no está corrupto",
+        "message": "no es un archivo mbox correcto\\\no está corrupto",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -813,7 +813,7 @@
         "message": "Número de copias de seguridad a conservar:"
     },
     "offlineWarning": {
-        "message": "Esta carpeta está desconectada.\\\\nSólo los mensajes guardados localmente se exportarán.¿Quiere continuar?",
+        "message": "Esta carpeta está desconectada.\\\nSólo los mensajes guardados localmente se exportarán.¿Quiere continuar?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -855,7 +855,7 @@
         "message": "${destinatario}"
     },
     "remoteWarning": {
-        "message": "Está exportando la copia local de una carpeta IMAP o grupos de NOTICIAS.\\\\nLas carpetas locales pueden no tener todos los mensajes de la carpeta remota.\\\\n¿Quiere continuar?",
+        "message": "Está exportando la copia local de una carpeta IMAP o grupos de NOTICIAS.\\\nLas carpetas locales pueden no tener todos los mensajes de la carpeta remota.\\\n¿Quiere continuar?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Esta es una carpeta virtual, para exportar sus mensajes tiene que\\\\ncopiarlos en una carpeta normal y exportar dicha carpeta",
+        "message": "Esta es una carpeta virtual, para exportar sus mensajes tiene que\\\ncopiarlos en una carpeta normal y exportar dicha carpeta",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Mensajes con archivos adjuntos e índice"

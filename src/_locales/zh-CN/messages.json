@@ -119,7 +119,7 @@
         "message": "备份内容"
     },
     "backupWarning": {
-        "message": "在此操作期间，程序将会失去响应几分钟。\\n你是否希望继续？",
+        "message": "在此操作期间，程序将会失去响应几分钟。\n你是否希望继续？",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "以 HTML 或 纯文本 格式导出，附件不会被存储。\\n如果你希望同时保存附件，请使用 EML 格式。\\n是否继续？\\n",
+        "message": "以 HTML 或 纯文本 格式导出，附件不会被存储。\n如果你希望同时保存附件，请使用 EML 格式。\n是否继续？\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "如果使用这个格式，将无法导入已导出的消息。\\n是否继续？",
+        "message": "如果使用这个格式，将无法导入已导出的消息。\n是否继续？",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "文件夹选择无效"
     },
     "isEudora": {
-        "message": "这个“mbox”文件看上去来自 Eudora。\\nThunderbird 无法处理它，因此你必须将其转换为标准的“mbox”格式。",
+        "message": "这个“mbox”文件看上去来自 Eudora。\nThunderbird 无法处理它，因此你必须将其转换为标准的“mbox”格式。",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "不支持的特性：只有设置为离线使用以后，\\nIMAP 或者新闻组账户的信件夹才能导出。",
+        "message": "不支持的特性：只有设置为离线使用以后，\nIMAP 或者新闻组账户的信件夹才能导出。",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "此“mbox”文件所用格式不同于 Thunderbird 文件夹格式，\\nThunderbird 可能无法恰当处理它。\\n是否继续？",
+        "message": "此“mbox”文件所用格式不同于 Thunderbird 文件夹格式，\nThunderbird 可能无法恰当处理它。\n是否继续？",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -747,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "无法导出。\\n选中的文件夹是不同的类型或者其中一个是虚拟文件夹。",
+        "message": "无法导出。\n选中的文件夹是不同的类型或者其中一个是虚拟文件夹。",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "未选择邮件文件夹：\\n\\n请创建或选择一个有效的帐户或“本地文件夹”子文件夹。",
+        "message": "未选择邮件文件夹：\n\n请创建或选择一个有效的帐户或“本地文件夹”子文件夹。",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -791,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "似乎不是一个 mbox 文件\\n或者是一个已经损坏的 mbox 文件",
+        "message": "似乎不是一个 mbox 文件\n或者是一个已经损坏的 mbox 文件",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -813,7 +813,7 @@
         "message": "要保留的备份数量："
     },
     "offlineWarning": {
-        "message": "该文件夹离线。\\n只有本地存储的信息会被导出。是否继续？",
+        "message": "该文件夹离线。\n只有本地存储的信息会被导出。是否继续？",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -855,7 +855,7 @@
         "message": "${收件人}"
     },
     "remoteWarning": {
-        "message": "你正在导出一个 IMAP 或者新闻组文件夹的本地副本。\\n本地文件夹并未保存远程文件夹中的全部信息。\\n你是否要继续？",
+        "message": "你正在导出一个 IMAP 或者新闻组文件夹的本地副本。\n本地文件夹并未保存远程文件夹中的全部信息。\n你是否要继续？",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "这是一个虚拟信件夹，要导出这些信息你必须\\n将他们复制到一个普通信件夹，然后导出这个普通信件夹。",
+        "message": "这是一个虚拟信件夹，要导出这些信息你必须\n将他们复制到一个普通信件夹，然后导出这个普通信件夹。",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "带有附件和索引的消息"

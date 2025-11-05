@@ -119,7 +119,7 @@
         "message": "Indhold af sikkerhedskopi"
     },
     "backupWarning": {
-        "message": "Under denne handling kan det ske,\\nat programmet ikke svarer i nogle minutter.\\nVil du fortsætte?\\n",
+        "message": "Under denne handling kan det ske,\nat programmet ikke svarer i nogle minutter.\nVil du fortsætte?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Eksport i HTML eller ren tekstformat gemmer ikke de vedhæftede filer.\\nHvis du også ønsker at gemme de vedhæftede filer, brug EML-format.\\nVil du fortsætte?\\n",
+        "message": "Eksport i HTML eller ren tekstformat gemmer ikke de vedhæftede filer.\nHvis du også ønsker at gemme de vedhæftede filer, brug EML-format.\nVil du fortsætte?\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Hvis du bruger dette format, vil det ikke være muligt at importere de eksporterede meddelelser.\\nVil du fortsætte?\\n",
+        "message": "Hvis du bruger dette format, vil det ikke være muligt at importere de eksporterede meddelelser.\nVil du fortsætte?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Ugyldigt mappevalg"
     },
     "isEudora": {
-        "message": "Denne \"mbox\"-fil ser ud til at komme fra Eudora.\\nThunderbird kan ikke håndtere den, så du skal konvertere den i standard \"mbox\"-format.",
+        "message": "Denne \"mbox\"-fil ser ud til at komme fra Eudora.\nThunderbird kan ikke håndtere den, så du skal konvertere den i standard \"mbox\"-format.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Funktionen er ikke tilgængelig: Det er kun muligt at eksportere fra en IMAP-\\neller NEWS-konto hvis mappen er sat til offline-brug",
+        "message": "Funktionen er ikke tilgængelig: Det er kun muligt at eksportere fra en IMAP-\neller NEWS-konto hvis mappen er sat til offline-brug",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Denne \"mbox\"-fil bruger et andet format end Thunderbird-mappe-formatet\\nog det er muligt at Thunderbird ikke kan håndtere den korrekt.\\nVil du fortsætte?",
+        "message": "Denne \"mbox\"-fil bruger et andet format end Thunderbird-mappe-formatet\nog det er muligt at Thunderbird ikke kan håndtere den korrekt.\nVil du fortsætte?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -751,7 +751,7 @@
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Ingen meddelelsesmappe valgt:\\n\\n Opret eller vælg en gyldig konto eller undermappe til lokal mappe.",
+        "message": "Ingen meddelelsesmappe valgt:\n\n Opret eller vælg en gyldig konto eller undermappe til lokal mappe.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -791,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "ser ikke ud til at være en mbox-fil\\neller at være en ødelagt mbox-fil",
+        "message": "ser ikke ud til at være en mbox-fil\neller at være en ødelagt mbox-fil",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -855,7 +855,7 @@
         "message": "${modtager}"
     },
     "remoteWarning": {
-        "message": "Du er ved at eksportere den lokale kopi af en IMAP- eller en NEWS-mappe.\\nDen lokale mappe kan ikke indeholde alle de meddelelser som findes i fjernmappen.\\nVil du fortsætte?",
+        "message": "Du er ved at eksportere den lokale kopi af en IMAP- eller en NEWS-mappe.\nDen lokale mappe kan ikke indeholde alle de meddelelser som findes i fjernmappen.\nVil du fortsætte?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Dette er en virtuel mappe. For at eksportere dens meddelelser skal du\\nkopiere dem til en almindelig mappe og eksportere denne almindelig mappe",
+        "message": "Dette er en virtuel mappe. For at eksportere dens meddelelser skal du\nkopiere dem til en almindelig mappe og eksportere denne almindelig mappe",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Beskeder med vedhæftede filer og indeks"

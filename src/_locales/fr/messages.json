@@ -119,7 +119,7 @@
         "message": "Contenu de la sauvegarde "
     },
     "backupWarning": {
-        "message": "Durant cette opération, le programme pourrait ne pas répondre.   \\nSouhaitez-vous continuer ?\\n",
+        "message": "Durant cette opération, le programme pourrait ne pas répondre.   \nSouhaitez-vous continuer ?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Si vous exportez dans ce format, les pièces jointes ne seront pas enregistrées.\\nSi vous souhaitez les enregistrer aussi, choisissez un autre format.\\nÊtes-vous sûr de vouloir continuer ?",
+        "message": "Si vous exportez dans ce format, les pièces jointes ne seront pas enregistrées.\nSi vous souhaitez les enregistrer aussi, choisissez un autre format.\nÊtes-vous sûr de vouloir continuer ?",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Si vous utilisez ce format, il ne sera pas possible d’importer les messages exportés.\\nSouhaitez-vous continuer ?\\n",
+        "message": "Si vous utilisez ce format, il ne sera pas possible d’importer les messages exportés.\nSouhaitez-vous continuer ?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,7 +561,7 @@
         "message": "Sélection de dossier non valide"
     },
     "isEudora": {
-        "message": "Ce fichier mbox semble provenir d’Eudora.\\nCe format n’est pas compatible avec Thunderbird, vous devez le convertir au format mbox standard.",
+        "message": "Ce fichier mbox semble provenir d’Eudora.\nCe format n’est pas compatible avec Thunderbird, vous devez le convertir au format mbox standard.",
         "src": "mboximport"
     },
     "isNewsgroup": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Ce fichier « mbox » utilise un format différent du format de dossier de Thunderbird et il est possible que Thunderbird ne puisse pas le gérer correctement.\\nSouhaitez-vous continuer ?",
+        "message": "Ce fichier « mbox » utilise un format différent du format de dossier de Thunderbird et il est possible que Thunderbird ne puisse pas le gérer correctement.\nSouhaitez-vous continuer ?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -747,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Exportation impossible.\\nLes dossiers sélectionnés sont de types différents ou l’un d'entre eux est un dossier virtuel.",
+        "message": "Exportation impossible.\nLes dossiers sélectionnés sont de types différents ou l’un d'entre eux est un dossier virtuel.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Aucun dossier de messages n’est sélectionné.\\n\\n Veuillez créer ou sélectionner un compte valide ou un sous-dossier du dossier local.",
+        "message": "Aucun dossier de messages n’est sélectionné.\n\n Veuillez créer ou sélectionner un compte valide ou un sous-dossier du dossier local.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -771,7 +771,7 @@
         "src": "mboximport"
     },
     "noPDFnoPrinter": {
-        "message": "Aucune imprimante ne semble installée sur cette machine.\\nCette fonction en réclame au moins une (même virtuelle).",
+        "message": "Aucune imprimante ne semble installée sur cette machine.\nCette fonction en réclame au moins une (même virtuelle).",
         "src": "mboximport"
     },
     "noProfile": {
@@ -813,7 +813,7 @@
         "message": "Nombre de sauvegardes à conserver :"
     },
     "offlineWarning": {
-        "message": "Ce dossier est hors ligne.\\nSeuls les messages enregistrés localement seront exportés.\\nÊtes-vous sûr de vouloir continuer ?",
+        "message": "Ce dossier est hors ligne.\nSeuls les messages enregistrés localement seront exportés.\nÊtes-vous sûr de vouloir continuer ?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -855,7 +855,7 @@
         "message": "${destinataire}"
     },
     "remoteWarning": {
-        "message": "Vous êtes sur le point d’exporter la copie locale d’un dossier IMAP ou NEWS.\\nLe dossier local pourrait ne pas contenir tous les messages présents dans le dossier distant.\\nÊtes-vous sûr de vouloir continuer ?",
+        "message": "Vous êtes sur le point d’exporter la copie locale d’un dossier IMAP ou NEWS.\nLe dossier local pourrait ne pas contenir tous les messages présents dans le dossier distant.\nÊtes-vous sûr de vouloir continuer ?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -996,9 +996,10 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Ceci est un dossier virtuel, pour en exporter les messages, vous devez\\nles copier dans un dossier normal et exporter ce dossier.",
+        "message": "Ceci est un dossier virtuel, pour en exporter les messages, vous devez\nles copier dans un dossier normal et exporter ce dossier.",
         "src": "mboximport"
-    },
+    }
+,
 
 	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
 		"message": "Messages avec pièces jointes et index"
