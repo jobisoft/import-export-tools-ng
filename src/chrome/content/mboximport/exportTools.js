@@ -779,7 +779,7 @@ async function exportAllMsgsDelayed(type, file, msgFolder, overrideContainer, pa
 
 	var msgList = [...msgFolder.messages];
 	if (msgFolder.getTotalMessages(false) != msgList.length) {
-		console.log(`IETNG: Thunderbird Msg count error: ${msgFolder.name}: getTotalMessages: ${IETtotal} Iterator: ${msgList.length}`)
+		//console.log(`IETNG: Thunderbird Msg count error: ${msgFolder.name}: getTotalMessages: ${IETtotal} Iterator: ${msgList.length}`)
 
 		let curMsgFolder = window.gTabmail.currentTabInfo.folder;
 		var gDBView = gTabmail.currentAbout3Pane.gDBView;
