@@ -2,6 +2,11 @@
 
 ## Versions
 
+Version 14.1.15 : Maintenance Release - November 6, 2025
+
+- Truncate long attachment names on Windows 
+- Compatibility for v140-v146
+
 Version 14.1.14 : Maintenance Release - September 16, 2025
 
 - Fix race condition preventing auto backup on shutdown 
