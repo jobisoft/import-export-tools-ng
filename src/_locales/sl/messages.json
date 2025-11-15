@@ -119,7 +119,7 @@
         "message": "Vsebina varnostne kopije"
     },
     "backupWarning": {
-        "message": "Med tem opravilom bo program morda\\nza nekaj trenutkov neodziven.\\nAli želite nadaljevati?\\n",
+        "message": "Med tem opravilom bo program morda\nza nekaj trenutkov neodziven.\nAli želite nadaljevati?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Če izvozite v tej obliki, priponke ne bodo shranjene.\\nČe želite shraniti tudi priponke, izberite drugo obliko.\\nAli želite nadaljevati?\\n",
+        "message": "Če izvozite v tej obliki, priponke ne bodo shranjene.\nČe želite shraniti tudi priponke, izberite drugo obliko.\nAli želite nadaljevati?\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Če uporabite to obliko, izvoženih sporočil ne bo mogoče uvoziti.\\nAli želite nadaljevati?",
+        "message": "Če uporabite to obliko, izvoženih sporočil ne bo mogoče uvoziti.\nAli želite nadaljevati?",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Neveljavna izbira mape"
     },
     "isEudora": {
-        "message": "Ta datoteka \"mbox\" je videti, da prihaja iz Eudore.\\nThunderbird je ne prepozna, tako da jo morate pretvoriti v standardno obliko \"mbox\".",
+        "message": "Ta datoteka \"mbox\" je videti, da prihaja iz Eudore.\nThunderbird je ne prepozna, tako da jo morate pretvoriti v standardno obliko \"mbox\".",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Možnost ni na voljo: izvoz iz računov IMAP ali NEWS\\nje mogoč samo, če je mapa nastavljena za delo brez povezave",
+        "message": "Možnost ni na voljo: izvoz iz računov IMAP ali NEWS\nje mogoč samo, če je mapa nastavljena za delo brez povezave",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Ta datoteka \"mbox\" uporablja drugačno obliko, kot Thunderbirdva oblika map\\nin možno je, da Thunderbird ne more z njo pravilno ravnati.\\nAli želite nadaljevati?",
+        "message": "Ta datoteka \"mbox\" uporablja drugačno obliko, kot Thunderbirdva oblika map\nin možno je, da Thunderbird ne more z njo pravilno ravnati.\nAli želite nadaljevati?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Izvozi sporočila kot ..."
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "Skp"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "Kp"
+    },
+    "msgHdr.Date": {
+        "message": "Datum"
+    },
+    "msgHdr.From": {
+        "message": "Od"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Odgovori za"
+    },
+    "msgHdr.Sender": {
+        "message": "Pošiljatelj"
+    },
+    "msgHdr.Subject": {
+        "message": "Zadeva"
+    },
+    "msgHdr.To": {
+        "message": "Za"
+    },
     "msgs": {
         "message": "sporočil od",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Izvoz ni mogoč.\\nIzbrane mape so različne vrste ali pa je ena od njih navidezna.",
+        "message": "Izvoz ni mogoč.\nIzbrane mape so različne vrste ali pa je ena od njih navidezna.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Izbrana ni nobena mapa s sporočili:\\n\\n Ustvarite ali izberite veljaven račun ali podmapo Local Folder.",
+        "message": "Izbrana ni nobena mapa s sporočili:\n\n Ustvarite ali izberite veljaven račun ali podmapo Local Folder.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -758,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "ni videti kot datoteka mbox\\nali je pokvarjena datoteka mbox",
+        "message": "ni videti kot datoteka mbox\nali je pokvarjena datoteka mbox",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -780,7 +813,7 @@
         "message": "Število varnostnih kopij, ki jih je treba obdržati:"
     },
     "offlineWarning": {
-        "message": "Ta mapa je nepovezana.\\nIzvožena bodo samo krajevno shranjena sporočila. Ali želite nadaljevati?",
+        "message": "Ta mapa je nepovezana.\nIzvožena bodo samo krajevno shranjena sporočila. Ali želite nadaljevati?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${prejemnik}"
     },
     "remoteWarning": {
-        "message": "Izvažate krajevno kopijo mape IMAP ali NEWS.\\nKrajevna mapa ne vsebuje vseh sporočil iz oddaljene mape.\\nAli želite nadaljevati?",
+        "message": "Izvažate krajevno kopijo mape IMAP ali NEWS.\nKrajevna mapa ne vsebuje vseh sporočil iz oddaljene mape.\nAli želite nadaljevati?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -963,7 +996,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "To je navidezna mapa, za izvoz njenih sporočil jeh morate\\nkopirati v običajno mapo in jo izvoziti",
+        "message": "To je navidezna mapa, za izvoz njenih sporočil jeh morate\nkopirati v običajno mapo in jo izvoziti",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Sporočila s prilogami in kazalom"
+	}
 }

@@ -27,7 +27,6 @@
 
 
 /* global
-mboximportbundle,
 GetFirstSelectedMsgFolder,
 FolderPaneSelectionChange,
 IETformatWarning,
@@ -42,7 +41,6 @@ buildContainerDirName,
 nametoascii,
 IETgetExt,
 getSubjectForHdr,
-mboximportbundle2,
 IETstr_converter,
 convertPRTimeToString,
 IETlogger,
@@ -781,7 +779,7 @@ async function exportAllMsgsDelayed(type, file, msgFolder, overrideContainer, pa
 
 	var msgList = [...msgFolder.messages];
 	if (msgFolder.getTotalMessages(false) != msgList.length) {
-		console.log(`IETNG: Thunderbird Msg count error: ${msgFolder.name}: getTotalMessages: ${IETtotal} Iterator: ${msgList.length}`)
+		//console.log(`IETNG: Thunderbird Msg count error: ${msgFolder.name}: getTotalMessages: ${IETtotal} Iterator: ${msgList.length}`)
 
 		let curMsgFolder = window.gTabmail.currentTabInfo.folder;
 		var gDBView = gTabmail.currentAbout3Pane.gDBView;
@@ -945,36 +943,10 @@ function createIndex(type, file2, hdrArray, msgFolder, justIndex, subdir) {
 		date_received_hdr = " (" + ietngUtils.localizeMsg("Received") + ")";
 	}
 
-	let strBundleService = Cc["@mozilla.org/intl/stringbundle;1"].getService(Ci.nsIStringBundleService);
-
-	var hdrsBundle;
-	hdrsBundle = strBundleService.createBundle("chrome://messenger/locale/mime.properties");
-
-	// temporarily fixup ja and zh-CN since these mime.properties
-	// are actually English 
-	// TBD - compile translations and convert to messages.json
-
-	let subjectHdr;
-	let fromHdr;
-	let toHdr;
-	let dateHdr;
-
-	if (Services.locale.appLocaleAsBCP47 === "ja") {
-		subjectHdr = "件名";
-		fromHdr = "差出人";
-		toHdr = "宛先";
-		dateHdr = "送信日時";
-	} else if (Services.locale.appLocaleAsBCP47 === "zh-CN") {
-		subjectHdr = "主题";
-		fromHdr = "来自";
-		toHdr = "收件人";
-		dateHdr = "日期";
-	} else {
-		subjectHdr = hdrsBundle.GetStringFromID(1000);
-		fromHdr = hdrsBundle.GetStringFromID(1009);
-		toHdr = hdrsBundle.GetStringFromID(1012);
-		dateHdr = hdrsBundle.GetStringFromID(1007);
-	}
+	let subjectHdr = ietngUtils.localizeMsg("msgHdr.Subject");
+	let fromHdr = ietngUtils.localizeMsg("msgHdr.From");
+	let toHdr = ietngUtils.localizeMsg("msgHdr.To");
+	let dateHdr = ietngUtils.localizeMsg("msgHdr.Date");
 
 	// Improve index table formatting
 	let styles = '<style>\r\n';
@@ -1153,14 +1125,19 @@ function createIndexShort1(type, file2, hdrArray, msgFolder, justIndex, subdir) 
 	data = data + styles;
 	data = data + '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\r\n<title>' + msgFolder.name + '</title>\r\n</head>\r\n<body>\r\n<h2>' + msgFolder.name + " (" + titleDate + ")</h2>";
 
+	let subjectHdr = ietngUtils.localizeMsg("msgHdr.Subject");
+	let fromHdr = ietngUtils.localizeMsg("msgHdr.From");
+	let toHdr = ietngUtils.localizeMsg("msgHdr.To");
+	let dateHdr = ietngUtils.localizeMsg("msgHdr.Date");
+
 	data = data + '<table width="99%" border="1" >';
 	data = data + "<tr>";
 	data = data + "<th><b>" + "&nbsp;&nbsp;" + "</b></th>"; // Check 1
 	data = data + "<th><b>" + "&nbsp;&nbsp;" + "</b></th>"; // Check 2
-	data = data + "<th><b>" + mboximportbundle2.GetStringFromID(1028) + "</b></th>"; // Attachment
-	data = data + "<th><b>" + mboximportbundle2.GetStringFromID(1000) + "</b></th>"; // Subject
-	data = data + "<th><b>" + mboximportbundle2.GetStringFromID(1009) + "</b></th>"; // From
-	data = data + "<th><b>" + mboximportbundle2.GetStringFromID(1007) + date_received_hdr + "</b></th>"; // Date
+	data = data + "<th><b>" + "Attachment" + "</b></th>"; // Attachment
+	data = data + "<th><b>" + ietngUtils.localizeMsg("msgHdr.Subject") + "</b></th>"; // Subject
+	data = data + "<th><b>" + ietngUtils.localizeMsg("msgHdr.From") + "</b></th>"; // From
+	data = data + "<th><b>" + ietngUtils.localizeMsg("msgHdr.Date") + date_received_hdr + "</b></th>"; // Date
 	data = data + "</tr>";
 
 
@@ -1672,6 +1649,15 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 											let afname = constructAttachmentsFilename(1, hdr);
 											attDirContainer.append(afname);
 										}
+
+										if (navigator.platform.toLowerCase().includes("win") &&
+											attDirContainer.path.length > 220) {
+											let attName = PathUtils.filename(attDirContainer.path);
+											let cutLen = attName.length / 4;
+											attName = attName.slice(0, attName.length - cutLen);
+											attName = attName.trimEnd();
+											attDirContainer.initWithPath(PathUtils.join(PathUtils.parent(attDirContainer.path), attName));
+										}
 										attDirContainer.createUnique(1, 0o755);
 										footer = '<br><hr><br><div style="font-size:16px;color:black;"><img src="data:image/gif;base64,R0lGODdhDwAPAOMAAP///zEwYmJlzQAAAPr6+vv7+/7+/vb29pyZ//39/YOBg////////////////////ywAAAAADwAPAAAESRDISUG4lQYr+s5bIEwDUWictA2GdBjhaAGDrKZzjYq3PgUw2co24+VGLYAAAesRLQklxoeiUDUI0qSj6EoH4Iuoq6B0PQJyJQIAOw==">\r\n<ul>';
 										noDir = false;
@@ -1700,14 +1686,32 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 
 											var attDirContainerClone = attDirContainer.clone();
 											attNameAscii = encodeURIComponent(att.name);
-											attDirContainerClone.append(att.name);
+
+											let totallen = attDirContainerClone.path.length + attNameAscii.length
+											var adjustedAttName = att.name;
+
+											// while NTFS is supposed to support paths
+											// up to 255 chars, tests throw exceptions
+											// at 249 chars so we truncate there
+
+											if (totallen > 248) {
+												let cutLen = totallen - 248;
+												// separate name from extension so we can truncate name
+												let extension = att.name.split('.').pop();
+												let lastDotIndex = att.name.lastIndexOf('.');
+												if (lastDotIndex == -1) {
+													adjustedAttName = att.name;
+												} else {
+													adjustedAttName = `${att.name.substring(0, lastDotIndex - cutLen)}.${extension}`;
+												}
+											}
+											attDirContainerClone.append(adjustedAttName);
 											attachments[i].file = attDirContainerClone;
 
 											let attPartName = att.url.match(/part=([.0-9]+)&?/)[1];
 											let attFile = await getAttachmentFile(aMsgHdr, attPartName)
 											let fileData = await fileToUint8Array(attFile);
 											await IOUtils.write(attDirContainerClone.path, fileData);
-
 										} catch (e) {
 											success = false;
 											console.debug('save attachment exception ' + att.name);
@@ -1716,7 +1720,10 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 									}
 
 									if (success)
-										footer = footer + '<li><a href="' + encodeURIComponent(attDirContainer.leafName) + "/" + attNameAscii + '">' + attDirContainerName + "/" + attName + '</li></a>';
+										footer = footer + '<li><a href="' +
+											encodeURIComponent(attDirContainer.leafName) +
+											"/" + encodeURIComponent(adjustedAttName) + '">' +
+											attDirContainerName + "/" + attName + '</li></a>';
 								}
 								if (footer) {
 									footer = footer + "</ul></div><div class='' ></div></body>";
@@ -1772,10 +1779,7 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 
 						let encoder = new TextEncoder();
 
-						let strBundleService = Cc["@mozilla.org/intl/stringbundle;1"].getService(Ci.nsIStringBundleService);
-						hdrsBundle = strBundleService.createBundle("chrome://messenger/locale/mimeheader.properties");
-
-						let replyToStr = hdrsBundle.GetStringFromName("REPLY-TO");
+						let replyToStr = ietngUtils.localizeMsg("msgHdr.ReplyTo");
 
 						let cvtToUTF16 = function (s) {
 							s = encoder.encode(s);
@@ -1787,11 +1791,10 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 						// streammessage with aConvert == true does not translate headers
 						// in the ja locale even in v128, just ty a Print!
 						if (Services.locale.appLocaleAsBCP47 === "ja") {
-							replyToStr = "返信先";
-							let jaSubject = "件名";
-							let jaTo = "宛先";
-							let jaFrom = "差出人";
-							let jaDate = "送信日時";
+							let jaSubject = ietngUtils.localizeMsg("msgHdr.Subject");
+							let jaTo = ietngUtils.localizeMsg("msgHdr.To");
+							let jaFrom = ietngUtils.localizeMsg("msgHdr.From");
+							let jaDate = ietngUtils.localizeMsg("msgHdr.Date");
 							jaSubject = cvtToUTF16(jaSubject);
 							data = data.replace(">Subject: </", `>${jaSubject}: </`);
 							jaTo = cvtToUTF16(jaTo);

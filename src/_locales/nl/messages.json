@@ -119,7 +119,7 @@
         "message": "Back-upinhoud"
     },
     "backupWarning": {
-        "message": "Tijdens deze bewerking kan het programma\\nenkele minuten niet reageren.\\nWilt u doorgaan?\\n",
+        "message": "Tijdens deze bewerking kan het programma\nenkele minuten niet reageren.\nWilt u doorgaan?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Als u in deze indeling exporteert, worden de bijlagen niet opgeslagen.\\nAls u ook de bijlagen wilt opslaan, kies dan een andere indeling.\\nWilt u doorgaan?",
+        "message": "Als u in deze indeling exporteert, worden de bijlagen niet opgeslagen.\nAls u ook de bijlagen wilt opslaan, kies dan een andere indeling.\nWilt u doorgaan?",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Als u deze indeling gebruikt, zult u de geëxporteerde berichten niet kunnen importeren.\\nWilt u doorgaan?\\n",
+        "message": "Als u deze indeling gebruikt, zult u de geëxporteerde berichten niet kunnen importeren.\nWilt u doorgaan?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Ongeldige mapselectie"
     },
     "isEudora": {
-        "message": "Dit ‘mbox’-bestand lijkt afkomstig uit Eudora.\\nThunderbird kan hier niet mee overweg, dus u moet het converteren naar de standaard ‘mbox’-indeling.",
+        "message": "Dit ‘mbox’-bestand lijkt afkomstig uit Eudora.\nThunderbird kan hier niet mee overweg, dus u moet het converteren naar de standaard ‘mbox’-indeling.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Functie niet beschikbaar: het is alleen mogelijk om vanuit\\neen IMAP- of nieuwsaccount te exporteren als de map voor\\nofflinegebruik is ingesteld",
+        "message": "Functie niet beschikbaar: het is alleen mogelijk om vanuit\neen IMAP- of nieuwsaccount te exporteren als de map voor\nofflinegebruik is ingesteld",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Dit ‘mbox’-bestand gebruikt een andere indeling dan de Thunderbird-map,\\nen mogelijk kan Thunderbird dit niet goed verwerken.\\nWilt u doorgaan?",
+        "message": "Dit ‘mbox’-bestand gebruikt een andere indeling dan de Thunderbird-map,\nen mogelijk kan Thunderbird dit niet goed verwerken.\nWilt u doorgaan?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Berichten exporteren als..."
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "BCC"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "CC"
+    },
+    "msgHdr.Date": {
+        "message": "Datum"
+    },
+    "msgHdr.From": {
+        "message": "Van"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Antwoord-naar"
+    },
+    "msgHdr.Sender": {
+        "message": "Afzender"
+    },
+    "msgHdr.Subject": {
+        "message": "Onderwerp"
+    },
+    "msgHdr.To": {
+        "message": "Aan"
+    },
     "msgs": {
         "message": "berichten van de",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Kan niet exporteren.\\nDe geselecteerde mappen hebben een verschillend type, of één ervan is een virtuele map.",
+        "message": "Kan niet exporteren.\nDe geselecteerde mappen hebben een verschillend type, of één ervan is een virtuele map.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Geen berichtenmap geselecteerd:\\n\\n Maak of selecteer een geldige account of submap Lokale map.",
+        "message": "Geen berichtenmap geselecteerd:\n\n Maak of selecteer een geldige account of submap Lokale map.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -758,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "lijkt geen mbox-bestand te zijn\\nof is een beschadigd mbox-bestand",
+        "message": "lijkt geen mbox-bestand te zijn\nof is een beschadigd mbox-bestand",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -780,7 +813,7 @@
         "message": "Aantal te bewaren back-ups:"
     },
     "offlineWarning": {
-        "message": "Deze map is offline.\\nAlleen de lokaal opgeslagen berichten worden geëxporteerd. Wilt u doorgaan?",
+        "message": "Deze map is offline.\nAlleen de lokaal opgeslagen berichten worden geëxporteerd. Wilt u doorgaan?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${ontvanger}"
     },
     "remoteWarning": {
-        "message": "U exporteert de lokale kopie van een IMAP- of nieuwsmap.\\nMogelijk bevat de lokale map niet alle berichten die in de externe map aanwezig zijn.\\nWilt u doorgaan?",
+        "message": "U exporteert de lokale kopie van een IMAP- of nieuwsmap.\nMogelijk bevat de lokale map niet alle berichten die in de externe map aanwezig zijn.\nWilt u doorgaan?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -963,7 +996,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Dit is een virtuele map. Om de berichten ervan te exporteren\\nmoet u ze naar een normale map kopiëren en deze normale map\\nexporteren",
+        "message": "Dit is een virtuele map. Om de berichten ervan te exporteren\nmoet u ze naar een normale map kopiëren en deze normale map\nexporteren",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Berichten met bijlagen en index"
+	}
 }

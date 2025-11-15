@@ -119,7 +119,7 @@
         "message": "Backup content"
     },
     "backupWarning": {
-        "message": "During this operation, the program could be\\nunresponsive for some minutes.\\nDo you want to go on?\\n",
+        "message": "During this operation, the program could be\nunresponsive for some minutes.\nDo you want to go on?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "If you export in this format, the attachments are not saved.\\nIf you want to save also the attachments, choose a different format.\\nAre you sure you want to continue?",
+        "message": "If you export in this format, the attachments are not saved.\nIf you want to save also the attachments, choose a different format.\nAre you sure you want to continue?",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "If you use this format, it will not be possible to import the exported messages.\\nAre you sure you want to continue?\\n",
+        "message": "If you use this format, it will not be possible to import the exported messages.\nAre you sure you want to continue?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,7 +561,7 @@
         "message": "Invalid folder selection"
     },
     "isEudora": {
-        "message": "This “Mbox” file seems to come from Eudora.\\nThunderbird can’t handle it and so you must convert it in standard “Mbox” format.",
+        "message": "This “Mbox” file seems to come from Eudora.\nThunderbird can’t handle it and so you must convert it in standard “Mbox” format.",
         "src": "mboximport"
     },
     "isNewsgroup": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "This “Mbox” file uses a different format from the Thunderbird folder format and it’s possible that Thunderbird can’t handle it properly.\\nAre you sure you want to continue?",
+        "message": "This “Mbox” file uses a different format from the Thunderbird folder format and it’s possible that Thunderbird can’t handle it properly.\nAre you sure you want to continue?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Export Messages As…"
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "BCC"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "CC"
+    },
+    "msgHdr.Date": {
+        "message": "Date"
+    },
+    "msgHdr.From": {
+        "message": "From"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Reply-To"
+    },
+    "msgHdr.Sender": {
+        "message": "Sender"
+    },
+    "msgHdr.Subject": {
+        "message": "Subject"
+    },
+    "msgHdr.To": {
+        "message": "To"
+    },
     "msgs": {
         "message": "messages of",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Unable to export.\\nThe selected folders are of different types or one of them is a virtual folder.",
+        "message": "Unable to export.\nThe selected folders are of different types or one of them is a virtual folder.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "No message folder selected:\\n\\nPlease create or select a valid account or Local Folder subfolder.",
+        "message": "No message folder selected:\n\nPlease create or select a valid account or Local Folder subfolder.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -780,7 +813,7 @@
         "message": "Number of backups to retain:"
     },
     "offlineWarning": {
-        "message": "This folder is offline.\\nJust the messages locally saved will be exported. Are you sure you want to continue?",
+        "message": "This folder is offline.\nJust the messages locally saved will be exported. Are you sure you want to continue?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${recipient}"
     },
     "remoteWarning": {
-        "message": "You’re exporting the local copy of a IMAP or NEWS folder.\\nThe local folder could not have all the messages present in remote folder.\\nAre you sure you want to continue?",
+        "message": "You’re exporting the local copy of a IMAP or NEWS folder.\nThe local folder could not have all the messages present in remote folder.\nAre you sure you want to continue?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -962,7 +995,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "This is a virtual folder, to export its messages you must\\ncopy them in a normal folder and export this normal folder",
+        "message": "This is a virtual folder, to export its messages you must\ncopy them in a normal folder and export this normal folder",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Messages With Attachments And Index"
+	}
 }

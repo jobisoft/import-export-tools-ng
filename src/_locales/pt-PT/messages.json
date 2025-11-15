@@ -119,7 +119,7 @@
         "message": "Cópia de segurança do conteúdo"
     },
     "backupWarning": {
-        "message": "Durante esta operação, o programa pode\\\\nbloquear durante alguns minuto.\\\\nDeseja continuar?\\\\n",
+        "message": "Durante esta operação, o programa pode\\\nbloquear durante alguns minuto.\\\nDeseja continuar?\\\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -259,7 +259,7 @@
         "message": "Data da última cópia de segurança: $ t"
     },
     "description2": {
-        "message": "Com base nas definições, é\\\\necessário fazer uma nova cópia de segurança."
+        "message": "Com base nas definições, é\\\necessário fazer uma nova cópia de segurança."
     },
     "description3": {
         "message": "Durante esta operação, o programa pode não responder durante alguns minutos."
@@ -565,7 +565,7 @@
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Funcionalidade não disponível: é possível importar de uma conta de notícias\\\\nou IMAP apenas se a pasta estiver para uso quando desligado",
+        "message": "Funcionalidade não disponível: é possível importar de uma conta de notícias\\\nou IMAP apenas se a pasta estiver para uso quando desligado",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Exportar mensagens como…"
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "BCC"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "CC"
+    },
+    "msgHdr.Date": {
+        "message": "Data"
+    },
+    "msgHdr.From": {
+        "message": "De"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Responder-Para"
+    },
+    "msgHdr.Sender": {
+        "message": "Remetente"
+    },
+    "msgHdr.Subject": {
+        "message": "Assunto"
+    },
+    "msgHdr.To": {
+        "message": "Para"
+    },
     "msgs": {
         "message": "mensagens de",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Não é possível exportar.\\\\\\\\nAs pastas selecionadas são de tipos diferentes ou uma delas é uma pasta virtual.",
+        "message": "Não é possível exportar.\\\\\\\nAs pastas selecionadas são de tipos diferentes ou uma delas é uma pasta virtual.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Nenhuma pasta de mensagens selecionada:\\n\\n Crie ou selecione uma conta válida ou uma subpasta de pasta local.",
+        "message": "Nenhuma pasta de mensagens selecionada:\n\n Crie ou selecione uma conta válida ou uma subpasta de pasta local.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -758,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "parece não ser um ficheiro mbox\\\\nou é um ficheiro mbox corrupto",
+        "message": "parece não ser um ficheiro mbox\\\nou é um ficheiro mbox corrupto",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -780,7 +813,7 @@
         "message": "Número de backups a serem mantidos:"
     },
     "offlineWarning": {
-        "message": "Esta pasta está offline.\\\\\\\\nApenas as mensagens guardadas localmente serão exportadas. Deseja continuar?",
+        "message": "Esta pasta está offline.\\\\\\\nApenas as mensagens guardadas localmente serão exportadas. Deseja continuar?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${destinatário}"
     },
     "remoteWarning": {
-        "message": "Está a exportar a cópia local de uma pasta IMAP ou NEWS.\\\\\\\\nA pasta local não tem todas as mensagens presentes na pasta remota.\\\\\\\\nDeseja continuar?",
+        "message": "Está a exportar a cópia local de uma pasta IMAP ou NEWS.\\\\\\\nA pasta local não tem todas as mensagens presentes na pasta remota.\\\\\\\nDeseja continuar?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -963,7 +996,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Isto é uma pasta virtual, para exportar as mensagens tem de copiá-las para uma\\\\npasta normal e exportar esta pasta normal",
+        "message": "Isto é uma pasta virtual, para exportar as mensagens tem de copiá-las para uma\\\npasta normal e exportar esta pasta normal",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Mensagens com anexos e índice"
+	}
 }

@@ -119,7 +119,7 @@
         "message": "Contenuto del backup"
     },
     "backupWarning": {
-        "message": "Questa operazione potrebbe richiedere diversi minuti,\\ndurante i quali il programma rimarrà bloccato.\\nSi desidera proseguire?\\n",
+        "message": "Questa operazione potrebbe richiedere diversi minuti,\ndurante i quali il programma rimarrà bloccato.\nSi desidera proseguire?\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "Esportando in questo formato, gli allegati non vengono salvati.\\nSe si desidera salvare anche gli allegati, scegliere un formato differente.\\nSi desidera continuare?\\n",
+        "message": "Esportando in questo formato, gli allegati non vengono salvati.\nSe si desidera salvare anche gli allegati, scegliere un formato differente.\nSi desidera continuare?\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "Usando questo formato, non sarà possibile importare in futuro i messaggi esportati.\\nSi desidera continuare?\\n",
+        "message": "Usando questo formato, non sarà possibile importare in futuro i messaggi esportati.\nSi desidera continuare?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "Selezione cartella non valida"
     },
     "isEudora": {
-        "message": "Questo file \"mbox\" sembra provenire da Eudora.\\nThunderbird non è in grado di gestire questo tipo di file,\\nè necessario convertirlo in un file con formato  \"mbox\" standard.",
+        "message": "Questo file \"mbox\" sembra provenire da Eudora.\nThunderbird non è in grado di gestire questo tipo di file,\nè necessario convertirlo in un file con formato  \"mbox\" standard.",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Funzione non disponibile: è possibile esportare da un account\\nIMAP o NEWS solo se la cartella è stata selezionata per l'uso fuori linea",
+        "message": "Funzione non disponibile: è possibile esportare da un account\nIMAP o NEWS solo se la cartella è stata selezionata per l'uso fuori linea",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "Questo file \"mbox\" usa un formato diverso da quello usato da Thunderbird\\ned è possibile che non venga gestito correttamente, specie se proviene da Eudora.\\nSi desidera continuare?",
+        "message": "Questo file \"mbox\" usa un formato diverso da quello usato da Thunderbird\ned è possibile che non venga gestito correttamente, specie se proviene da Eudora.\nSi desidera continuare?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Esporta messaggi come..."
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "Ccn"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "CC"
+    },
+    "msgHdr.Date": {
+        "message": "Data"
+    },
+    "msgHdr.From": {
+        "message": "Da"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Rispondi-a"
+    },
+    "msgHdr.Sender": {
+        "message": "Mittente"
+    },
+    "msgHdr.Subject": {
+        "message": "Oggetto"
+    },
+    "msgHdr.To": {
+        "message": "A"
+    },
     "msgs": {
         "message": "messaggi su",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Impossibile procedere all\\'esportazione.\\nSono state selezionate cartelle di tipo diverso oppure vi è tra di esse una cartella virtuale.",
+        "message": "Impossibile procedere all\\'esportazione.\nSono state selezionate cartelle di tipo diverso oppure vi è tra di esse una cartella virtuale.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Nessuna cartella di messaggi selezionata:\\n\\n Crea o seleziona un account valido o una sottocartella Cartella locale.",
+        "message": "Nessuna cartella di messaggi selezionata:\n\n Crea o seleziona un account valido o una sottocartella Cartella locale.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -758,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "non sembra essere un file di tipo mbox\\noppure si tratta di un file mbox corrotto",
+        "message": "non sembra essere un file di tipo mbox\noppure si tratta di un file mbox corrotto",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -780,7 +813,7 @@
         "message": "Numero di backup da conservare:"
     },
     "offlineWarning": {
-        "message": "Questa cartella è al momento non in linea.\\nVerranno esportati solo i messaggi salvati localmente. Si desidera continuare?",
+        "message": "Questa cartella è al momento non in linea.\nVerranno esportati solo i messaggi salvati localmente. Si desidera continuare?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${destinatario}"
     },
     "remoteWarning": {
-        "message": "Si sta per esportare una cartella di tipo IMAP o NEWS salvata localmente.\\nLa cartella locale potrebbe non contenere tutti i messaggi della cartella remota.\\nSi desidera continuare?",
+        "message": "Si sta per esportare una cartella di tipo IMAP o NEWS salvata localmente.\nLa cartella locale potrebbe non contenere tutti i messaggi della cartella remota.\nSi desidera continuare?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -963,7 +996,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Questa è una cartella virtuale, per esportare i messaggi in essa contenuti\\nè necessario copiarli in una normale cartella ed esportare quella.",
+        "message": "Questa è una cartella virtuale, per esportare i messaggi in essa contenuti\nè necessario copiarli in una normale cartella ed esportare quella.",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Messaggi con allegati e indice"
+	}
 }

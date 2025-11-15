@@ -119,7 +119,7 @@
         "message": "Fes còpia de seguretat de contingut"
     },
     "backupWarning": {
-        "message": "Durant aquest operació, el programa podria deixar de respondre per alguns minuts.\\\\nVoleu continuar?\\\\n",
+        "message": "Durant aquest operació, el programa podria deixar de respondre per alguns minuts.\\\nVoleu continuar?\\\n",
         "src": "mboximport"
     },
     "badfolder": {
@@ -498,11 +498,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "En l\\'exportació en format HTML o text pla, no es desen els fitxer adjunts.\\\\nSi voleu desar els fitxer adjunts, useu el format EML.\\\\nVoleu continuar?\\\\n",
+        "message": "En l\\'exportació en format HTML o text pla, no es desen els fitxer adjunts.\\\nSi voleu desar els fitxer adjunts, useu el format EML.\\\nVoleu continuar?\\\n",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "If you use this format, it will not be possible to import the exported messages.\\nDo you want to continue?\\n",
+        "message": "If you use this format, it will not be possible to import the exported messages.\nDo you want to continue?\n",
         "src": "mboximport"
     },
     "importDone": {
@@ -562,7 +562,7 @@
         "message": "Selecció de carpeta no vàlida"
     },
     "isEudora": {
-        "message": "Aquest fitxer \"mbox\" sembla que prové del programa Eudora.\\nEl Thunderbird no pot gestionar-lo i heu de convertir-lo a un format \"mbox\" estàndard.",
+        "message": "Aquest fitxer \"mbox\" sembla que prové del programa Eudora.\nEl Thunderbird no pot gestionar-lo i heu de convertir-lo a un format \"mbox\" estàndard.",
         "src": "mboximport"
     },
     "isNewsgroup": {
@@ -574,7 +574,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\\nand it's possible that Thunderbird can't handle it properly.\\nDo you want to continue?",
+        "message": "This \"mbox\" file uses a different format from the Thunderbird folder format\nand it's possible that Thunderbird can't handle it properly.\nDo you want to continue?",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -690,6 +690,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Exporta missatges com a..."
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "BCC"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "CC"
+    },
+    "msgHdr.Date": {
+        "message": "Data"
+    },
+    "msgHdr.From": {
+        "message": "De"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Respon a"
+    },
+    "msgHdr.Sender": {
+        "message": "Remitent"
+    },
+    "msgHdr.Subject": {
+        "message": "Assumpte"
+    },
+    "msgHdr.To": {
+        "message": "Per a"
+    },
     "msgs": {
         "message": "missatges de",
         "src": "mboximport"
@@ -715,11 +748,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "No s\\'ha pogut exportar.\\\\nLes carpetes seleccionades són de diferents tipus o una d\\'elles és una carpeta virtual.",
+        "message": "No s\\'ha pogut exportar.\\\nLes carpetes seleccionades són de diferents tipus o una d\\'elles és una carpeta virtual.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "No s&#39;ha seleccionat cap carpeta de missatges:\\n\\n Creeu o seleccioneu un compte vàlid o una subcarpeta de carpeta local.",
+        "message": "No s&#39;ha seleccionat cap carpeta de missatges:\n\n Creeu o seleccioneu un compte vàlid o una subcarpeta de carpeta local.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -781,7 +814,7 @@
         "message": "Nombre de còpies de seguretat a conservar:"
     },
     "offlineWarning": {
-        "message": "Aquesta carpeta es troba fora de línia.\\\\nNomés s\\'exportaran els missatges desats al vostre equip. Voleu continuar?",
+        "message": "Aquesta carpeta es troba fora de línia.\\\nNomés s\\'exportaran els missatges desats al vostre equip. Voleu continuar?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -823,7 +856,7 @@
         "message": "${destinatari}"
     },
     "remoteWarning": {
-        "message": "Esteu exportant la còpia local d\\'una carpeta IMAP o NEWS.\\\\nLa carpeta local podria no tenir tots els missatges de la carpeta remota.\\\\nVoleu continuar?",
+        "message": "Esteu exportant la còpia local d'una carpeta IMAP o NEWS.\nLa carpeta local podria no tenir tots els missatges de la carpeta remota.\nVoleu continuar?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -968,4 +1001,9 @@
         "message": "Aquesta és una carpeta virtual, per exportar els missatgs heu de copiar-los a una carpeta normal i exportar aquesta carpeta normal",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Missatges amb fitxers adjunts i índex"
+	}
 }

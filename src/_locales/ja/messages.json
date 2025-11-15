@@ -119,7 +119,7 @@
         "message": "バックアップ種別"
     },
     "backupWarning": {
-        "message": "この操作中はプログラムが\\n応答しなくなる可能性があります。\\nこのまま続行しますか？",
+        "message": "この操作中はプログラムが\n応答しなくなる可能性があります。\nこのまま続行しますか？",
         "src": "mboximport"
     },
     "badfolder": {
@@ -497,11 +497,11 @@
         "src": "mboximport"
     },
     "formatWarning": {
-        "message": "このエクスポートでは、添付ファイルは保存されません。\\n添付ファイルも保存したい場合は、他の形式を使用してください。\\n  注：但し（添付ファイル含む）は、別フォルダーに保存します。\\nこのまま続行しますか？",
+        "message": "このエクスポートでは、添付ファイルは保存されません。\n添付ファイルも保存したい場合は、他の形式を使用してください。\n  注：但し（添付ファイル含む）は、別フォルダーに保存します。\nこのまま続行しますか？",
         "src": "mboximport"
     },
     "formatWarningImport": {
-        "message": "この形式を使用した場合は、エクスポートしたメッセージのインポートは可能にはなりません。\\nこのまま続行しますか？",
+        "message": "この形式を使用した場合は、エクスポートしたメッセージのインポートは可能にはなりません。\nこのまま続行しますか？",
         "src": "mboximport"
     },
     "importDone": {
@@ -561,11 +561,11 @@
         "message": "無効なフォルダーの選択"
     },
     "isEudora": {
-        "message": "この「mbox」ファイルは、Eudora のものと思われます。\\nThunderbird ではそのままでは扱うことができませんので、標準の「mbox」形式に変換してください。",
+        "message": "この「mbox」ファイルは、Eudora のものと思われます。\nThunderbird ではそのままでは扱うことができませんので、標準の「mbox」形式に変換してください。",
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "未対応: IMAP または NEWS のアカウントは\\nオフライン利用に設定されているフォルダーのみエクスポート可能です",
+        "message": "未対応: IMAP または NEWS のアカウントは\nオフライン利用に設定されているフォルダーのみエクスポート可能です",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -573,7 +573,7 @@
         "src": "mboximport"
     },
     "isNotStandard": {
-        "message": "この「mbox」ファイルは、Thunderbird のフォルダー形式と異なる形式を使用します。また、Thunderbird が、適切に扱えない可能性があります。\\nこのまま続行しますか？",
+        "message": "この「mbox」ファイルは、Thunderbird のフォルダー形式と異なる形式を使用します。また、Thunderbird が、適切に扱えない可能性があります。\nこのまま続行しますか？",
         "src": "mboximport"
     },
     "justMailFiles": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "メッセージを次の形式でエクスポート…"
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "BCC"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "CC"
+    },
+    "msgHdr.Date": {
+        "message": "送信日時"
+    },
+    "msgHdr.From": {
+        "message": "差出人"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Reply-To"
+    },
+    "msgHdr.Sender": {
+        "message": "Sender"
+    },
+    "msgHdr.Subject": {
+        "message": "件名"
+    },
+    "msgHdr.To": {
+        "message": "宛先"
+    },
     "msgs": {
         "message": "メッセージ:",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "エクスポートすることができません。\\n選択されたフォルダーは異なるタイプか、あるいは仮想フォルダーがあります。",
+        "message": "エクスポートすることができません。\n選択されたフォルダーは異なるタイプか、あるいは仮想フォルダーがあります。",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "メッセージフォルダーが選択されていません：\\n\\n有効なアカウントまたはローカルフォルダーサブフォルダーを作成または選択してください。",
+        "message": "メッセージフォルダーが選択されていません：\n\n有効なアカウントまたはローカルフォルダーサブフォルダーを作成または選択してください。",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -758,7 +791,7 @@
         "src": "mboximport"
     },
     "nomboxfile": {
-        "message": "mbox 形式のファイルではないか\\n破損した mbox ファイルのようです",
+        "message": "mbox 形式のファイルではないか\n破損した mbox ファイルのようです",
         "src": "mboximport"
     },
     "nonAlphanumericFilter": {
@@ -780,7 +813,7 @@
         "message": "バックアップの保存数:"
     },
     "offlineWarning": {
-        "message": "このフォルダーはオフラインです。\\nローカルに保存されているメッセージのみエクスポートします。このまま続行しますか？",
+        "message": "このフォルダーはオフラインです。\nローカルに保存されているメッセージのみエクスポートします。このまま続行しますか？",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${受信者}"
     },
     "remoteWarning": {
-        "message": "ローカルにある IMAP または NEWS のコピーをエクスポートしています。\\nローカルフォルダーはリモートフォルダー内のすべてのメッセージまで含むことができません。\\nこのまま続行しますか？",
+        "message": "ローカルにある IMAP または NEWS のコピーをエクスポートしています。\nローカルフォルダーはリモートフォルダー内のすべてのメッセージまで含むことができません。\nこのまま続行しますか？",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -963,7 +996,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "これは仮想フォルダーであり、メッセージをエクスポートするためには\\n通常のフォルダーにコピーしてエクスポートする必要があります",
+        "message": "これは仮想フォルダーであり、メッセージをエクスポートするためには\n通常のフォルダーにコピーしてエクスポートする必要があります",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "添付ファイルとインデックス付きのメッセージ"
+	}
 }

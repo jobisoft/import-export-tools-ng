@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Εξαγωγή μηνυμάτων ως…"
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "Κρυφή κοιν."
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "Κοινοποίηση"
+    },
+    "msgHdr.Date": {
+        "message": "Ημερομηνία"
+    },
+    "msgHdr.From": {
+        "message": "Από"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Απάντηση"
+    },
+    "msgHdr.Sender": {
+        "message": "Αποστολέας"
+    },
+    "msgHdr.Subject": {
+        "message": "Θέμα"
+    },
+    "msgHdr.To": {
+        "message": "Προς"
+    },
     "msgs": {
         "message": "μηνύματα του",
         "src": "mboximport"
@@ -718,7 +751,7 @@
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Δεν επιλέχθηκε φάκελος μηνυμάτων:\\n\\n Δημιουργήστε ή επιλέξτε έναν έγκυρο λογαριασμό ή έναν υποφάκελο Τοπικού φακέλου.",
+        "message": "Δεν επιλέχθηκε φάκελος μηνυμάτων:\n\n Δημιουργήστε ή επιλέξτε έναν έγκυρο λογαριασμό ή έναν υποφάκελο Τοπικού φακέλου.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -966,4 +999,9 @@
         "message": "Αυτός είναι ένας εικονικός φάκελος, για να εξαγάγετε τα μηνύματά του, πρέπει να τα αντιγράψετε σε έναν κανονικό φάκελο και να εξαγάγετε αυτόν τον κανονικό φάκελο",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Μηνύματα με συνημμένα και ευρετήριο"
+	}
 }

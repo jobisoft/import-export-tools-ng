@@ -119,7 +119,7 @@
         "message": "Obsah zálohy"
     },
     "backupWarning": {
-        "message": "Počas tejto operácie môže aplikácia \\\\nna niekoľko minút prestať reagovať. \\\\nChcete pokračovať?",
+        "message": "Počas tejto operácie môže aplikácia \\\nna niekoľko minút prestať reagovať. \\\nChcete pokračovať?",
         "src": "mboximport"
     },
     "badfolder": {
@@ -565,7 +565,7 @@
         "src": "mboximport"
     },
     "isNewsgroup": {
-        "message": "Táto funkcia je nedostupná: export priečinka s účtov IMAP alebo  diskusných \\\\nskupín, je možný len ak sú nastavené na čítanie v režime Offline",
+        "message": "Táto funkcia je nedostupná: export priečinka s účtov IMAP alebo  diskusných \\\nskupín, je možný len ak sú nastavené na čítanie v režime Offline",
         "src": "mboximport"
     },
     "isNotMaildir": {
@@ -689,6 +689,39 @@
     "msgCtxMenu_TopId.title": {
         "message": "Exportovať správy ako…"
     },
+    "msgHdr.Bcc": {
+        "message": "Bcc"
+    },
+    "msgHdr.BccLocal": {
+        "message": "Skrytá kópia"
+    },
+    "msgHdr.Cc": {
+        "message": "Cc"
+    },
+    "msgHdr.CcLocal": {
+        "message": "Kópia"
+    },
+    "msgHdr.Date": {
+        "message": "Dátum"
+    },
+    "msgHdr.From": {
+        "message": "Od"
+    },
+    "msgHdr.MessageID": {
+        "message": "Message-ID"
+    },
+    "msgHdr.ReplyTo": {
+        "message": "Odpovedať na"
+    },
+    "msgHdr.Sender": {
+        "message": "Odosielateľ"
+    },
+    "msgHdr.Subject": {
+        "message": "Predmet"
+    },
+    "msgHdr.To": {
+        "message": "Komu"
+    },
     "msgs": {
         "message": "správ z",
         "src": "mboximport"
@@ -714,11 +747,11 @@
         "src": "mboximport"
     },
     "noFolderExport": {
-        "message": "Nemožno exportovať. \\\\nVo vybrané priečinky sú rôznych typov, alebo jeden z nich je virtuálny priečinok.",
+        "message": "Nemožno exportovať. \\\nVo vybrané priečinky sú rôznych typov, alebo jeden z nich je virtuálny priečinok.",
         "src": "mboximport"
     },
     "noFolderSelected": {
-        "message": "Nie je vybratý žiadny priečinok so správami:\\n\\n Vytvorte alebo vyberte platný účet alebo podpriečinok Miestny priečinok.",
+        "message": "Nie je vybratý žiadny priečinok so správami:\n\n Vytvorte alebo vyberte platný účet alebo podpriečinok Miestny priečinok.",
         "src": "mboximport"
     },
     "noMaildirStorage": {
@@ -780,7 +813,7 @@
         "message": "Počet záloh, ktoré sa majú zachovať:"
     },
     "offlineWarning": {
-        "message": "Tento priečinok je offline. \\\\nExportované budú len lokálne uložené správy. Naozaj chcete pokračovať?",
+        "message": "Tento priečinok je offline. \\\nExportované budú len lokálne uložené správy. Naozaj chcete pokračovať?",
         "src": "mboximport"
     },
     "openHelpInWindow.label": {
@@ -822,7 +855,7 @@
         "message": "${príjemca}"
     },
     "remoteWarning": {
-        "message": "Exportujete lokálnu kópiu priečinka IMAP alebo NEWS. \\\\nMiestny priečinok však neobsahuje všetky správy, ktoré sú vo vzdialenom priečinku. \\\\nNaozaj chcete pokračovať?",
+        "message": "Exportujete lokálnu kópiu priečinka IMAP alebo NEWS. \\\nMiestny priečinok však neobsahuje všetky správy, ktoré sú vo vzdialenom priečinku. \\\nNaozaj chcete pokračovať?",
         "src": "mboximport"
     },
     "runProfileManager": {
@@ -963,7 +996,12 @@
         "src": "mboximport"
     },
     "virtualfolder": {
-        "message": "Toto je virtuálny priečinok. Pre export jeho\\\\nspráv ich musíte najskôr skopírovať do\\\\nnormálneho priečinka.",
+        "message": "Toto je virtuálny priečinok. Pre export jeho\\\nspráv ich musíte najskôr skopírovať do\\\nnormálneho priečinka.",
         "src": "mboximport"
     }
+,
+
+	"folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
+		"message": "Správy s prílohami a indexom"
+	}
 }
