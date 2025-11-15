@@ -32,8 +32,6 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     // check for multiple folders selected
     var folderSet = await getFolderSet(ctxEvent.selectedFolders, functionParams);
-    console.log(folderSet)
-    return
 
     console.log(ctxEvent, functionParams, folderSet);
 
@@ -167,92 +165,76 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 }
 
 async function getFolderSet(selectedFolders, functionParams) {
+  var fullFolderSet = selectedFolders;
+
   // if we are doing subfolders we need to prune then get all subfolders 
   if (functionParams.subFolders) {
-    // pruning removes overlapping subfolders 
+    // pruning removes overlapping subfolders
+    console.log("prune")
     let prunedFolders = selectedFolders;
     selectedFolders.forEach(folder => {
       prunedFolders = prunedFolders.filter(pfolder => pfolder == folder || !pfolder.path.startsWith(folder.path))
     });
-    selectedFolders = prunedFolders;
-  }
-  // add all subfolders under top folders
-  var fullFolderSet = selectedFolders;
+    fullFolderSet = prunedFolders;
 
-  async function getSubFolders(folder) {
-    let subFolders = await browser.folders.getSubFolders(folder.id);
-    fullFolderSet = fullFolderSet.concat(subFolders);
-    if (subFolders) {
-      for (const subFolder of subFolders) {
-        await getSubFolders(subFolder);
+    // add all subfolders under top folders recurseivly
+
+    async function getSubFolders(folder) {
+      let subFolders = await browser.folders.getSubFolders(folder.id);
+      fullFolderSet = fullFolderSet.concat(subFolders);
+      if (subFolders) {
+        for (const subFolder of subFolders) {
+          await getSubFolders(subFolder);
+        }
       }
     }
+    let topFolders = fullFolderSet;
+    for (const folder of topFolders) {
+      await getSubFolders(folder);
+    }
   }
-  let topFolders = fullFolderSet;
-  for (const folder of topFolders) {
-    await getSubFolders(folder);
-  }
+  console.log("full set", fullFolderSet)
 
   // get path of shortest parent
 
   var firstParents = await browser.folders.getParentFolders(fullFolderSet[0].id)
   let basePathLen = firstParents.length
-  
-  /*
-  if (firstParents = []) {
-      firstParents = [{}];
-      firstParents[0].path = "/";
-    }
-      */
-     
+
+  if (!firstParents.length) {
+    firstParents.push({ path: "/" });
+  }
+
   let basePath = firstParents[0].path;
 
-  for (let index = 0; index < fullFolderSet.length; index++) {
+  for (let index = 1; index < fullFolderSet.length; index++) {
     let parentfolders = await browser.folders.getParentFolders(fullFolderSet[index].id);
-    console.log(parentfolders)
-    console.log(parentfolders[0])
-    console.log(parentfolders[0]?.path)
-
-    if (parentfolders = []) {
-      parentfolders = [{}];
-      parentfolders[0].path = "/";
-    }
 
     if (parentfolders.length < basePathLen) {
       basePathLen = parentfolders.length;
       basePath = parentfolders[0].path;
     }
-
-    console.log(parentfolders[0])
-    console.log(index, fullFolderSet[index].path, parentfolders[0].path)
-    //if (fullFolderSet[])
   }
 
   console.log("base", basePath)
 
+  // create relative export paths with localization
+
   for (const [index, folder] of fullFolderSet.entries()) {
     let parentfolders = await browser.folders.getParentFolders(folder.id);
-      console.log(parentfolders)
+    //console.log(parentfolders)
 
     fullFolderSet[index].exportPath = folder.name;
     for (const [index2, folderParent] of parentfolders.entries()) {
-      if (parentfolders = []) {
-      parentfolders = [{}];
-      parentfolders[0].path = "/";
-      parentfolders[0].name = "";
-
-    }
-      console.log(parentfolders[index2].name)
-
       if (folderParent.path == basePath) {
-        console.log("break")
         break;
       }
       fullFolderSet[index].exportPath = `${parentfolders[index2].name}/${fullFolderSet[index].exportPath}`;
 
     }
-
+    console.log(fullFolderSet[index].path, fullFolderSet[index].exportPath)
   }
+
+
 
   // add folder path and totalMsgCount 
   for (const [index, folder] of fullFolderSet.entries()) {
