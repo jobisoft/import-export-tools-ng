@@ -414,10 +414,17 @@ export var exportMessages = {
     // Thunderbird wont allow a forward slash in a folder name 
     // so we can count on that as our path separator
 
-    let cleanFolderName = expTask.folders[expTask.currentFolderIndex].name.replace(/[\\:<>*\?\"\|]/g, "_");
+    let cleanFolderName = expTask.folders[expTask.currentFolderIndex].
+      exportPath;
+    console.log(cleanFolderName)
+
+      //.replace(/[\\:<>*\?\"\|]/g, "_");
     // use PathUtils.join which will give us an OS proper path
     let base = expTask.exportContainer.directory;
-    msgsDir = PathUtils.join(base, cleanFolderName);
+    console.log(base)
+
+    msgsDir = PathUtils.join(base, ...cleanFolderName.split(osPathSeparator));
+    console.log(msgsDir)
     if (expTask.messages.messageContainer) {
       msgsDir = PathUtils.join(msgsDir, expTask.messages.messageContainerName);
     }

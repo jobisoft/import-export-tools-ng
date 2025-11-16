@@ -113,11 +113,14 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       // this is our folder loop
       for (var folderIndex = 0; folderIndex < expTask.folders.length; folderIndex++) {
         expTask.currentFolderIndex = folderIndex;
-        expTask.currentFolderPath = expTask.folders[folderIndex].path;
+        expTask.currentFolderPath = expTask.folders[folderIndex].exportPath;
         folderMsgCount = 0;
 
         // create export container
-        expTask.exportContainer.directory = await browser.ExportMessages.createExportContainer(expTask);
+        if (!functionParams?.subFolders ||
+          (functionParams?.subFolders && folderIndex == 0)) {
+          expTask.exportContainer.directory = await browser.ExportMessages.createExportContainer(expTask);
+        }
 
         // create the status window on first folder
         if (folderIndex == 0) {
@@ -228,7 +231,7 @@ async function getFolderSet(selectedFolders, functionParams) {
       if (folderParent.path == basePath) {
         break;
       }
-      fullFolderSet[index].exportPath = `${parentfolders[index2].name}/${fullFolderSet[index].exportPath}`;
+      fullFolderSet[index].exportPath = `${parentfolders[index2].name}${osPathSeparator}${fullFolderSet[index].exportPath}`;
 
     }
     console.log(fullFolderSet[index].path, fullFolderSet[index].exportPath)
