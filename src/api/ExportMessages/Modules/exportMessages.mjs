@@ -418,7 +418,6 @@ export var exportMessages = {
       exportPath;
     console.log(cleanFolderName)
 
-      //.replace(/[\\:<>*\?\"\|]/g, "_");
     // use PathUtils.join which will give us an OS proper path
     let base = expTask.exportContainer.directory;
     console.log(base)

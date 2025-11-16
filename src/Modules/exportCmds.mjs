@@ -226,12 +226,14 @@ async function getFolderSet(selectedFolders, functionParams) {
     let parentfolders = await browser.folders.getParentFolders(folder.id);
     //console.log(parentfolders)
 
-    fullFolderSet[index].exportPath = folder.name;
+    fullFolderSet[index].exportPath = folder.name.replace(/[\\:<>*\?\"\|]/g, "_");
+
     for (const [index2, folderParent] of parentfolders.entries()) {
       if (folderParent.path == basePath) {
         break;
       }
-      fullFolderSet[index].exportPath = `${parentfolders[index2].name}${osPathSeparator}${fullFolderSet[index].exportPath}`;
+      fullFolderSet[index].exportPath =
+        `${parentfolders[index2].name.replace(/[\\:<>*\?\"\|]/g, "_")}${osPathSeparator}${fullFolderSet[index].exportPath}`;
 
     }
     console.log(fullFolderSet[index].path, fullFolderSet[index].exportPath)
