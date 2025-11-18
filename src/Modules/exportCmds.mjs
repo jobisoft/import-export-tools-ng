@@ -173,7 +173,6 @@ async function getFolderSet(selectedFolders, functionParams) {
   // if we are doing subfolders we need to prune then get all subfolders 
   if (functionParams.subFolders) {
     // pruning removes overlapping subfolders
-    console.log("prune")
     let prunedFolders = selectedFolders;
     selectedFolders.forEach(folder => {
       prunedFolders = prunedFolders.filter(pfolder => pfolder == folder || !pfolder.path.startsWith(folder.path))
