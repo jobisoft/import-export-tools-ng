@@ -16,7 +16,8 @@ const translate = new Translate({ projectId, key });
 // console.debug( translate );
 
 var translationArray = [
-  { key: "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title", text: "Messages With Attachments And Index"},
+	{ key: "OK.button", text: "OK"},
+  { key: "Cancel.button", text: "Cancel"},
 
   
 ];
