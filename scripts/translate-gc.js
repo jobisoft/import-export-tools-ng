@@ -171,7 +171,9 @@ async function translateAllLocales(iFile, sourceArray, locales, format, options)
 			source = source.substr(0, source.lastIndexOf('}') - 1) + ",\n\n" + lt + "\n}";
 			
 			console.debug(source);
+			source = JSON.parse(source);
 			source = prettier.format(source, { parser: 'json' });
+			source = JSON.stringify(source);
 			console.debug(source);
 
 			fs.outputFileSync(`${options.outputLocaleDir}/${targetLocale}/${outputFileName}`, source);
@@ -536,6 +538,7 @@ let localeFoldersHelp = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', '
 // managed help locales
 //localeFolders = ['de', 'ja', 'fr', 'da'];
 
+localeFolders = ['en-US'];
 
 //translateHelpPage();
 //translatePage();
