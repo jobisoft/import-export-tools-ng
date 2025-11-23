@@ -19,6 +19,14 @@
 var { AppConstants } = ChromeUtils.importESModule("resource://gre/modules/AppConstants.sys.mjs");
 var Ietng_ESM = parseInt(AppConstants.MOZ_APP_VERSION, 10) >= 128;
 
+var { ExtensionParent } = ChromeUtils.importESModule(
+	"resource://gre/modules/ExtensionParent.sys.mjs"
+);
+
+var ietngExtension = ExtensionParent.GlobalManager.getExtension(
+	"ImportExportToolsNG@cleidigh.kokkini.net"
+);
+
 var { MailServices } = Ietng_ESM
 	? ChromeUtils.importESModule("resource:///modules/MailServices.sys.mjs")
 	: ChromeUtils.import("resource:///modules/MailServices.jsm");
@@ -387,7 +395,7 @@ export var ietngUtils = {
   },
 
   localizeMsg: function (msgName) {
-		return this.top.ietngAddon.ietngExtension.localeData.localizeMessage(msgName);
+		return ietngExtension.localeData.localizeMessage(msgName);
 	},
 
 };
