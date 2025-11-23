@@ -168,7 +168,11 @@ async function translateAllLocales(iFile, sourceArray, locales, format, options)
 		if (options.append && options.outputFormat === 3) {
 			var source = fs.readFileSync(`${options.outputLocaleDir}/${targetLocale}/${options.outputLocaleDirSuffix}${outputFileName}`, { encoding: 'utf8' });
 			source = source.substr(0, source.lastIndexOf('}') - 1) + ",\n\n" + lt + "\n}";
+			
 			console.debug(source);
+			source = prettier.format(source, { parser: 'json' });
+			console.debug(source);
+
 			fs.outputFileSync(`${options.outputLocaleDir}/${targetLocale}/${outputFileName}`, source);
 		}
 		else if (options.append) {
