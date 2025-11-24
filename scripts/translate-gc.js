@@ -546,22 +546,13 @@ let localeFoldersHelp = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', '
 // managed help locales
 //localeFolders = ['de', 'ja', 'fr', 'da'];
 
-localeFolders = ['en-US'];
 
 //translateHelpPage();
 //translatePage();
-//loadTranslationArray(inputFiles, options);
-//console.log(translationArray.length)
-//translationArray = translationArray.slice(101)
-//translateAll("messages.json", translationArray, options);
 
 // message translations
 translateAll(inputFiles, translationArray, options);
 
-//loadTranslationArray(inputFiles, options);
-//convert(inputFiles, options);
-//locs()
-// let inputFiles = ["settings.dtd"];
 /*
 node .\scripts\translate-gc.js
 */
