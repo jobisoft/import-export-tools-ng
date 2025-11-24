@@ -16,11 +16,10 @@ const translate = new Translate({ projectId, key });
 // console.debug( translate );
 
 var translationArray = [
-  { key: "OK.button", text: "OK"},
-  { key: "Cancel.button", text: "Cancel"},
+	{ key: "OK.button", text: "OK" },
+	{ key: "Cancel.button", text: "Cancel" },
 
 
-  
 ];
 
 
@@ -120,7 +119,7 @@ async function translateAllLocales(iFile, sourceArray, locales, format, options)
 							console.debug('DTD 0  ' + iFile);
 							entry = `<!ENTITY ${sourceArray[i].key} "${s}">`;
 							break;
-		
+
 						case '.properties':
 							console.debug('Properties 0  ' + iFile);
 							entry = `${sourceArray[i].key}=${s}`;
@@ -166,21 +165,35 @@ async function translateAllLocales(iFile, sourceArray, locales, format, options)
 		// let outputFileName = iFile.replace('.', '-') + ".json";
 		let outputFileName = iFile;
 
-		
+
 		if (options.append && options.outputFormat === 3) {
 			var source = fs.readFileSync(`${options.outputLocaleDir}/${targetLocale}/${options.outputLocaleDirSuffix}${outputFileName}`, { encoding: 'utf8' });
 			source = source.substr(0, source.lastIndexOf('}') - 1) + ",\n\n" + lt + "\n}";
-			console.debug(source);
+
+			let obj = JSON.parse(source);
+
+			// Sort the keys alphabetically
+			const sortedKeys = Object.keys(obj).sort(function (a, b) {
+				return a.toLowerCase().localeCompare(b.toLowerCase());
+			});
+
+			// Create a new object with sorted keys
+			const sortedObj = {};
+			sortedKeys.forEach(key => {
+				sortedObj[key] = obj[key];
+			});
+			source = JSON.stringify(sortedObj, null, 2);
+
 			fs.outputFileSync(`${options.outputLocaleDir}/${targetLocale}/${outputFileName}`, source);
 		}
 		else if (options.append) {
 			console.debug('AppendingMessages');
 			lt = "\n" + lt;
 			fs.appendFileSync(`${options.outputLocaleDir}/${targetLocale}/${options.outputLocaleDirSuffix}${outputFileName}`, lt);
-			
+
 		} else {
 			fs.outputFileSync(`${options.outputLocaleDir}/${targetLocale}/${options.outputLocaleDirSuffix}${outputFileName}`, lt);
-			
+
 		}
 	}
 }
@@ -194,7 +207,7 @@ function sleep(ms) {
 
 async function translateHelpPage() {
 	//var localeFolders = _getAllFilesOrFolders(localeDir, true);
-	
+
 	//var supportedLocales = ['ca', 'da', 'de', 'en-US', 'es-ES', 'fr', 'gl-ES', 'hu-HU', 'hy-AM'];
 
 	//var supportedLocales = ['it', 'ja', 'ko-KR', 'nl', 'pl', 'pt-PT', 'ru', 'sk-SK', 'sl-SI', 'sv-SE', 'zh-CN', 'el'];
@@ -371,7 +384,7 @@ function loadPropertys(propertyFile, options) {
 	// 	}
 	// }
 	// console.debug(translationArray);
-	
+
 	// console.debug(propertyStrings);
 	return propertyStrings;
 }
@@ -403,7 +416,7 @@ function loadTranslationArray(inputFiles, options) {
 				//translateAll(iFile, strings, options);
 				console.log(translationArray)
 				break;
-	
+
 			default:
 				break;
 		}
@@ -428,22 +441,22 @@ function convert(iFile, options) {
 			//let entry = eval(`{"${key}": {message: "${text}" }`)
 			var entry = `\t"${key}": {\n\t\t"message": "${text}"\n\t}`;
 			if (index < strings.length - 1) {
-				entry+= ",\n\n"
+				entry += ",\n\n"
 			}
 			console.log(entry)
 			outputJson += entry;
-			
+
 		})
 		//outputJson += "\n};";
- 	//	outputJson = prettier.format(outputJson	, { parser: 'json', printWidth: 110 });
+		//	outputJson = prettier.format(outputJson	, { parser: 'json', printWidth: 110 });
 		let targetLocale = locale;
 		let outputFileName = "messages.json";
 		console.log(outputJson)
 		var source = fs.readFileSync(`${options.outputLocaleDir}/${targetLocale}/${options.outputLocaleDirSuffix}${outputFileName}`, { encoding: 'utf8' });
-			source = source.substr(0, source.lastIndexOf('}') - 1) + ",\n\n" + outputJson + "\n}";
-			console.debug(source);
-			fs.outputFileSync(`${options.outputLocaleDir}/${targetLocale}/${outputFileName}`, source);
-		
+		source = source.substr(0, source.lastIndexOf('}') - 1) + ",\n\n" + outputJson + "\n}";
+		console.debug(source);
+		fs.outputFileSync(`${options.outputLocaleDir}/${targetLocale}/${outputFileName}`, source);
+
 		//fs.outputFileSync(output, outputJson);
 
 	});
@@ -454,8 +467,8 @@ var cs = "python locale-converter.py ..\\src\\chrome\\locale\\${l1}\\mboximport 
 function locs() {
 	localeFolders.forEach(loc => {
 		let s = cs
-		s = s.replace("${l1}",loc)
-		s = s.replace("${l2}",loc)
+		s = s.replace("${l1}", loc)
+		s = s.replace("${l2}", loc)
 
 		console.log(s)
 	});
@@ -491,7 +504,7 @@ var options2 = {
 	outputFormat: 1,
 };
 
-	//inputLocaleDir: `./src/chrome/locale/en-US/mboximport`,
+//inputLocaleDir: `./src/chrome/locale/en-US/mboximport`,
 
 var options = {
 	inputLocaleDir: `./src/_locales/en-US`,
@@ -519,7 +532,7 @@ inputFiles = ["messages.json"];
 // 						'el', 'pl', 'da', 'pt-PT'];
 
 localeFolders = ['de', 'en-US', 'nl', 'fr', 'it', 'zh-CN', 'ja', 'es-ES', 'ru', 'hu-HU', 'hy-AM', 'ko-KR',
-'el', 'pl', 'da', 'pt-PT', 'ca', 'gl-ES', 'sk-SK', 'sl-SI', 'sv-SE'];
+	'el', 'pl', 'da', 'pt-PT', 'ca', 'gl-ES', 'sk-SK', 'sl-SI', 'sv-SE'];
 
 // full locale set
 localeFolders = ['en-US', 'de', 'ca', 'cs', 'da', 'el', 'es-ES', 'fr', 'gl', 'hu', 'hy-AM', 'it', 'ja', 'ko',
@@ -536,18 +549,10 @@ let localeFoldersHelp = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', '
 
 //translateHelpPage();
 //translatePage();
-//loadTranslationArray(inputFiles, options);
-//console.log(translationArray.length)
-//translationArray = translationArray.slice(101)
-//translateAll("messages.json", translationArray, options);
 
 // message translations
 translateAll(inputFiles, translationArray, options);
- 
-//loadTranslationArray(inputFiles, options);
- //convert(inputFiles, options);
-//locs()
-// let inputFiles = ["settings.dtd"];
+
 /*
 node .\scripts\translate-gc.js
 */
