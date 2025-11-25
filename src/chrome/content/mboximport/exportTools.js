@@ -783,7 +783,7 @@ async function exportAllMsgsDelayed(type, file, msgFolder, overrideContainer, pa
 
 	var msgList = [...msgFolder.messages];
 	if (msgFolder.getTotalMessages(false) != msgList.length) {
-		console.log(`IETNG: Thunderbird Msg count error: ${msgFolder.name}: getTotalMessages: ${IETtotal} Iterator: ${msgList.length}`)
+		//console.log(`IETNG: Thunderbird Msg count error: ${msgFolder.name}: getTotalMessages: ${IETtotal} Iterator: ${msgList.length}`)
 
 		let curMsgFolder = window.gTabmail.currentTabInfo.folder;
 		var gDBView = gTabmail.currentAbout3Pane.gDBView;
@@ -1653,6 +1653,15 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 											let afname = constructAttachmentsFilename(1, hdr);
 											attDirContainer.append(afname);
 										}
+
+										if (navigator.platform.toLowerCase().includes("win") &&
+											attDirContainer.path.length > 220) {
+											let attName = PathUtils.filename(attDirContainer.path);
+											let cutLen = attName.length / 4;
+											attName = attName.slice(0, attName.length - cutLen);
+											attName = attName.trimEnd();
+											attDirContainer.initWithPath(PathUtils.join(PathUtils.parent(attDirContainer.path), attName));
+										}
 										attDirContainer.createUnique(1, 0o755);
 										footer = '<br><hr><br><div style="font-size:16px;color:black;"><img src="data:image/gif;base64,R0lGODdhDwAPAOMAAP///zEwYmJlzQAAAPr6+vv7+/7+/vb29pyZ//39/YOBg////////////////////ywAAAAADwAPAAAESRDISUG4lQYr+s5bIEwDUWictA2GdBjhaAGDrKZzjYq3PgUw2co24+VGLYAAAesRLQklxoeiUDUI0qSj6EoH4Iuoq6B0PQJyJQIAOw==">\r\n<ul>';
 										noDir = false;
@@ -1681,14 +1690,32 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 
 											var attDirContainerClone = attDirContainer.clone();
 											attNameAscii = encodeURIComponent(att.name);
-											attDirContainerClone.append(att.name);
+
+											let totallen = attDirContainerClone.path.length + attNameAscii.length
+											var adjustedAttName = att.name;
+
+											// while NTFS is supposed to support paths
+											// up to 255 chars, tests throw exceptions
+											// at 249 chars so we truncate there
+
+											if (totallen > 248) {
+												let cutLen = totallen - 248;
+												// separate name from extension so we can truncate name
+												let extension = att.name.split('.').pop();
+												let lastDotIndex = att.name.lastIndexOf('.');
+												if (lastDotIndex == -1) {
+													adjustedAttName = att.name;
+												} else {
+													adjustedAttName = `${att.name.substring(0, lastDotIndex - cutLen)}.${extension}`;
+												}
+											}
+											attDirContainerClone.append(adjustedAttName);
 											attachments[i].file = attDirContainerClone;
 
 											let attPartName = att.url.match(/part=([.0-9]+)&?/)[1];
 											let attFile = await getAttachmentFile(aMsgHdr, attPartName)
 											let fileData = await fileToUint8Array(attFile);
 											await IOUtils.write(attDirContainerClone.path, fileData);
-
 										} catch (e) {
 											success = false;
 											console.debug('save attachment exception ' + att.name);
@@ -1697,7 +1724,10 @@ async function exportAsHtml(uri, uriArray, file, convertToText, allMsgs, copyToC
 									}
 
 									if (success)
-										footer = footer + '<li><a href="' + encodeURIComponent(attDirContainer.leafName) + "/" + attNameAscii + '">' + attDirContainerName + "/" + attName + '</li></a>';
+										footer = footer + '<li><a href="' +
+											encodeURIComponent(attDirContainer.leafName) +
+											"/" + encodeURIComponent(adjustedAttName) + '">' +
+											attDirContainerName + "/" + attName + '</li></a>';
 								}
 								if (footer) {
 									footer = footer + "</ul></div><div class='' ></div></body>";
