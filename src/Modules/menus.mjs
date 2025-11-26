@@ -725,7 +725,6 @@ var folderCtxMenuSet = [
       functionParams: { expType: "html", saveAttachments: "all", index: false }
     }
   },
-
   {
     menuDef: {
       parentId: folderCtxMenu_Exp_HTMLFormat_Id,
@@ -791,6 +790,19 @@ var folderCtxMenuSet = [
       functionParams: { expType: "pdf", saveAttachments: "none", index: false }
     }
   },
+  
+  {
+    menuDef: {
+      parentId: folderCtxMenu_Exp_PDFFormat_Id,
+      id: "folderCtxMenu_PDF_subfolders_newexp",
+      title: "(New) " + localizeMenuTitle("folderCtxMenu_Exp_PDFFormatCreateIndexRecursive_Id.title"),    
+      onclick: menuFunctionDispatcher,
+    },
+    dispatchOptions: {
+      dispatchFunction: exportCmds.exportFolders,
+      functionParams: { expType: "pdf", saveAttachments: "none", index: false, subFolders: true }
+    }
+  },
   {
     menuDef: {
       parentId: folderCtxMenu_Exp_PDFFormat_Id,
@@ -803,6 +815,21 @@ var folderCtxMenuSet = [
       functionParams: { expType: "pdf", saveAttachments: "all", index: false }
     }
   },
+  {
+    menuDef: {
+      parentId: folderCtxMenu_Exp_PDFFormat_Id,
+      id: "folderCtxMenu_PDF_saveatts_subfolders_newexp",
+      title: "(New) " + localizeMenuTitle("folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title"),    
+      onclick: menuFunctionDispatcher,
+    },
+    dispatchOptions: {
+      dispatchFunction: exportCmds.exportFolders,
+      functionParams: { expType: "pdf", saveAttachments: "all", index: false, subFolders: true }
+    }
+  },
+
+
+
   {
     menuDef: {
       parentId: folderCtxMenu_Exp_PDFFormat_Id,
