@@ -60,6 +60,14 @@ console.log("listener set")
 
 document.addEventListener('DOMContentLoaded', () => {
   i18n.updateDocument();
+
+  messenger.runtime
+    .sendMessage({
+      command: "UI_EVENT",
+      source: "expStatusWin",
+      srcEvent: "expStatusWinOpen",
+    });
+
   okButton.addEventListener("click", okButtonListener);
   cancelButton.addEventListener("click", cancelButtonListener);
 

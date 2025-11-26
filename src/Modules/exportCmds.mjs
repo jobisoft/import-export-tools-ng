@@ -91,7 +91,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       folderMsgCount += msgCount;
       browser.runtime.sendMessage({
         command: "UI_UPDATE", target: "expStatusWin",
-        folderName: expTask.folders[expTask.currentFolderIndex].name, msgCount: folderMsgCount,
+        folderName: expTask.folders[expTask.currentFolderIndex].exportPath, msgCount: folderMsgCount,
         maxMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount
       })
       console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
@@ -125,11 +125,24 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         // create the status window on first folder
         if (folderIndex == 0) {
           await ui.createExportStatusWindow("Export HTML");
-          await new Promise(r => setTimeout(r, 100));
+
+          // wait for the window to load and send expStatusWinOpen
+          
+          await new Promise((resolve, reject) => {
+            async function expStatusWinOpen(msg) {
+              if (msg.command == "UI_EVENT" &&
+                msg.source == "expStatusWin" &&
+                msg.srcEvent == "expStatusWinOpen") {
+                browser.runtime.onMessage.removeListener(expStatusWinOpen);
+                resolve();
+              }
+            }
+            browser.runtime.onMessage.addListener(expStatusWinOpen);
+          });
         }
 
         // send initial ui status
-        browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatus", folderName: expTask.folders[folderIndex].name, msgCount: folderMsgCount, maxMsgCount: expTask.folders[folderIndex].totalMsgCount })
+        browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatusWin", folderName: expTask.folders[folderIndex].exportPath, msgCount: folderMsgCount, maxMsgCount: expTask.folders[folderIndex].totalMsgCount })
 
         var exportStatus = await msgIterateBatch(expTask);
         if (abort) {
