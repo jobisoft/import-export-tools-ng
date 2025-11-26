@@ -674,6 +674,18 @@ var folderCtxMenuSet = [
       functionParams: { expType: "eml", saveAttachments: "none", index: false }
     }
   },
+  {
+    menuDef: {
+      parentId: folderCtxMenu_Exp_EMLFormat_Id,
+      id: "folderCtxMenu_EML_subfolders_newexp",
+      title: "(New) " + localizeMenuTitle("folderCtxMenu_Exp_EMLFormatCreateIndexRecursive_Id.title"),
+      onclick: menuFunctionDispatcher,
+    },
+    dispatchOptions: {
+      dispatchFunction: exportCmds.exportFolders,
+      functionParams: { expType: "eml", saveAttachments: "none", index: false, subFolders: true }
+    }
+  },
 
   {
     menuDef: {
@@ -719,6 +731,18 @@ var folderCtxMenuSet = [
       parentId: folderCtxMenu_Exp_HTMLFormat_Id,
       id: "folderCtxMenu_HTML_subfolders_newexp",
       title: "(New) " + localizeMenuTitle("folderCtxMenu_Exp_HTMLFormatCreateIndexRecursive_Id.title"),    
+      onclick: menuFunctionDispatcher,
+    },
+    dispatchOptions: {
+      dispatchFunction: exportCmds.exportFolders,
+      functionParams: { expType: "html", saveAttachments: "none", index: false, subFolders: true }
+    }
+  },
+  {
+    menuDef: {
+      parentId: folderCtxMenu_Exp_HTMLFormat_Id,
+      id: "folderCtxMenu_HTML_saveatts_subfolders_newexp",
+      title: "(New) " + localizeMenuTitle("folderCtxMenu_Exp_HTMLFormatSaveAttsCreateIndexRecursive_Id.title"),    
       onclick: menuFunctionDispatcher,
     },
     dispatchOptions: {
