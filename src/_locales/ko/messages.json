@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "첨부 파일 및 인덱스가 있는 메시지"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "하위 폴더가 있는 메시지, 인덱스 및 첨부 파일"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "일반 텍스트 형식"
   },

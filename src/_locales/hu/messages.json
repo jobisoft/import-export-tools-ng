@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Mellékletekkel és indexszel rendelkező üzenetek"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Üzenetek, index és mellékletek almappákkal"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Egyszerű szöveges formátum"
   },

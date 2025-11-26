@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Messaggi con allegati e indice"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Messaggi, indice e allegati con sottocartelle"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Formato testo normale"
   },

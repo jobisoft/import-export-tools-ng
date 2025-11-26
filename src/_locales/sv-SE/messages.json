@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Meddelanden med bilagor och index"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Meddelanden, index och bilagor med undermappar"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Oformaterad text"
   },

@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Messages With Attachments And Index"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Messages, Index and Attachments with Subfolders"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Plain Text Format"
   },

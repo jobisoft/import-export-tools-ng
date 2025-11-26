@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Messages avec pièces jointes et index"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Messages, index et pièces jointes avec sous-dossiers"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Format texte brut"
   },

@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Сообщения с вложениями и индексом"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Сообщения, индекс и вложения с подпапками"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Простой текстовый формат"
   },

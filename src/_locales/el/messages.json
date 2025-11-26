@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Μηνύματα με συνημμένα και ευρετήριο"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Μηνύματα, Ευρετήριο και Συνημμένα με Υποφακέλους"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Μορφή απλού κειμένου"
   },

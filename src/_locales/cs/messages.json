@@ -392,6 +392,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Zprávy s přílohami a indexem"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Zprávy, index a přílohy s podsložkami"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Formát prostého textu"
   },

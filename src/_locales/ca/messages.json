@@ -396,6 +396,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Missatges amb fitxers adjunts i índex"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Missatges, índex i fitxers adjunts amb subcarpetes"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Format de text pla"
   },

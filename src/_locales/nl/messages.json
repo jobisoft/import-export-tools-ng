@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Berichten met bijlagen en index"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Berichten, index en bijlagen met submappen"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Platte tekstformaat"
   },

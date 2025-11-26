@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "添付ファイルとインデックス付きのメッセージ"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "メッセージ、インデックス、添付ファイル（サブフォルダ付き）"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "プレーンテキスト形式"
   },

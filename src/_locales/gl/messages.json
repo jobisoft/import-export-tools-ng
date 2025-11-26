@@ -396,6 +396,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Mensaxes con anexos e índice"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Mensaxes, índice e anexos con subcartafoles"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Formato de texto plano"
   },

@@ -395,6 +395,9 @@
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Sporočila s prilogami in kazalom"
   },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Sporočila, kazalo in priloge s podmapami"
+  },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Oblika navadnega besedila"
   },
