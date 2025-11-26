@@ -25,7 +25,6 @@ const baseExpTask = {
   },
   messages: {
     messageContainer: true,
-    create: true,
     messageContainerName: "messages",
     messageContainerDirectory: "",
   },
@@ -117,6 +116,9 @@ async function _build_EML_expTask(expTask, params, ctxEvent, folderSet) {
   expTask.dateFormat.type = 1;
   expTask.names.extension = "eml";
   expTask.attachments.save = params.saveAttachments;
+
+  // containers
+  expTask.messages.messageContainer = false;
 
   // names
   let nameFormat = await prefs.getPref("exportEML.filename_format");
