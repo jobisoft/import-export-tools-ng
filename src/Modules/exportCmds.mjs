@@ -81,20 +81,20 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     // ev listener
 
-    var folderMsgCount;
-    var totalMsgCount = 0;
+    let folderExportedMsgCount;
 
     async function _updateListener(folderName, msgCount) {
       if (abort) {
         return;
       }
-      folderMsgCount += msgCount;
+      folderExportedMsgCount += msgCount;
       browser.runtime.sendMessage({
         command: "UI_UPDATE", target: "expStatusWin",
-        folderName: expTask.folders[expTask.currentFolderIndex].exportPath, msgCount: folderMsgCount,
-        maxMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount
+        currentFolderName: expTask.folders[expTask.currentFolderIndex].exportPath,
+        folderExportedMsgCount: folderExportedMsgCount,
+        totalFolderMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount
       })
-      console.log(folderName, `Msg count: (${folderMsgCount} / ${totalMsgCount})`)
+      console.log(folderName, `Msg count: (${folderExportedMsgCount} / ${expTask.folders[expTask.currentFolderIndex].totalMsgCount})`)
     }
 
     var _updateListenerRef = _updateListener;
@@ -108,13 +108,13 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       let st = new Date();
       console.log(new Date());
 
-      var folderMsgCount = 0;
+      folderExportedMsgCount = 0;
 
       // this is our folder loop
       for (var folderIndex = 0; folderIndex < expTask.folders.length; folderIndex++) {
         expTask.currentFolderIndex = folderIndex;
         expTask.currentFolderPath = expTask.folders[folderIndex].exportPath;
-        folderMsgCount = 0;
+        folderExportedMsgCount = 0;
 
         // create export container
         if (!functionParams?.subFolders ||
@@ -142,7 +142,13 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         }
 
         // send initial ui status
-        browser.runtime.sendMessage({ command: "UI_UPDATE", target: "expStatusWin", folderName: expTask.folders[folderIndex].exportPath, msgCount: folderMsgCount, maxMsgCount: expTask.folders[folderIndex].totalMsgCount })
+        browser.runtime.sendMessage({
+          command: "UI_UPDATE",
+          target: "expStatusWin",
+          currentFolderName: expTask.folders[folderIndex].exportPath,
+          folderExportedMsgCount: folderExportedMsgCount,
+          totalFolderMsgCount: expTask.folders[folderIndex].totalMsgCount
+        });
 
         var exportStatus = await msgIterateBatch(expTask);
         if (abort) {

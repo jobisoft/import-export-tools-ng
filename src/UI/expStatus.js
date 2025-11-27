@@ -38,10 +38,10 @@ browser.runtime.onMessage.addListener(msg => {
   switch (msg.command) {
     case "UI_UPDATE":
       console.log(msg)
-      currentFolder.innerText = msg.folderName;
-      totalFolderMsgCount.innerText = msg.maxMsgCount;
-      currentFolderProgress.max = msg.maxMsgCount;
-      currentFolderProgress.value = msg.msgCount;
+      currentFolder.innerText = msg.currentFolderName;
+      totalFolderMsgCount.innerText = msg.totalFolderMsgCount;
+      currentFolderProgress.max = msg.totalFolderMsgCount;
+      currentFolderProgress.value = msg.folderExportedMsgCount;
       break;
     case "UI_CMD":
       switch (msg.subCommand) {
