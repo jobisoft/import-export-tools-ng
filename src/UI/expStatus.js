@@ -2,7 +2,11 @@
 
 const currentFolderProgress = document.getElementById("msg-progress");
 const currentFolder = document.getElementById("current-folder");
-const totalFolderMsgCount = document.getElementById("total-folder-msg-count")
+const totalFolderMsgCount = document.getElementById("total-folder-msg-count");
+const totalFolderCount = document.getElementById("total-folder-count");
+const totalMsgCount = document.getElementById("total-msg-count");
+const totalMsgProgress = document.getElementById("total-msg-progress");
+
 const okButton = document.getElementById("okButton");
 const cancelButton = document.getElementById("cancelButton");
 var cancelHandled = false;
@@ -37,11 +41,16 @@ browser.runtime.onMessage.addListener(msg => {
   }
   switch (msg.command) {
     case "UI_UPDATE":
-      console.log(msg)
+      console.log(msg);
       currentFolder.innerText = msg.currentFolderName;
       totalFolderMsgCount.innerText = msg.totalFolderMsgCount;
       currentFolderProgress.max = msg.totalFolderMsgCount;
       currentFolderProgress.value = msg.folderExportedMsgCount;
+      totalFolderCount.innerText = (msg.currentFolderIndex + 1) + " \\ " + msg.totalFolderCount;
+      totalMsgCount.innerText = msg.totalMsgCount;
+      totalMsgProgress.value = msg.totalMsgsExported;
+      totalMsgProgress.max = msg.totalMsgCount;
+
       break;
     case "UI_CMD":
       switch (msg.subCommand) {
@@ -56,7 +65,7 @@ browser.runtime.onMessage.addListener(msg => {
   }
 });
 
-console.log("listener set")
+console.log("listener set");
 
 document.addEventListener('DOMContentLoaded', () => {
   i18n.updateDocument();
@@ -78,6 +87,6 @@ window.addEventListener("beforeunload", (event) => {
   if (!cancelHandled) {
     cancel();
   }
-  console.log("close")
+  console.log("close");
 });
 

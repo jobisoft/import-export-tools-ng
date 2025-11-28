@@ -86,13 +86,16 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
     // ev listener
 
-    let folderExportedMsgCount;
+    let folderExportedMsgCount = 0;
+    let totalMsgsExported = 0;
 
     async function _updateListener(folderName, msgCount) {
       if (abort) {
         return;
       }
       folderExportedMsgCount += msgCount;
+      totalMsgsExported += msgCount;
+
       browser.runtime.sendMessage({
         command: "UI_UPDATE", target: "expStatusWin",
         currentFolderName: expTask.folders[expTask.currentFolderIndex].exportPath,
@@ -100,7 +103,9 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
         folderExportedMsgCount: folderExportedMsgCount,
         totalFolderMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount,
         totalFolderCount: totalFolderCount,
-        totalMsgCount: totalMsgCount
+        totalMsgCount: totalMsgCount,
+        totalMsgsExported: totalMsgsExported
+
       })
       console.log(folderName, `Msg count: (${folderExportedMsgCount} / ${expTask.folders[expTask.currentFolderIndex].totalMsgCount})`)
     }
@@ -117,7 +122,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       console.log(new Date());
 
       folderExportedMsgCount = 0;
-
+      
       // this is our folder loop
       for (var folderIndex = 0; folderIndex < expTask.folders.length; folderIndex++) {
         expTask.currentFolderIndex = folderIndex;
@@ -135,7 +140,7 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
           await ui.createExportStatusWindow("Export HTML");
 
           // wait for the window to load and send expStatusWinOpen
-          
+
           await new Promise((resolve, reject) => {
             async function expStatusWinOpen(msg) {
               if (msg.command == "UI_EVENT" &&
@@ -154,8 +159,14 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
           command: "UI_UPDATE",
           target: "expStatusWin",
           currentFolderName: expTask.folders[folderIndex].exportPath,
+          currentFolderIndex: expTask.currentFolderIndex,
           folderExportedMsgCount: folderExportedMsgCount,
-          totalFolderMsgCount: expTask.folders[folderIndex].totalMsgCount
+          totalFolderMsgCount: expTask.folders[folderIndex].totalMsgCount,
+          totalFolderCount: totalFolderCount,
+          totalMsgCount: totalMsgCount,
+          totalMsgsExported: totalMsgsExported
+
+
         });
 
         var exportStatus = await msgIterateBatch(expTask);

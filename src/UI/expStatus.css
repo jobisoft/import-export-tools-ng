@@ -55,6 +55,13 @@ tr, td {
 	width: 40px;
 }
 
+.progress-div1 {
+	padding-top: 15px;
+}
+
+.progress-div2 {
+	padding-top: 12px;
+}
 .progress::after {
 	padding-left: 5px;
   content: attr(max);
