@@ -31,7 +31,12 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       */
 
     // check for multiple folders selected
-    var folderSet = await getFolderSet(ctxEvent.selectedFolders, functionParams);
+    let folderSet = await getFolderSet(ctxEvent.selectedFolders, functionParams);
+    let totalFolderCount = folderSet.length;
+    let totalMsgCount = 0;
+    folderSet.forEach(folder => {
+      totalMsgCount += folder.totalMsgCount;
+    });
 
     console.log(ctxEvent, functionParams, folderSet);
 
@@ -91,8 +96,11 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
       browser.runtime.sendMessage({
         command: "UI_UPDATE", target: "expStatusWin",
         currentFolderName: expTask.folders[expTask.currentFolderIndex].exportPath,
+        currentFolderIndex: expTask.currentFolderIndex,
         folderExportedMsgCount: folderExportedMsgCount,
-        totalFolderMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount
+        totalFolderMsgCount: expTask.folders[expTask.currentFolderIndex].totalMsgCount,
+        totalFolderCount: totalFolderCount,
+        totalMsgCount: totalMsgCount
       })
       console.log(folderName, `Msg count: (${folderExportedMsgCount} / ${expTask.folders[expTask.currentFolderIndex].totalMsgCount})`)
     }
