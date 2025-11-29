@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opcións"
   },
+  "currentFolder.label": {
+    "message": "Cartafol actual"
+  },
   "customDate": {
     "message": "Data personalizada:"
   },
@@ -323,6 +326,9 @@
   "filePickerImportMSG": {
     "message": "Seleccionar as mensaxes a importar",
     "src": "mboximport"
+  },
+  "folderCount.label": {
+    "message": "Número de cartafoles"
   },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Copiar o camiño do cartafol"
@@ -597,8 +603,14 @@
   "mboxExport": {
     "message": "Exportar cartafoles como ficheiros MBOX:"
   },
+  "messageCount.label": {
+    "message": "Número de mensaxes"
+  },
   "messageImportProblems.msg": {
     "message": "Houbo problemas ao importar algunhas mensaxes:"
+  },
+  "messagesExported.label": {
+    "message": "Mensaxes exportadas"
   },
   "messagesMsg": {
     "message": "Mensaxes",
@@ -988,6 +1000,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importar perfil"
+  },
+  "totalErrors.label": {
+    "message": "Total de erros"
+  },
+  "totalMessages.label": {
+    "message": "Total de mensaxes"
+  },
+  "totalMessagesExported.label": {
+    "message": "Total de mensaxes exportadas"
   },
   "useExtFilenameFormat": {
     "message": "Usa Formato Estendido"

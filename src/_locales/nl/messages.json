@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opties"
   },
+  "currentFolder.label": {
+    "message": "Huidige map"
+  },
   "customDate": {
     "message": "Aangepaste datum:"
   },
@@ -322,6 +325,9 @@
   "filePickerImportMSG": {
     "message": "Selecteer de te importeren berichten",
     "src": "mboximport"
+  },
+  "folderCount.label": {
+    "message": "Aantal mappen"
   },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Mappad kopiëren"
@@ -596,8 +602,14 @@
   "mboxExport": {
     "message": "Mappen exporteren als mbox-bestand:"
   },
+  "messageCount.label": {
+    "message": "Berichtenaantal"
+  },
   "messageImportProblems.msg": {
     "message": "Er waren problemen bij het importeren van sommige berichten:"
+  },
+  "messagesExported.label": {
+    "message": "Geëxporteerde berichten"
   },
   "messagesMsg": {
     "message": "Berichten",
@@ -987,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importeer profiel"
+  },
+  "totalErrors.label": {
+    "message": "Totaal aantal fouten"
+  },
+  "totalMessages.label": {
+    "message": "Totaal aantal berichten"
+  },
+  "totalMessagesExported.label": {
+    "message": "Totaal aantal geëxporteerde berichten"
   },
   "useExtFilenameFormat": {
     "message": "Gebruik uitgebreid formaat"

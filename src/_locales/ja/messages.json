@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "設定"
   },
+  "currentFolder.label": {
+    "message": "現在のフォルダ"
+  },
   "customDate": {
     "message": "カスタマイズ日時形式："
   },
@@ -322,6 +325,9 @@
   "filePickerImportMSG": {
     "message": "選択したメッセージをインポート",
     "src": "mboximport"
+  },
+  "folderCount.label": {
+    "message": "フォルダ数"
   },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "フォルダーのパスをコピー"
@@ -596,8 +602,14 @@
   "mboxExport": {
     "message": "フォルダーを mbox ファイルでエクスポートする場所："
   },
+  "messageCount.label": {
+    "message": "メッセージ数"
+  },
   "messageImportProblems.msg": {
     "message": "いくつかのメッセージのインポート中に問題が発生しました:"
+  },
+  "messagesExported.label": {
+    "message": "エクスポートされたメッセージ"
   },
   "messagesMsg": {
     "message": "メッセージ数",
@@ -987,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "プロファイルのインポート"
+  },
+  "totalErrors.label": {
+    "message": "合計エラー数"
+  },
+  "totalMessages.label": {
+    "message": "合計メッセージ数"
+  },
+  "totalMessagesExported.label": {
+    "message": "エクスポートされたメッセージの合計数"
   },
   "useExtFilenameFormat": {
     "message": "カスタム形式を使用する"

@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opciones"
   },
+  "currentFolder.label": {
+    "message": "Carpeta actual"
+  },
   "customDate": {
     "message": "Fecha personalizada:"
   },
@@ -322,6 +325,9 @@
   "filePickerImportMSG": {
     "message": "Seleccionar los mensajes a importar",
     "src": "mboximport"
+  },
+  "folderCount.label": {
+    "message": "Recuento de carpetas"
   },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Copiar ruta de carpeta"
@@ -596,8 +602,14 @@
   "mboxExport": {
     "message": "Exportar carpetas como archivo MBOX:"
   },
+  "messageCount.label": {
+    "message": "Recuento de mensajes"
+  },
   "messageImportProblems.msg": {
     "message": "Hubo problemas al importar algunos mensajes:"
+  },
+  "messagesExported.label": {
+    "message": "Mensajes exportados"
   },
   "messagesMsg": {
     "message": "Mensajes",
@@ -987,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importar perfil"
+  },
+  "totalErrors.label": {
+    "message": "Errores totales"
+  },
+  "totalMessages.label": {
+    "message": "Total de mensajes"
+  },
+  "totalMessagesExported.label": {
+    "message": "Total de mensajes exportados"
   },
   "useExtFilenameFormat": {
     "message": "Usar formato extendido"
