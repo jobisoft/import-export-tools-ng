@@ -34,8 +34,19 @@ body {
 	font-family: 'Roboto', sans-serif;
 	color: var(--dialog-text-color);
   min-width: 320px;
-  min-height: 150px;
+}
+
+#outer-container {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 25px);
 	margin: 10px;
+
+}
+
+#main-content {
+	flex: 1;
+
 }
 
 table { 
@@ -79,7 +90,9 @@ tr.multiple-folders-display {
 }
 
 #buttons {
+	/* background-color: aqua; */
 	text-align: right;
+
 }
 
 button {
