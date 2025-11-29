@@ -50,7 +50,12 @@ browser.runtime.onMessage.addListener(msg => {
       totalMsgCount.innerText = msg.totalMsgCount;
       totalMsgProgress.value = msg.totalMsgsExported;
       totalMsgProgress.max = msg.totalMsgCount;
+      if (msg?.winType == "multipleFolders") {
+        console.log("display on")
+        document.documentElement.style.setProperty('--multiple-folders-display', 'block');
+        document.documentElement.style.setProperty('--multiple-folders-display-row', 'table-row');
 
+      }
       break;
     case "UI_CMD":
       switch (msg.subCommand) {

@@ -137,7 +137,11 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
 
         // create the status window on first folder
         if (folderIndex == 0) {
-          await ui.createExportStatusWindow("Export HTML");
+          var winType = "singleFolder";
+          if (totalFolderCount > 1) {
+            winType = "multipleFolders";
+          }
+          await ui.createExportStatusWindow("Export HTML", winType);
 
           // wait for the window to load and send expStatusWinOpen
 
@@ -164,8 +168,8 @@ export async function exportFolders(ctxEvent, tab, functionParams) {
           totalFolderMsgCount: expTask.folders[folderIndex].totalMsgCount,
           totalFolderCount: totalFolderCount,
           totalMsgCount: totalMsgCount,
-          totalMsgsExported: totalMsgsExported
-
+          totalMsgsExported: totalMsgsExported,
+          winType: winType
 
         });
 

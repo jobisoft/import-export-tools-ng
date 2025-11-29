@@ -1,7 +1,7 @@
 /* UI expStatus windows css */
 
 :root {
-	--dialog-bgcolor: Field;
+	--dialog-bgcolor: #f5ffff;
 	--dialog-text-color: FieldText;
 	--in-content-box-background: Field !important;
 	--in-content-accent-color: rgb(69, 161, 255);
@@ -12,6 +12,9 @@
 	--table-border-color: #d2d2d2;
 	--table-stripe-even: #e8e8e8;
 	--link-color: darkblue;
+	--multiple-folders-display: none;
+	--multiple-folders-display-row: none;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +52,14 @@ tr, td {
 	border: 1px solid black;
 }
 */
+
+.multiple-folders-display {
+	display: var(--multiple-folders-display);
+}
+
+tr.multiple-folders-display {
+	display: var(--multiple-folders-display-row);
+}
 
 .numright {
 	text-align: right;
