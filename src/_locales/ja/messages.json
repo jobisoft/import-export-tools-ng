@@ -828,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "わかりました"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "タブではなくウィンドウでヘルプを開く"

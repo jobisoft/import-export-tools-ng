@@ -828,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "D&#39;ACCORD"
+  "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Ouvrir l’aide dans une fenêtre au lieu d’un onglet"

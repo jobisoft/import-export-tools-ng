@@ -828,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "V poriadku"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Otvorte pomocníka v okne namiesto karty"

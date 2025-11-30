@@ -828,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "DE ACUERDO"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Abrir la ayuda en una ventana en lugar de una pestaña"

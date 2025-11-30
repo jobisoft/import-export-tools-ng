@@ -828,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "好的"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "在窗口而不是选项卡中打开帮助"

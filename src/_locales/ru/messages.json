@@ -828,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "ХОРОШО"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Открыть справку в окне вместо вкладки"
