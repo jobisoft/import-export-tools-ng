@@ -71,17 +71,28 @@ var autoBackup = {
 	getDir: function () {
 		var file = null;
 
+		console.log("IETNG: getDir")
 		try {
 			var dir = gBackupPrefBranch.getCharPref("extensions.importexporttoolsng.autobackup.dir");
+			console.log("IETNG: dirpref:", dir)
+
 			file = Cc["@mozilla.org/file/local;1"]
 				.createInstance(Ci.nsIFile);
 			file.initWithPath(dir);
-			if (!file.exists() || !file.isDirectory())
+			if (!file.exists() || !file.isDirectory()) {
+				console.log("IETNG: dir doesn't exist or not dir")
+
 				file = null;
+			}
+
 		} catch (e) {
+			console.log("IETNG: ex", e)
+
 			file = null;
 		}
 		if (!file) {
+			console.log("IETNG: file null calling picker")
+
 			file = IETgetPickerModeFolder();
 			autoBackup.filePicker = true;
 		}
@@ -189,9 +200,15 @@ var autoBackup = {
 	},
 
 	end: function (sec) {
+		console.log("IETNG: end", sec)
+
 		if (sec === 0) {
+			console.log("IETNG: close ")
+
 			window.close();
 		} else {
+			console.log("IETNG: delay 1s")
+
 			window.setTimeout(autoBackup.end, 1000, sec - 1);
 		}
 	},
@@ -271,7 +288,11 @@ var autoBackup = {
 			document.getElementById("start").collapsed = true;
 			document.getElementById("done").removeAttribute("collapsed");
 			// new remove old backups #663
+			console.log("IETNG: write done, removing backups")
+
 			await autoBackup.removeOldBackups();
+			console.log("IETNG: remove done, calling end")
+
 			autoBackup.end(3);
 		}
 	},
