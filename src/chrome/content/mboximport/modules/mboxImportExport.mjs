@@ -145,7 +145,7 @@ export var mboxImportExport = {
 
       let over4GBskipMsg = ietngUtils.localizeMsg("over4GBskipMsg");
 
-      if (stat.size > 150000000000) {
+      if (stat.size > 170000000000) {
         console.log(`Mbox ${fname} larger than 4GB, skipping`);
         //window.alert(`Mbox ${fname} ${over4GBskipMsg}`);
 
