@@ -33,7 +33,6 @@ var gBackupPrefBranch = Cc["@mozilla.org/preferences-service;1"]
 var autoBackup = {
 
 	onOK: function () {
-		setTimeout(autoBackup.start, 500);
 		document.getElementById("start").removeAttribute("collapsed");
 		document.getElementById("go").collapsed = true;
 		document.documentElement.getButton("accept").disabled = true;
@@ -42,7 +41,7 @@ var autoBackup = {
 		// 2 = save just if new with custom name, save all with unique name
 		autoBackup.saveMode = gBackupPrefBranch.getIntPref("extensions.importexporttoolsng.autobackup.save_mode");
 		autoBackup.type = gBackupPrefBranch.getIntPref("extensions.importexporttoolsng.autobackup.type");
-		// return false;
+		autoBackup.start();
 	},
 
 	load: function () {
@@ -68,9 +67,8 @@ var autoBackup = {
 		}
 	},
 
-	getDir: function () {
+	getDir: async function () {
 		var file = null;
-
 		try {
 			var dir = gBackupPrefBranch.getCharPref("extensions.importexporttoolsng.autobackup.dir");
 			file = Cc["@mozilla.org/file/local;1"]
@@ -82,7 +80,7 @@ var autoBackup = {
 			file = null;
 		}
 		if (!file) {
-			file = IETgetPickerModeFolder();
+			file = await asyncIETgetPickerModeFolder();
 			autoBackup.filePicker = true;
 		}
 		return file;
@@ -99,9 +97,9 @@ var autoBackup = {
 		foStream.close();
 	},
 
-	start: function () {
+	start: async function () {
 		// "dir" is the target directory for the backup
-		var dir = autoBackup.getDir();
+		var dir = await autoBackup.getDir();
 		if (!dir)
 			return;
 
