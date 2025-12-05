@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Options"
   },
+  "currentFolder.label": {
+    "message": "Current Folder"
+  },
   "customDate": {
     "message": "Custom Date:"
   },
@@ -323,6 +326,9 @@
     "message": "Select the messages to import",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Folder Count"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Copy Folder Path"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Messages With Attachments And Index"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Messages, Index and Attachments with Subfolders"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Plain Text Format"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Export folders as MBOX file:"
   },
+  "messageCount.label": {
+    "message": "Message Count"
+  },
   "messageImportProblems.msg": {
     "message": "There were problems importing some messages:"
+  },
+  "messagesExported.label": {
+    "message": "Messages Exported"
   },
   "messagesMsg": {
     "message": "Messages",
@@ -983,6 +998,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Import Profile"
+  },
+  "totalErrors.label": {
+    "message": "Total Errors"
+  },
+  "totalMessages.label": {
+    "message": "Total Messages"
+  },
+  "totalMessagesExported.label": {
+    "message": "Total Messages Exported"
   },
   "useExtFilenameFormat": {
     "message": "Use Extended Format"

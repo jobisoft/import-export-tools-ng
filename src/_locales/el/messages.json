@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Επιλογές"
   },
+  "currentFolder.label": {
+    "message": "Τρέχων φάκελος"
+  },
   "customDate": {
     "message": "Προσαρμοσμένη ημερομηνία:"
   },
@@ -323,6 +326,9 @@
     "message": "Επιλέξτε τα μηνύματα για εισαγωγή",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Αριθμός φακέλων"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Αντιγραφή διαδρομής φακέλου"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Μηνύματα με συνημμένα και ευρετήριο"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Μηνύματα, Ευρετήριο και Συνημμένα με Υποφακέλους"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Μορφή απλού κειμένου"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Εξαγωγή φακέλων ως αρχείο MBOX:"
   },
+  "messageCount.label": {
+    "message": "Αριθμός μηνυμάτων"
+  },
   "messageImportProblems.msg": {
     "message": "Παρουσιάστηκαν προβλήματα κατά την εισαγωγή ορισμένων μηνυμάτων:"
+  },
+  "messagesExported.label": {
+    "message": "Εξήχθησαν μηνύματα"
   },
   "messagesMsg": {
     "message": "Μηνύματα",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "ΕΝΤΑΞΕΙ"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Ανοίξτε τη βοήθεια σε ένα παράθυρο αντί για μια καρτέλα"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Εισαγωγή προφίλ"
+  },
+  "totalErrors.label": {
+    "message": "Συνολικά Σφάλματα"
+  },
+  "totalMessages.label": {
+    "message": "Σύνολο Μηνυμάτων"
+  },
+  "totalMessagesExported.label": {
+    "message": "Σύνολο μηνυμάτων που εξήχθησαν"
   },
   "useExtFilenameFormat": {
     "message": "Χρησιμοποιήστε εκτεταμένη μορφή"

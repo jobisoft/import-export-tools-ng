@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opcije"
   },
+  "currentFolder.label": {
+    "message": "Trenutna mapa"
+  },
   "customDate": {
     "message": "Datum po meri:"
   },
@@ -323,6 +326,9 @@
     "message": "Izberite sporočila za uvoz",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Število map"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Kopiraj pot do mape"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Sporočila s prilogami in kazalom"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Sporočila, kazalo in priloge s podmapami"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Oblika navadnega besedila"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Izvozi mape kot datoteko MBOX:"
   },
+  "messageCount.label": {
+    "message": "Število sporočil"
+  },
   "messageImportProblems.msg": {
     "message": "Pri uvozu nekaterih sporočil je prišlo do težav:"
+  },
+  "messagesExported.label": {
+    "message": "Izvožena sporočila"
   },
   "messagesMsg": {
     "message": "Sporočila",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "V redu"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Odpiranje pomoči v oknu namesto na zavihku"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Uvozi profil"
+  },
+  "totalErrors.label": {
+    "message": "Skupno število napak"
+  },
+  "totalMessages.label": {
+    "message": "Skupno sporočil"
+  },
+  "totalMessagesExported.label": {
+    "message": "Skupno število izvoženih sporočil"
   },
   "useExtFilenameFormat": {
     "message": "Uporabi razširjeno obliko"

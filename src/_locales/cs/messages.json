@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Možnosti"
   },
+  "currentFolder.label": {
+    "message": "Aktuální složka"
+  },
   "customDate": {
     "message": "Vlastní datum:"
   },
@@ -323,6 +326,9 @@
     "message": "Vyberte zprávy, které chcete importovat",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Počet složek"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Kopírovat cestu složky"
   },
@@ -391,6 +397,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Zprávy s přílohami a indexem"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Zprávy, index a přílohy s podsložkami"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Formát prostého textu"
@@ -590,8 +599,14 @@
   "mboxExport": {
     "message": "Exportovat složky jako soubor MBOX:"
   },
+  "messageCount.label": {
+    "message": "Počet zpráv"
+  },
   "messageImportProblems.msg": {
     "message": "Při importu některých zpráv došlo k problémům:"
+  },
+  "messagesExported.label": {
+    "message": "Exportované zprávy"
   },
   "messagesMsg": {
     "message": "Zprávy",
@@ -981,6 +996,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importovat profil"
+  },
+  "totalErrors.label": {
+    "message": "Celkový počet chyb"
+  },
+  "totalMessages.label": {
+    "message": "Celkový počet zpráv"
+  },
+  "totalMessagesExported.label": {
+    "message": "Celkový počet exportovaných zpráv"
   },
   "useExtFilenameFormat": {
     "message": "Použijte rozšířený formát"

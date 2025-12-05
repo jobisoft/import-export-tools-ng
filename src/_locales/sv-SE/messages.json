@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Alternativ"
   },
+  "currentFolder.label": {
+    "message": "Aktuell mapp"
+  },
   "customDate": {
     "message": "Anpassad datum:"
   },
@@ -323,6 +326,9 @@
     "message": "Välj meddelanden att importera",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Antal mappar"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Kopiera mappsökväg"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Meddelanden med bilagor och index"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Meddelanden, index och bilagor med undermappar"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Oformaterad text"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Exportera mappar som MBOX-fil:"
   },
+  "messageCount.label": {
+    "message": "Antal meddelanden"
+  },
   "messageImportProblems.msg": {
     "message": "Det uppstod problem med att importera några meddelanden:"
+  },
+  "messagesExported.label": {
+    "message": "Meddelanden exporterade"
   },
   "messagesMsg": {
     "message": "Meddelanden",
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importera profil"
+  },
+  "totalErrors.label": {
+    "message": "Totalt antal fel"
+  },
+  "totalMessages.label": {
+    "message": "Totalt antal meddelanden"
+  },
+  "totalMessagesExported.label": {
+    "message": "Totalt antal exporterade meddelanden"
   },
   "useExtFilenameFormat": {
     "message": "Använd Utökat format"

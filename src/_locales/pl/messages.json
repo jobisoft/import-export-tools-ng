@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opcje"
   },
+  "currentFolder.label": {
+    "message": "Aktualny folder"
+  },
   "customDate": {
     "message": "Data niestandardowa:"
   },
@@ -323,6 +326,9 @@
     "message": "Wybierz wiadomości do zaimportowania",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Liczba folderów"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Skopiuj ścieżkę folderu"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Wiadomości z załącznikami i indeksem"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Wiadomości, indeks i załączniki z podfolderami"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Zwykły format tekstowy"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Folder eksportu dla plików mbox:"
   },
+  "messageCount.label": {
+    "message": "Liczba wiadomości"
+  },
   "messageImportProblems.msg": {
     "message": "Wystąpiły problemy z importowaniem niektórych wiadomości:"
+  },
+  "messagesExported.label": {
+    "message": "Wiadomości wyeksportowane"
   },
   "messagesMsg": {
     "message": "Wiadomości",
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importuj profil"
+  },
+  "totalErrors.label": {
+    "message": "Całkowita liczba błędów"
+  },
+  "totalMessages.label": {
+    "message": "Łączna liczba wiadomości"
+  },
+  "totalMessagesExported.label": {
+    "message": "Łączna liczba wyeksportowanych wiadomości"
   },
   "useExtFilenameFormat": {
     "message": "Użyj rozszerzonego formatu"

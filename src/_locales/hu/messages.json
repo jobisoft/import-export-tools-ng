@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opciók"
   },
+  "currentFolder.label": {
+    "message": "Aktuális mappa"
+  },
   "customDate": {
     "message": "Egyéni dátum:"
   },
@@ -323,6 +326,9 @@
     "message": "Az importálni kívánt üzenetek kijelölése",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Mappák száma"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Mappa elérési útjának másolása"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Mellékletekkel és indexszel rendelkező üzenetek"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Üzenetek, index és mellékletek almappákkal"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Egyszerű szöveges formátum"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Mappák exportálása MBOX fájlként:"
   },
+  "messageCount.label": {
+    "message": "Üzenetek száma"
+  },
   "messageImportProblems.msg": {
     "message": "Problémák adódtak néhány üzenet importálásakor:"
+  },
+  "messagesExported.label": {
+    "message": "Exportált üzenetek"
   },
   "messagesMsg": {
     "message": "üzenetek",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "RENDBEN"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Lap helyett ablakban nyissa meg a súgót"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Profil importálása"
+  },
+  "totalErrors.label": {
+    "message": "Összes hiba"
+  },
+  "totalMessages.label": {
+    "message": "Összes üzenet"
+  },
+  "totalMessagesExported.label": {
+    "message": "Összes exportált üzenet"
   },
   "useExtFilenameFormat": {
     "message": "A kiterjesztett formátum használata"

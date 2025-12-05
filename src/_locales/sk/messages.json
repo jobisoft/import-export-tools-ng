@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "možnosti"
   },
+  "currentFolder.label": {
+    "message": "Aktuálny priečinok"
+  },
   "customDate": {
     "message": "Vlastný dátum:"
   },
@@ -323,6 +326,9 @@
     "message": "Výber správ na importovanie",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Počet priečinkov"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Kopírovať cestu k priečinku"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Správy s prílohami a indexom"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Správy, index a prílohy s podpriečinkami"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Formát obyčajného textu"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Export priečinkov ako MBOX súbory:"
   },
+  "messageCount.label": {
+    "message": "Počet správ"
+  },
   "messageImportProblems.msg": {
     "message": "Pri importovaní niektorých správ sa vyskytli problémy:"
+  },
+  "messagesExported.label": {
+    "message": "Exportované správy"
   },
   "messagesMsg": {
     "message": "Správy",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "V poriadku"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Otvorte pomocníka v okne namiesto karty"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importovať profil"
+  },
+  "totalErrors.label": {
+    "message": "Celkový počet chýb"
+  },
+  "totalMessages.label": {
+    "message": "Celkový počet správ"
+  },
+  "totalMessagesExported.label": {
+    "message": "Celkový počet exportovaných správ"
   },
   "useExtFilenameFormat": {
     "message": "Použite rozšírený formát"

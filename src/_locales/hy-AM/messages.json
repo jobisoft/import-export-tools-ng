@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Ընտրանքներ"
   },
+  "currentFolder.label": {
+    "message": "Ընթացիկ թղթապանակ"
+  },
   "customDate": {
     "message": "Պատվերով ամսաթիվ."
   },
@@ -323,6 +326,9 @@
     "message": "Ընտրեք ներմուծվող նամակները",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Թղթապանակների քանակը"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Պատճենել Թղթապանակի ուղին"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Հաղորդագրություններ՝ կից ֆայլերով և ինդեքսով"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Հաղորդագրություններ, ինդեքս և կցորդներ ենթապանակներով"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Պարզ տեքստի ձևաչափ"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Արտածել թղթապանակները որպես MBOX ֆայլ."
   },
+  "messageCount.label": {
+    "message": "Հաղորդագրությունների քանակը"
+  },
   "messageImportProblems.msg": {
     "message": "Որոշ հաղորդագրություններ ներմուծելիս խնդիրներ առաջացան."
+  },
+  "messagesExported.label": {
+    "message": "Հաղորդագրությունները արտահանվեցին"
   },
   "messagesMsg": {
     "message": "Հաղորդագրություններ",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "Լավ"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Բացեք օգնությունը պատուհանում՝ ներդիրի փոխարեն"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Ներմուծեք պրոֆիլը"
+  },
+  "totalErrors.label": {
+    "message": "Ընդհանուր սխալներ"
+  },
+  "totalMessages.label": {
+    "message": "Հաղորդագրությունների ընդհանուր թիվը"
+  },
+  "totalMessagesExported.label": {
+    "message": "Արտահանված հաղորդագրությունների ընդհանուր թիվը"
   },
   "useExtFilenameFormat": {
     "message": "Օգտագործեք երկարացված ձևաչափը"

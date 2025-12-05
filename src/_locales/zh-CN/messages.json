@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "选项"
   },
+  "currentFolder.label": {
+    "message": "当前文件夹"
+  },
   "customDate": {
     "message": "自订日期："
   },
@@ -323,6 +326,9 @@
     "message": "选择要导入的邮件",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "文件夹数量"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "复制文件夹路径"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "带有附件和索引的消息"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "邮件、索引和附件（含子文件夹）"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "纯文本格式"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "将信件夹作为 MBOX 文件导出："
   },
+  "messageCount.label": {
+    "message": "消息计数"
+  },
   "messageImportProblems.msg": {
     "message": "导入某些消息时出现问题："
+  },
+  "messagesExported.label": {
+    "message": "已导出消息"
   },
   "messagesMsg": {
     "message": "留言",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "好的"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "在窗口而不是选项卡中打开帮助"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "导入配置文件"
+  },
+  "totalErrors.label": {
+    "message": "总错误数"
+  },
+  "totalMessages.label": {
+    "message": "消息总数"
+  },
+  "totalMessagesExported.label": {
+    "message": "导出消息总数"
   },
   "useExtFilenameFormat": {
     "message": "使用扩展格式"

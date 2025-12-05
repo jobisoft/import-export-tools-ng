@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Параметры"
   },
+  "currentFolder.label": {
+    "message": "Текущая папка"
+  },
   "customDate": {
     "message": "Пользовательская дата:"
   },
@@ -323,6 +326,9 @@
     "message": "Выберите сообщение для импорта",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Количество папок"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Копировать путь к папке"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Сообщения с вложениями и индексом"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Сообщения, индекс и вложения с подпапками"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Простой текстовый формат"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "папок как файла mbox:"
   },
+  "messageCount.label": {
+    "message": "Количество сообщений"
+  },
   "messageImportProblems.msg": {
     "message": "Возникли проблемы с импортом некоторых сообщений:"
+  },
+  "messagesExported.label": {
+    "message": "Экспортированные сообщения"
   },
   "messagesMsg": {
     "message": "Сообщения",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "ХОРОШО"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Открыть справку в окне вместо вкладки"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Импорт профиля"
+  },
+  "totalErrors.label": {
+    "message": "Всего ошибок"
+  },
+  "totalMessages.label": {
+    "message": "Всего сообщений"
+  },
+  "totalMessagesExported.label": {
+    "message": "Всего экспортировано сообщений"
   },
   "useExtFilenameFormat": {
     "message": "Использовать расширенный формат"

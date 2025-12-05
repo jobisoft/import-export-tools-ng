@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Opcions"
   },
+  "currentFolder.label": {
+    "message": "Carpeta actual"
+  },
   "customDate": {
     "message": "Data personalitzada:"
   },
@@ -324,6 +327,9 @@
     "message": "Seleccioneu els missatges que voleu importar",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Recompte de carpetes"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Copia el camí de la carpeta"
   },
@@ -395,6 +401,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Missatges amb fitxers adjunts i índex"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Missatges, índex i fitxers adjunts amb subcarpetes"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Format de text pla"
@@ -594,8 +603,14 @@
   "mboxExport": {
     "message": "Exporta les carpetes a un fitxer MBOX:"
   },
+  "messageCount.label": {
+    "message": "Nombre de missatges"
+  },
   "messageImportProblems.msg": {
     "message": "Hi ha hagut problemes en importar alguns missatges:"
+  },
+  "messagesExported.label": {
+    "message": "Missatges exportats"
   },
   "messagesMsg": {
     "message": "Missatges",
@@ -814,7 +829,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "D&#39;acord"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Obriu l&#39;ajuda en una finestra en lloc d&#39;una pestanya"
@@ -986,6 +1001,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importa el perfil"
+  },
+  "totalErrors.label": {
+    "message": "Total d&#39;errors"
+  },
+  "totalMessages.label": {
+    "message": "Total de missatges"
+  },
+  "totalMessagesExported.label": {
+    "message": "Total de missatges exportats"
   },
   "useExtFilenameFormat": {
     "message": "Utilitza un format estès"

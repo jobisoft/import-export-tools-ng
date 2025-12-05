@@ -164,6 +164,9 @@
   "ctxMenu_Options.title": {
     "message": "Indstillinger"
   },
+  "currentFolder.label": {
+    "message": "Aktuel mappe"
+  },
   "customDate": {
     "message": "Brugerdefineret dato:"
   },
@@ -323,6 +326,9 @@
     "message": "Vælg meddelelserne til import",
     "src": "mboximport"
   },
+  "folderCount.label": {
+    "message": "Antal mapper"
+  },
   "folderCtxMenu_CopyFolderPath_Id.title": {
     "message": "Kopier mappesti"
   },
@@ -394,6 +400,9 @@
   },
   "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndex_Id.title": {
     "message": "Beskeder med vedhæftede filer og indeks"
+  },
+  "folderCtxMenu_Exp_PDFFormatSaveAttsCreateIndexRecursive_Id.title": {
+    "message": "Beskeder, indeks og vedhæftede filer med undermapper"
   },
   "folderCtxMenu_Exp_PlainTextFormat_Id.title": {
     "message": "Almindeligt tekstformat"
@@ -593,8 +602,14 @@
   "mboxExport": {
     "message": "Eksporter mapper som MBOX-fil:"
   },
+  "messageCount.label": {
+    "message": "Antal beskeder"
+  },
   "messageImportProblems.msg": {
     "message": "Der opstod problemer med at importere nogle meddelelser:"
+  },
+  "messagesExported.label": {
+    "message": "Eksporterede beskeder"
   },
   "messagesMsg": {
     "message": "Meddelelser",
@@ -813,7 +828,7 @@
     "src": "mboximport"
   },
   "OK.button": {
-    "message": "Okay"
+    "message": "OK"
   },
   "openHelpInWindow.label": {
     "message": "Åbn hjælp i et vindue i stedet for i et faneblad"
@@ -984,6 +999,15 @@
   },
   "toolsCtxMenu_Imp_Profile_Id.title": {
     "message": "Importer profil"
+  },
+  "totalErrors.label": {
+    "message": "Samlede fejl"
+  },
+  "totalMessages.label": {
+    "message": "Samlet antal beskeder"
+  },
+  "totalMessagesExported.label": {
+    "message": "Samlet antal eksporterede beskeder"
   },
   "useExtFilenameFormat": {
     "message": "Brug udvidet format"
