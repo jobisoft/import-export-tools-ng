@@ -74,24 +74,24 @@ var autoBackup = {
 		console.log("IETNG: getDir")
 		try {
 			var dir = gBackupPrefBranch.getCharPref("extensions.importexporttoolsng.autobackup.dir");
-			console.log("IETNG: dirpref:", dir)
+			alert("IETNG: dirpref:\n" + dir)
 
 			file = Cc["@mozilla.org/file/local;1"]
 				.createInstance(Ci.nsIFile);
 			file.initWithPath(dir);
 			if (!file.exists() || !file.isDirectory()) {
-				console.log("IETNG: dir doesn't exist or not dir")
+				alert("IETNG: dir doesn't exist or not dir")
 
 				file = null;
 			}
 
 		} catch (e) {
-			console.log("IETNG: ex", e)
+			alert("IETNG: ex\n" + e)
 
 			file = null;
 		}
 		if (!file) {
-			console.log("IETNG: file null calling picker")
+			alert("IETNG: file null calling picker")
 
 			file = IETgetPickerModeFolder();
 			autoBackup.filePicker = true;
@@ -201,13 +201,16 @@ var autoBackup = {
 
 	end: function (sec) {
 		console.log("IETNG: end", sec)
+		autoBackup.writeLog("starting end " + sec + "\n", true);
 
 		if (sec === 0) {
 			console.log("IETNG: close ")
-
+			autoBackup.writeLog("closing\n", true);
+			alert("closing")
 			window.close();
 		} else {
 			console.log("IETNG: delay 1s")
+			autoBackup.writeLog("delay 1s\n", true);
 
 			window.setTimeout(autoBackup.end, 1000, sec - 1);
 		}
@@ -292,6 +295,7 @@ var autoBackup = {
 
 			await autoBackup.removeOldBackups();
 			console.log("IETNG: remove done, calling end")
+			autoBackup.writeLog("calling end\n", true);
 
 			autoBackup.end(3);
 		}
