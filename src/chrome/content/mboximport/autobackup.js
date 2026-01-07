@@ -68,7 +68,7 @@ var autoBackup = {
 		}
 	},
 
-	getDir: function () {
+	getDir: async function () {
 		var file = null;
 		var dir = null;
 
@@ -98,7 +98,7 @@ var autoBackup = {
 		}
 
 		if (!file) {
-			file = IETgetPickerModeFolder();
+			file = await asyncIETgetPickerModeFolder();
 			autoBackup.filePicker = true;
 		}
 		return file;
@@ -115,9 +115,9 @@ var autoBackup = {
 		foStream.close();
 	},
 
-	start: function () {
+	start: async function () {
 		// "dir" is the target directory for the backup
-		var dir = autoBackup.getDir();
+		var dir = await autoBackup.getDir();
 		if (!dir)
 			return;
 
