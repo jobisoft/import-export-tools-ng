@@ -545,7 +545,7 @@ localeFolders = ['en-US', 'de', 'ca', 'cs', 'da', 'el', 'es-ES', 'fr', 'gl', 'hu
 	'nl', 'pl', 'pt-PT', 'ru', 'sk', 'sl', 'sv-SE', 'zh-CN'];
 
 // unmanaged help locales
-let localeFoldersHelp = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', 'hy-AM', 'it', 'ko-KR',
+localeFolders = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', 'hy-AM', 'it', 'ko-KR',
 	'nl', 'pl', 'pt-PT', 'ru', 'sk-SK', 'sl-SI', 'sv-SE', 'zh-CN'];
 
 
@@ -553,11 +553,11 @@ let localeFoldersHelp = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', '
 //localeFolders = ['de', 'ja', 'fr', 'da'];
 
 
-//translateHelpPage();
+translateHelpPage();
 //translatePage();
 
 // message translations
-translateAll(inputFiles, translationArray, options);
+//translateAll(inputFiles, translationArray, options);
 
 /*
 node .\scripts\translate-gc.js
