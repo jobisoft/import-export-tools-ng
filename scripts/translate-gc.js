@@ -13,7 +13,7 @@ const { Translate } = require('@google-cloud/translate').v2;
 // Instantiates a client
 const translate = new Translate({ projectId, key });
 
-// console.debug( translate );
+//console.debug( translate );
 
 var translationArray = [
 	{ key: "currentFolder.label", text: "Current Folder"},
@@ -255,6 +255,7 @@ async function translateHelpPage() {
 				console.debug('call back ' + translation[0].split('>')[1]);
 				let outputFileName = translation[0].split('>')[1];
 				console.debug(outputFileName);
+				console.log("trans", translation[1])
 				fs.outputFileSync(outputFileName, translation[1]);
 				console.debug('Translated ' + shortLocale);
 			});
@@ -548,7 +549,7 @@ localeFolders = ['en-US', 'de', 'ca', 'cs', 'da', 'el', 'es-ES', 'fr', 'gl', 'hu
 localeFolders = ['en-US', 'ca', 'cs', 'el', 'es-ES', 'gl-ES', 'hu-HU', 'hy-AM', 'it', 'ko-KR',
 	'nl', 'pl', 'pt-PT', 'ru', 'sk-SK', 'sl-SI', 'sv-SE', 'zh-CN'];
 
-
+localeFolders = ["it"]
 // managed help locales
 //localeFolders = ['de', 'ja', 'fr', 'da'];
 
