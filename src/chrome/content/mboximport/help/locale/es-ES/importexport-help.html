@@ -7,42 +7,45 @@
     <title>Ayuda de ImportExportTools NG</title>
   </head>
   <body>
-    <table style="width: 100%;" id="main-help">
+    <table style="width: 100%" id="main-help">
       <tr>
-        <td style="vertical-align: top;">
-          <div style="font-size: 1.8em; font-weight: bold;">Ayuda de ImportExportTools NG</div>
-          <div id="extVersion" style="padding-left: 4px;">ver</div>
+        <td style="vertical-align: top">
+          <div style="font-size: 1.8em; font-weight: bold">Ayuda de ImportExportTools NG</div>
+          <div id="extVersion" style="padding-left: 4px">ver</div>
         </td>
-        <td style="text-align: right; padding-right: 30px;">
+        <td style="text-align: right; padding-right: 30px">
           <img src="../../../icons/import-export-tools-ng-icon-64px.png" />
         </td>
       </tr>
     </table>
-    <h3 id="release_notes" style="padding-left: 4px;">Notas de la versión:</h3>
+    <h3 id="release_notes" style="padding-left: 4px">Notas de la versión:</h3>
     <p>
-      <b>Nota importante:</b> A partir del lanzamiento de Thunderbird v136, Mozilla realizará lanzamientos
-      mensuales. Es posible que no pueda publicar ImportExportTools NG todos los meses. Antes de actualizar
-      Thunderbird, verifique si hay una actualización compatible con ImportExportTools NG.<br /><br />
+      <b>URGENTE: NO ACTUALICE A THUNDERBIRD V147 SI NECESITA SOPORTE PARA EXPORTACIÓN DE PDF.</b><br /><br />
+      Hay un error grave en Thunderbird que provoca un bloqueo al exportar PDF. Se desconoce cuándo se
+      solucionará en Thunderbird.<br /><br />
+      <b>De ahora en adelante, solo actualizaré ImportExportTools NG para el canal ESR.</b> No puedo tener
+      errores como este en el futuro. Si necesita ImportExportTools NG, deberá permanecer en el canal ESR o
+      volver a él. Pronto publicaré instrucciones para la reversión en la sección de problemas de Github.<br /><br />
+      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
+        >Problemas con ImportExportTools NG</a
+      ><br /><br />
+      Lo siento, esto está fuera de mi control.<br /><br />
       Cristóbal<br /><br />
-      - Corrección de errores de exportación intermitentes e inconsistentes de todos los tipos de mensajes<br />
-      - Nuevo: Exportaciones de selección de carpetas múltiples<br />
-      - Mayor manejo de errores para importaciones EML, exportaciones mbox<br />
-      - Actualizar la configuración regional en danés (da) - @Joergen<br />
-      - Actualizar la configuración regional húngara (hu-HU) - @ef99<br />
+      - Se aumentó la importación máxima de mbox a 50 GB
     </p>
     <h2 id="main_help">Descripción general y menús de ImportExportTools NG</h2>
     <p>
       ImportExportTools NG es una extensión derivada del trabajo original de Paolo &quot;Kaosmos&quot;. Ofrece
-      múltiples funciones de importación y exportación compatibles con varios formatos de archivo, incluyendo:
-      Nota: Algunos formatos no son compatibles con todas las funciones.<br />
+      múltiples funciones de importación y exportación compatibles con diversos formatos de archivo,
+      incluyendo: Nota: Algunos formatos no son compatibles con todas las funciones.<br />
       - mbox<br />
       - EML<br />
       - directorio de correo<br />
       - HTML<br />
-      - texto plano<br />
+      - texto sin formato<br />
       - CSV (valores separados por comas)<br />
       - PDF<br /><br />
-      Si bien la mayor parte de la funcionalidad se centra en los mensajes, también se puede importar y
+      Aunque la mayor parte de la funcionalidad se centra en los mensajes, también se puede importar y
       exportar perfiles de Thunderbird. Además, las exportaciones pueden incluir un archivo de índice HTML o
       CSV. Otra función es la copia de seguridad del perfil de Thunderbird.<br />
       <p>
@@ -86,7 +89,7 @@
           <td>
             Exporte la cuenta completa, con su estructura y subcarpetas, en formato mbox. La exportación se
             realiza mediante un contenedor con el nombre de la cuenta.<br />
-            Nota: este elemento de menú solo aparece al hacer clic derecho en una entrada de cuenta.
+            Nota: Este elemento de menú solo aparece al hacer clic derecho en una entrada de cuenta.
           </td>
         </tr>
         <tr>
@@ -114,7 +117,7 @@
             __MSG_folderCtxMenu_Exp_FolderMboxFlattenedSubFolders_Id.title__
           </td>
           <td>
-            Exportar una carpeta, incluidas todas sus subcarpetas, a un conjunto de archivos en formato mbox,
+            Exportar una carpeta incluyendo todas sus subcarpetas a un conjunto de archivos en formato mbox,
             uno para cada subcarpeta, exportados a una sola carpeta.
           </td>
         </tr>
@@ -165,8 +168,8 @@
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_PlainTextFormatCreateIndex_Id.title__</td>
           <td>
-            Exporte los mensajes de la carpeta como archivos con formato de texto simple, los archivos
-            adjuntos no están incluidos.<br />
+            Exporte los mensajes de la carpeta como archivos en formato de texto simple, los archivos adjuntos
+            no están incluidos.<br />
             Esto también crea un archivo de índice HTML que enumera cada mensaje.
           </td>
         </tr>
@@ -175,7 +178,7 @@
             __MSG_folderCtxMenu_Exp_PlainTextFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            Exporte los mensajes de la carpeta como archivos con formato de texto simple, incluidos los
+            Exporte los mensajes de la carpeta como archivos en formato de texto simple, incluidos los
             archivos adjuntos.<br />
             Esto también crea un archivo de índice HTML que enumera cada mensaje.
           </td>
@@ -183,7 +186,7 @@
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_PlainTextFormatSingleFile_Id.title__</td>
           <td>
-            Exporte los mensajes de la carpeta como un único archivo en formato de texto simple; los archivos
+            Exporte los mensajes de la carpeta como un único archivo en formato de texto simple, los archivos
             adjuntos no están incluidos.<br />
             Esto también crea un archivo de índice HTML que enumera cada mensaje.
           </td>
@@ -193,8 +196,8 @@
             __MSG_folderCtxMenu_Exp_PlainTextFormatSingleFileSaveAtts_Id.title__
           </td>
           <td>
-            Exporte los mensajes de la carpeta como un único archivo con formato de texto simple, incluidos
-            los archivos adjuntos.<br />
+            Exporte los mensajes de la carpeta como un único archivo con formato de texto sin formato,
+            incluidos los archivos adjuntos.<br />
             Esto también crea un archivo de índice HTML que enumera cada mensaje.
           </td>
         </tr>
@@ -369,8 +372,8 @@
             __MSG_msgCtxMenu_Exp_PlainTextFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            Exportar los mensajes como archivos con formato de texto simple, incluidos los archivos
-            adjuntos.<br />
+            Exportar los mensajes como archivos de formato de texto sin formato, incluidos los archivos
+            adjuntos<br />
             Esto también crea un archivo de índice HTML que enumera cada mensaje.
           </td>
         </tr>
@@ -388,7 +391,7 @@
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_MboxFormatAppendMbox_Id.title__</td>
-          <td>Añadir los mensajes seleccionados a un archivo mbox existente</td>
+          <td>Anexar los mensajes seleccionados a un archivo mbox existente</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_msgCtxMenu_Exp_Index_Id.title__</td>
@@ -529,7 +532,7 @@
             Año basado en la semana ISO 8601 con siglo como número decimal. El año de 4 dígitos corresponde al
             número de semana ISO (véase <code class="code1">%V</code> ). Tiene el mismo formato y valor que
             <code class="code1">%Y</code> , excepto que si el número de semana ISO pertenece al año anterior o
-            al siguiente, se utiliza ese año.
+            posterior, se utiliza ese año.
           </td>
         </tr>
         <tr>
@@ -585,8 +588,8 @@
         <tr>
           <td><code class="code1">%p</code></td>
           <td>
-            Puede ser &quot;AM&quot; o &quot;PM&quot;, según el valor de hora dado. El mediodía se considera
-            &quot;PM&quot; y la medianoche, &quot;AM&quot;.
+            Puede ser &quot;AM&quot; o &quot;PM&quot;, según el valor de hora indicado. El mediodía se
+            considera &quot;PM&quot; y la medianoche, &quot;AM&quot;.
           </td>
         </tr>
         <tr>
@@ -628,7 +631,7 @@
         </tr>
         <tr>
           <td><code class="code1">%X</code></td>
-          <td>Representación de la hora preferida para la configuración regional actual sin la fecha.</td>
+          <td>Representación de hora preferida para la configuración regional actual sin la fecha.</td>
         </tr>
         <tr>
           <td><code class="code1">%y</code></td>
@@ -827,7 +830,7 @@
     </p>
     <p>
       Ambas preferencias utilizan el mismo tipo de formato de nombres de archivo extendido que el nombre de
-      archivo de los mensajes exportados. La primera es para adjuntos externos, la segunda para adjuntos
+      archivo de los mensajes exportados. La primera es para adjuntos externos y la segunda para adjuntos
       incrustados (en línea).
     </p>
     <p><code class="notranslate">importexporttoolsng.experimental.use_delivery_date</code></p>
@@ -886,10 +889,9 @@
         &quot;compose&quot; }]</code
       ><br />
     </p>
-
     <p>
-      Como los accesos directos son nuevos y experimentales, también añadiré más documentación al repositorio.
-      Consulta el
+      Como los atajos son nuevos y experimentales, también añadiré más documentación al repositorio. Consulta
+      el
       <a class="link1" href="https://github.com/thundernest/import-export-tools-ng"
         >archivo README de la extensión ImportExportTools NG.</a
       ><br />
