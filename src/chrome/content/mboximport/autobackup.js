@@ -68,21 +68,37 @@ var autoBackup = {
 		}
 	},
 
-	getDir: function () {
+	getDir: async function () {
 		var file = null;
+		var dir = null;
 
+		// handle empty pref
 		try {
-			var dir = gBackupPrefBranch.getCharPref("extensions.importexporttoolsng.autobackup.dir");
-			file = Cc["@mozilla.org/file/local;1"]
-				.createInstance(Ci.nsIFile);
-			file.initWithPath(dir);
-			if (!file.exists() || !file.isDirectory())
-				file = null;
-		} catch (e) {
-			file = null;
+			dir = gBackupPrefBranch.getCharPref("extensions.importexporttoolsng.autobackup.dir");
+		} catch (ex) {
+			dir = null;
 		}
+
+		if (dir) {
+			try {
+
+				file = Cc["@mozilla.org/file/local;1"]
+					.createInstance(Ci.nsIFile);
+				file.initWithPath(dir);
+				if (!file.exists() || !file.isDirectory()) {
+					alert("IETNG: dir doesn't exist or not dir")
+
+					file = null;
+				}
+
+			} catch (e) {
+				alert("IETNG: ex\n" + e);
+				file = null;
+			}
+		}
+
 		if (!file) {
-			file = IETgetPickerModeFolder();
+			file = await asyncIETgetPickerModeFolder();
 			autoBackup.filePicker = true;
 		}
 		return file;
@@ -99,9 +115,9 @@ var autoBackup = {
 		foStream.close();
 	},
 
-	start: function () {
+	start: async function () {
 		// "dir" is the target directory for the backup
-		var dir = autoBackup.getDir();
+		var dir = await autoBackup.getDir();
 		if (!dir)
 			return;
 
@@ -271,6 +287,7 @@ var autoBackup = {
 			document.getElementById("start").collapsed = true;
 			document.getElementById("done").removeAttribute("collapsed");
 			// new remove old backups #663
+
 			await autoBackup.removeOldBackups();
 			autoBackup.end(3);
 		}

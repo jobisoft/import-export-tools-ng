@@ -4,89 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../importexport-help.css" type="text/css" />
-    <title>Nápověda k nástrojům ImportExportTools NG</title>
+    <title>Pomoč za ImportExportTools NG</title>
   </head>
   <body>
     <table style="width: 100%" id="main-help">
       <tr>
         <td style="vertical-align: top">
-          <div style="font-size: 1.8em; font-weight: bold">Nápověda k nástrojům ImportExportTools NG</div>
-          <div id="extVersion" style="padding-left: 4px">verze</div>
+          <div style="font-size: 1.8em; font-weight: bold">Pomoč za ImportExportTools NG</div>
+          <div id="extVersion" style="padding-left: 4px">ver</div>
         </td>
         <td style="text-align: right; padding-right: 30px">
           <img src="../../../icons/import-export-tools-ng-icon-64px.png" />
         </td>
       </tr>
     </table>
-    <h3 id="release_notes" style="padding-left: 4px">Poznámky k vydání:</h3>
+    <h3 id="release_notes" style="padding-left: 4px">Opombe ob izdaji:</h3>
     <p>
-      <b>NALÉHAVÉ: NEAKTUALIZUJTE NA THUNDERBIRD V147, POKUD POTŘEBUJETE PODPORU EXPORTU PDF.</b><br /><br />
-      V Thunderbirdu existuje základní chyba, která způsobuje pád aplikace při exportu PDF. Kdy bude tato
-      chyba v Thunderbirdu opravena, není známo.<br /><br />
-      <b>ImportExportTools NG budu do budoucna aktualizovat pouze pro kanál ESR.</b> V budoucnu se mi takové
-      chyby nesmí vyskytovat. Pokud ImportExportTools NG potřebujete, budete muset zůstat na kanálu ESR nebo
-      se na něj vrátit. Pokyny k vrácení zpět brzy zveřejním v sekci problémů na Githubu.<br /><br />
+      <b>NUJNO: NE POSODOBITE NA THUNDERBIRD V147, ČE POTREBUJETE PODPORO ZA IZVOZ PDF-JA.</b><br /><br />
+      V Thunderbirdu obstaja osnovna napaka, ki povzroča sesutje pri izvozu PDF-jev. Kdaj bo to v Thunderbirdu
+      odpravljeno, ni znano.<br /><br />
+      <b>ImportExportTools NG bom v prihodnje posodabljal samo za kanal ESR.</b> V prihodnje ne smem imeti
+      takšnih napak. Če potrebujete ImportExportTools NG, boste morali ostati na kanalu ESR ali se vrniti na
+      kanal ESR. Kmalu bom v razdelku o težavah na Githubu objavil navodila za povrnitev na prejšnjo
+      različico.<br /><br />
       <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problémy s NG v nástroji ImportExportTools</a
+        >Težave z orodji ImportExportTools NG</a
       ><br /><br />
-      Promiň, tohle je mimo mou kontrolu.<br /><br />
-      Kryštof<br /><br />
-      - Maximální velikost importu mboxu byla zvýšena na 50 GB.
+      Žal mi je, to je izven mojega nadzora.<br /><br />
+      Krištof<br /><br />
+      - Povečana največja velikost uvoza mbox na 50 GB
     </p>
-    <h2 id="main_help">Přehled a nabídky nástroje ImportExportTools NG</h2>
+    <h2 id="main_help">Pregled in meniji orodij ImportExportTools NG</h2>
     <p>
-      ImportExportTools NG je rozšíření založené na původním díle Paola „Kaosmos“. Rozšíření nabízí několik
-      funkcí importu a exportu s podporou několika různých formátů souborů, včetně: Poznámka: Některé formáty
-      nejsou podporovány ve všech funkcích.<br />
+      ImportExportTools NG je nadaljevalna razširitev, ki temelji na izvirnem delu Paola &quot;Kaosmos&quot;.
+      Razširitev ponuja več funkcij uvoza in izvoza, ki podpirajo več različnih formatov datotek, vključno z:
+      Opomba: Nekateri formati niso podprti v vseh funkcijah.<br />
       - mbox<br />
       - EML<br />
-      - e-mailový adresář<br />
+      - poštni imenik<br />
       - HTML<br />
-      - prostý text<br />
-      - CSV (data oddělená čárkou)<br />
+      - odprto besedilo<br />
+      - CSV (vrednosti, ločene z vejicami)<br />
       - PDF<br /><br />
-      I když se většina funkcí točí kolem zpráv, existuje také podpora pro import a export profilů
-      Thunderbirdu. Exporty mohou navíc obsahovat i indexový soubor HTML nebo CSV. Další funkcí je zálohování
-      profilu Thunderbirdu.<br />
+      Čeprav se večina funkcionalnosti vrti okoli sporočil, obstaja tudi podpora za uvoz in izvoz profilov
+      Thunderbird. Poleg tega lahko izvoz vključuje tudi indeksno datoteko HTML ali CSV. Varnostno kopiranje
+      profila Thunderbird je še ena funkcija.<br />
       <p>
-        Přístup k funkcím IETng se provádí prostřednictvím několika různých nabídek instalovaných rozšířením.
-        Funkce jsou kontextově citlivé. Nabídky jsou přidány pro:<br />
-        - Kontext podokna složek (operace se složkou)<br />
-        - Kontext seznamu zpráv (vybrané zprávy)<br />
-        - Nabídka Nástroje (profil a zálohovací operace)<br /><br />
-        Možnosti, které jsou dostupné v nabídce „Nástroje“, nejsou v nabídce „Hamburger“, budou k dispozici v
-        budoucí verzi. Tyto funkce jsou k dispozici také v novém tlačítku na panelu nástrojů. Každá z nabídek
-        a tlačítek má také položky nabídky Nápověda a Možnosti pro přístup k dialogovému oknu možností.<br />
+        Dostop do funkcionalnosti IETng je mogoč prek več različnih menijev, ki jih namesti razširitev.
+        Funkcije so občutljive na kontekst. Dodani so meniji za:<br />
+        - Kontekst podokna map (delovanje mape)<br />
+        - Kontekst seznama sporočil (izbrana sporočila)<br />
+        - Meni Orodja (profil in varnostno kopiranje)<br /><br />
+        Možnosti, ki so dostopne v meniju »Orodja«, niso v meniju »Hamburger«, temveč bodo v prihodnji
+        različici. Te funkcije so na voljo tudi v novem gumbu orodne vrstice. Vsak meni in gumb ima tudi
+        elementa menija Pomoč in Možnosti za dostop do pogovornega okna z možnostmi.<br />
       </p>
     </p>
     <h3>Podpora:</h3>
     <p>
-      Problémy nebo požadavky na funkce prosím zasílejte do repozitáře rozšíření GitHub:
+      Prosimo, objavite težave ali zahteve za funkcije v repozitoriju razširitev GitHub:
       <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problémy s ImportExportTools NG</a
+        >Težave z ImportExportTools NG</a
       ><br /><br />
-      V případě problémů s chybami uveďte následující informace, které pomohou s jejich řešením:<br />
-      - Verze ImportExportTools NG<br />
-      - Verze pro Thunderbird<br />
-      - Operační systém a jeho verze<br />
-      - Výstup ladění (kopírování z ladicí konzole - přístup pomocí Ctrl-Shift-J)<br />
-      - Popis kroků vedoucích k problému<br />
+      Pri težavah z napakami vključite naslednje informacije, ki bodo pomagale rešiti težave:<br />
+      - Različica ImportExportTools NG<br />
+      - Različica Thunderbirda<br />
+      - Operacijski sistem in različica<br />
+      - Izpis za odpravljanje napak (kopiranje iz konzole za odpravljanje napak - dostop s Control-Shift-J)<br />
+      - Opis korakov, ki vodijo do težave<br />
     </p>
-    <h2 id="main_menu_help">Funkce kontextové nabídky složky</h2>
+    <h2 id="main_menu_help">Funkcije kontekstnega menija mape</h2>
     <table class="menu-table">
       <thead>
         <tr>
-          <th>Položka nabídky</th>
-          <th>Popis funkce</th>
+          <th>Element menija</th>
+          <th>Opis funkcije</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_Exp_Account_Id.title__</td>
           <td>
-            Exportujte celý účet se strukturou a podsložkami ve formátu mbox. Export se provádí pomocí
-            kontejneru s názvem účtu.<br />
-            Poznámka: Tato položka nabídky se zobrazí pouze po kliknutí pravým tlačítkem myši na položku účtu.
+            Izvozite celoten račun s strukturo in podmapami v formatu mbox. Izvoz se izvede z uporabo vsebnika
+            z imenom računa.<br />
+            Opomba: Ta element menija se prikaže le, če z desno miškino tipko kliknete vnos računa.
           </td>
         </tr>
         <tr>
@@ -95,25 +96,25 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_FolderMboxOnly_Id.title__</td>
-          <td>Export jedné složky do souboru formátu mbox</td>
+          <td>Izvoz ene mape v datoteko formata mbox</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_FolderMboxZipped_Id.title__</td>
-          <td>Export jedné složky do zip souboru ve formátu mbox</td>
+          <td>Izvoz ene mape v stisnjeno datoteko formata mbox</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">
             __MSG_folderCtxMenu_Exp_FolderMboxStructuredSubFolders_Id.title__
           </td>
-          <td>Export složky včetně všech jejích podsložek do stromu zpráv ve formátu mbox</td>
+          <td>Izvozi mapo, vključno z vsemi njenimi podmapami, v drevo sporočil v formatu mbox</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">
             __MSG_folderCtxMenu_Exp_FolderMboxFlattenedSubFolders_Id.title__
           </td>
           <td>
-            Exportovat složku včetně všech jejích podsložek do sady souborů formátu mbox, jeden pro každou
-            podsložku, exportovaných do jedné složky.
+            Izvozi mapo, vključno z vsemi njenimi podmapami, v niz datotek formata mbox, eno za vsako podmapo,
+            izvoženo v eno samo mapo.
           </td>
         </tr>
         <tr>
@@ -127,8 +128,8 @@
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_EMLFormatCreateIndex_Id.title__</td>
           <td>
-            Exportujte zprávy ze složky jako soubory ve formátu EML (bez struktury/podsložek).<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila mape kot datoteke formata EML (brez strukture/podmap).<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
@@ -138,8 +139,8 @@
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_HTMLFormatCreateIndex_Id.title__</td>
           <td>
-            Exportujte zprávy ze složky jako soubory ve formátu HTML (bez struktury/podsložek).<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila mape kot datoteke v formatu HTML (brez strukture/podmap).<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
@@ -147,14 +148,14 @@
             __MSG_folderCtxMenu_Exp_HTMLFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            Exportujte zprávy ze složky jako soubory ve formátu HTML (bez struktury/podsložek).<br />
-            Přílohy se ukládají jako samostatné soubory. Tím se také vytvoří indexový soubor HTML se seznamem
-            všech zpráv.
+            Izvozite sporočila mape kot datoteke v formatu HTML (brez strukture/podmap).<br />
+            Priloge se shranijo kot ločene datoteke. S tem se ustvari tudi indeksna datoteka HTML, ki navaja
+            vsako sporočilo.
           </td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_PDFFormat_Id.title__</td>
-          <td>Export zpráv ze složky jako sadu souborů ve formátu PDF</td>
+          <td>Izvozite sporočila mape kot niz datotek v formatu PDF</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_PlainTextFormat_Id.title__</td>
@@ -163,8 +164,8 @@
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_PlainTextFormatCreateIndex_Id.title__</td>
           <td>
-            Exportovat zprávy ze složky jako soubory ve formátu prostého textu, přílohy nejsou zahrnuty.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila mape kot datoteke v obliki navadnega besedila, priloge niso vključene.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
@@ -172,16 +173,16 @@
             __MSG_folderCtxMenu_Exp_PlainTextFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            Exportujte zprávy ze složky jako soubory ve formátu prostého textu, včetně příloh.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila mape kot datoteke v obliki navadnega besedila, vključno s prilogami.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_PlainTextFormatSingleFile_Id.title__</td>
           <td>
-            Exportujte zprávy ze složky jako jeden soubor ve formátu prostého textu, přílohy nejsou
-            zahrnuty.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila mape kot eno samo datoteko v obliki navadnega besedila, priloge niso
+            vključene.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
@@ -189,16 +190,17 @@
             __MSG_folderCtxMenu_Exp_PlainTextFormatSingleFileSaveAtts_Id.title__
           </td>
           <td>
-            Exportujte zprávy ze složky jako jeden soubor ve formátu prostého textu, včetně příloh.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila mape kot eno samo datoteko v obliki navadnega besedila, vključno s
+            prilogami.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_CSVFormat_Id.title__</td>
           <td>
-            Exportujte zprávy ze složky jako jeden textový soubor ve formátu CSV (hodnoty oddělené čárkou),
-            přílohy nejsou zahrnuty.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila iz mape kot eno samo besedilno datoteko CSV (vrednosti, ločene z vejicami),
+            priloge niso vključene.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
@@ -207,23 +209,23 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_IndexHTML_Id.title__</td>
-          <td>Vytvoří indexový soubor HTML složky messages (bez exportu zpráv)</td>
+          <td>Ustvari indeksno datoteko HTML za mapo sporočil (brez izvoza sporočil)</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_IndexCSV_Id.title__</td>
-          <td>Vytvoří indexový soubor CSV složky zpráv (bez exportu zpráv).</td>
+          <td>Ustvari indeksno datoteko CSV za mapo sporočila (brez izvoza sporočil)</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_Exp_SearchExport_Id.title__</td>
-          <td>Otevřít dialogové okno vyhledávání a exportovat požadované výsledky</td>
+          <td>Odprite pogovorno okno za iskanje in izvozite želene rezultate</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_Imp_MboxFiles_Id.title__</td>
-          <td>(Import pouze do lokálních složek, ne IMAP)</td>
+          <td>(Uvozi samo v lokalne mape, ne v IMAP)</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Imp_MboxFilesIndv_Id.title__</td>
-          <td>Importovat jeden nebo více souborů mbox z adresáře.</td>
+          <td>Uvozite eno ali več datotek mbox iz imenika.</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Imp_MboxFilesIndvRecursive_Id.title__</td>
@@ -243,7 +245,7 @@
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_Imp_MaildirFiles_Id.title__</td>
-          <td>Výběr a import složky maildir</td>
+          <td>Izberite in uvozite mapo maildir</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_Imp_EMLFormat_Id.title__</td>
@@ -251,41 +253,41 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Imp_EMLFormatMsgs_Id.title__</td>
-          <td>Výběr a import souborů zpráv EML (bez struktury/podsložek)</td>
+          <td>Izberite in uvozite datoteke sporočil EML (brez strukture/podmap)</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Imp_EMLFormatDir_Id.title__</td>
-          <td>Importovat všechny zprávy EML z jedné složky</td>
+          <td>Uvozi vsa sporočila EML iz ene mape</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Imp_EMLFormatDirAndSubdir_Id.title__</td>
-          <td>Importovat všechny zprávy EML z jedné složky včetně struktury/podsložek</td>
+          <td>Uvozite vsa sporočila EML iz ene mape, vključno s strukturo/podmapami</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_CopyFolderPath_Id.title__</td>
-          <td>Zkopírujte cestu operačního systému k vybrané složce</td>
+          <td>Kopirajte pot operacijskega sistema do izbrane mape</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_OpenFolderDir_Id.title__</td>
-          <td>Otevření cesty operačního systému k vybrané složce</td>
+          <td>Odprite pot operacijskega sistema do izbrane mape</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Options.title__</td>
-          <td>Otevřít dialogové okno možností ImportExportTools NG</td>
+          <td>Odprite pogovorno okno z možnostmi ImportExportTools NG</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Help.title__</td>
-          <td>Otevřít hlavní stránku nápovědy</td>
+          <td>Odpri glavno stran s pomočjo</td>
         </tr>
       </tbody>
     </table>
     <br />
-    <h2 id="message_functions_help">Kontextová nabídka zprávy</h2>
+    <h2 id="message_functions_help">Kontekstni meni sporočila</h2>
     <table class="menu-table">
       <thead>
         <tr>
-          <th>Položka nabídky</th>
-          <th>Popis funkce</th>
+          <th>Element menija</th>
+          <th>Opis funkcije</th>
         </tr>
       </thead>
       <tbody>
@@ -299,13 +301,13 @@
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_EMLFormatMsgsOnly_Id.title__</td>
-          <td>Exportovat vybrané zprávy do souborů formátu EML (s vloženými přílohami)</td>
+          <td>Izvozi izbrana sporočila v datoteke formata EML (z vdelanimi prilogami)</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_EMLFormatCreateIndex_Id.title__</td>
           <td>
-            Exportovat vybrané zprávy do souborů ve formátu EML<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozi izbrana sporočila v datoteke formata EML<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
@@ -314,29 +316,29 @@
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_HTMLFormatMsgsOnly_Id.title__</td>
-          <td>Exportovat vybrané zprávy do souborů ve formátu HTML</td>
+          <td>Izvozi izbrana sporočila v datoteke formata HTML</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_HTMLFormatSaveAtts_Id.title__</td>
-          <td>Exportovat vybrané zprávy do souborů ve formátu HTML včetně příloh</td>
+          <td>Izvozi izbrana sporočila v datoteke formata HTML, vključno s prilogami</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_HTMLFormatCreateIndex_Id.title__</td>
           <td>
-            Exportujte zprávy jako soubory ve formátu HTML.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila kot datoteke v formatu HTML.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_HTMLFormatSaveAttsCreateIndex_Id.title__</td>
           <td>
-            Exportujte zprávy jako soubory ve formátu HTML včetně příloh.<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila kot datoteke HTML, vključno s prilogami.<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_Exp_PDFFormat_Id.title__</td>
-          <td>Export vybraných zpráv do souborů ve formátu PDF</td>
+          <td>Izvoz izbranih sporočil v datoteke PDF</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_Exp_PlainTextFormat_Id.title__</td>
@@ -344,24 +346,24 @@
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_PlainTextFormatMsgsOnly_Id.title__</td>
-          <td>Exportovat vybrané zprávy do souborů ve formátu prostého textu</td>
+          <td>Izvozi izbrana sporočila v datoteke v obliki navadnega besedila</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_PlainTextFormatSaveAtts_Id.title__</td>
-          <td>Exportovat vybrané zprávy do souborů ve formátu prostého textu včetně příloh</td>
+          <td>Izvozi izbrana sporočila v datoteke v obliki navadnega besedila, vključno s prilogami</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">
             __MSG_msgCtxMenu_Exp_PlainTextFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            Exportovat zprávy jako soubory ve formátu prostého textu včetně příloh<br />
-            Tím se také vytvoří indexový soubor HTML, který obsahuje seznam všech zpráv.
+            Izvozite sporočila kot datoteke v obliki navadnega besedila, vključno s prilogami<br />
+            S tem se ustvari tudi indeksna datoteka HTML, ki navaja vsa sporočila.
           </td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_Exp_CSVFormat_Id.title__</td>
-          <td>Exportovat vybrané zprávy do jednoho textového souboru CSV</td>
+          <td>Izvozi izbrana sporočila v eno samo besedilno datoteko CSV</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_Exp_MboxFormat_Id.title__</td>
@@ -369,11 +371,11 @@
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_MboxFormatNewMbox_Id.title__</td>
-          <td>Exportovat vybrané zprávy do jednoho souboru mbox</td>
+          <td>Izvozi izbrana sporočila v eno samo datoteko mbox</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_MboxFormatAppendMbox_Id.title__</td>
-          <td>Připojit vybrané zprávy do existujícího souboru mbox</td>
+          <td>Pripni izbrana sporočila obstoječi datoteki mbox</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_msgCtxMenu_Exp_Index_Id.title__</td>
@@ -381,11 +383,11 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_Exp_IndexHTML_Id.title__</td>
-          <td>Vytvořte indexový soubor HTML pro vybrané zprávy</td>
+          <td>Ustvarite indeksno datoteko HTML za izbrana sporočila</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_Exp_IndexCSV_Id.title__</td>
-          <td>Vytvořit indexový soubor CSV pro vybrané zprávy</td>
+          <td>Ustvarite indeksno datoteko CSV za izbrana sporočila</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_msgCtxMenu_CopyToClipboard_Id.title__</td>
@@ -393,29 +395,29 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_CopyToClipboardMessage_Id.title__</td>
-          <td>Zkopírovat jednu vybranou zprávu do schránky</td>
+          <td>Kopiraj eno izbrano sporočilo v odložišče</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_msgCtxMenu_CopyToClipboardHeaders_Id.title__</td>
-          <td>Zkopírovat záhlaví jedné vybrané zprávy do schránky</td>
+          <td>Kopiraj glave posameznega izbranega sporočila v odložišče</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Options.title__</td>
-          <td>Otevřít dialogové okno možností ImportExportTools NG</td>
+          <td>Odprite pogovorno okno z možnostmi ImportExportTools NG</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Help.title__</td>
-          <td>Otevřít hlavní stránku nápovědy</td>
+          <td>Odpri glavno stran s pomočjo</td>
         </tr>
       </tbody>
     </table>
     <br />
-    <h2 id="tools_functions_help">Nabídka Nástroje</h2>
+    <h2 id="tools_functions_help">Meni orodij</h2>
     <table class="menu-table">
       <thead>
         <tr>
-          <th>Položka nabídky</th>
-          <th>Popis funkce</th>
+          <th>Element menija</th>
+          <th>Opis funkcije</th>
         </tr>
       </thead>
       <tbody>
@@ -425,15 +427,15 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_toolsCtxMenu_Exp_ProfileFull_Id.title__</td>
-          <td>Uložit kompletní profil (e-mail, linky, možnosti)</td>
+          <td>Shrani celoten profil (pošta, razširitve, možnosti)</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_toolsCtxMenu_Exp_ProfileMailOnly_Id.title__</td>
-          <td>Ukládat veškerou poštu do aktuálního profilu</td>
+          <td>Shrani vso pošto v trenutni profil</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_toolsCtxMenu_Imp_Profile_Id.title__</td>
-          <td>Importovat kompletní profil (pošta, rozšíření, možnosti)</td>
+          <td>Uvoz celotnega profila (pošta, razširitve, možnosti)</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_toolsCtxMenu_Backup_Id.title__</td>
@@ -441,301 +443,306 @@
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Options.title__</td>
-          <td>Otevřít dialogové okno možností ImportExportTools NG</td>
+          <td>Odprite pogovorno okno z možnostmi ImportExportTools NG</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Help.title__</td>
-          <td>Otevřít hlavní stránku nápovědy</td>
+          <td>Odpri glavno stran s pomočjo</td>
         </tr>
       </tbody>
     </table>
-    <h2 id="customdate_format_help">Vlastní formát data</h2>
+    <h2 id="customdate_format_help">Oblika datuma po meri</h2>
     <p>
-      Možnost vlastního data umožňuje úplnou kontrolu nad formátováním data použitého pro oba soubory v
-      indexu. V rozbalovacích nabídkách názvů souborů je k dispozici jak výchozí formát „Datum“, tak i nový
-      vlastní formát „Datum (vlastní)“. Vlastní datum lze také použít s tokenem ${date_custom} použitým v
-      rozšířených vlastních názvech souborů. Původní (výchozí) formát data je:<br />
-      RRRRMMMDDHHmm : 202011060808<br /><br />
-      Vlastní formát data využívá sekvence % odpovídající unixové funkcionalitě <code>strftime()</code> . Je
-      založen na JavaScriptovém portu funkce
+      Možnost datuma po meri omogoča popoln nadzor nad oblikovanjem datuma, ki se uporablja za obe datoteki v
+      indeksu. V spustnih menijih imen datotek sta na voljo tako privzeta oblika »Datum« kot tudi nova oblika
+      po meri »Datum (po meri)«. Datum po meri se lahko uporabi tudi z žetonom ${date_custom}, ki se uporablja
+      v razširjenih imenih datotek po meri. Prvotna (privzeta) oblika datuma je:<br />
+      LLLLMDDHHmm : 202011060808<br /><br />
+      Oblika datuma po meri uporablja zaporedja %, ki se ujemajo s funkcionalnostjo <code>strftime()</code> v
+      Unixu. Temelji na JavaScript različici funkcije
       <a class="link1" href="http://man7.org/linux/man-pages/man3/strftime.3.html"><code>strftime()</code></a>
-      , která formátuje datum a čas.<br />
-      Port funkce strftime() od TH Doana (https://thdoan.github.io/strftime/)<br />
+      , ki omogoča oblikovanje datuma in časa.<br />
+      Prilagajanje funkcije strftime() avtorja TH Doana (https://thdoan.github.io/strftime/)<br />
     </p>
-    <h3>Popisy konverzních sekvencí</h3>
+    <h3>Opisi zaporedja pretvorb</h3>
     <table class="dateformat-table">
       <thead>
         <tr>
-          <th>Sekvence</th>
-          <th>Popis</th>
+          <th>Zaporedje</th>
+          <th>Opis</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><code class="code1">%a</code></td>
-          <td>Zkrácený název dne v týdnu.</td>
+          <td>Skrajšano ime dneva v tednu.</td>
         </tr>
         <tr>
           <td><code class="code1">%A</code></td>
-          <td>Celý název dne v týdnu.</td>
+          <td>Polno ime dneva v tednu.</td>
         </tr>
         <tr>
           <td><code class="code1">%b</code></td>
-          <td>Zkrácený název měsíce.</td>
+          <td>Skrajšano ime meseca.</td>
         </tr>
         <tr>
           <td><code class="code1">%B</code></td>
-          <td>Celý název měsíce.</td>
+          <td>Polno ime meseca.</td>
         </tr>
         <tr>
           <td><code class="code1">%c</code></td>
-          <td>Preferované znázornění data a času (UTC) pro aktuální národní prostředí.</td>
+          <td>Prednostna predstavitev datuma in časa (UTC) za trenutne jezikovne nastavitve.</td>
         </tr>
         <tr>
           <td><code class="code1">%C</code></td>
-          <td>Číslo století (rok/100) jako dvouciferné celé číslo.</td>
+          <td>Številka stoletja (leto/100) kot dvomestno celo število.</td>
         </tr>
         <tr>
           <td><code class="code1">%d</code></td>
-          <td>Den v měsíci jako desetinné číslo (rozsah 01 až 31).</td>
+          <td>Dan v mesecu kot decimalno število (območje od 01 do 31).</td>
         </tr>
         <tr>
           <td><code class="code1">%e</code></td>
-          <td>Den v měsíci jako desetinné číslo (rozsah 1 až 31).</td>
+          <td>Dan v mesecu kot decimalno število (območje od 1 do 31).</td>
         </tr>
         <tr>
           <td><code class="code1">%F</code></td>
-          <td>Formát data dle ISO 8601 (ekvivalent <code class="code1">%Y-%m-%d</code> ).</td>
+          <td>Oblika datuma po standardu ISO 8601 (enakovredno <code class="code1">%Y-%m-%d</code> ).</td>
         </tr>
         <tr>
           <td><code class="code1">%G</code></td>
           <td>
-            Rok založený na týdnu podle normy ISO 8601 se stoletím jako desetinným číslem. Čtyřmístný rok
-            odpovídá číslu týdne podle normy ISO (viz <code class="code1">%V</code> ). Má stejný formát a
-            hodnotu jako <code class="code1">%Y</code> , až na to, že pokud číslo týdne podle normy ISO patří
-            k předchozímu nebo následujícímu roku, použije se místo toho tento rok.
+            Leto po standardu ISO 8601, ki temelji na tednu in je decimalno število stoletje. Štirimestno leto
+            ustreza številki tedna po standardu ISO (glejte <code class="code1">%V</code> ). Ima enako obliko
+            in vrednost kot <code class="code1">%Y</code> , le da če številka tedna po standardu ISO pripada
+            prejšnjemu ali naslednjemu letu, se namesto tega uporabi to leto.
           </td>
         </tr>
         <tr>
           <td><code class="code1">%g</code></td>
-          <td>Jako <code class="code1">%G</code> , ale bez století, tedy s dvoumístným rokem (00-99).</td>
+          <td>
+            Kot <code class="code1">%G</code> , vendar brez stoletja, torej z dvomestno letnico (00–99).
+          </td>
         </tr>
         <tr>
           <td><code class="code1">%H</code></td>
           <td>
-            Hodina jako desetinné číslo s použitím 24hodinového formátu (rozsah 00 až 23). Viz také
+            Ura kot decimalno število z uporabo 24-urnega formata (območje od 00 do 23). Glejte tudi
             <code class="code1">%k</code> .
           </td>
         </tr>
         <tr>
           <td><code class="code1">%I</code></td>
           <td>
-            Hodina jako desetinné číslo s použitím 12hodinového formátu (rozsah 01 až 12). Viz také
+            Ura kot decimalno število z uporabo 12-urnega formata (območje od 01 do 12). Glejte tudi
             <code class="code1">%l</code> .
           </td>
         </tr>
         <tr>
           <td><code class="code1">%j</code></td>
-          <td>Den v roce jako desetinné číslo (rozsah 001 až 366).</td>
+          <td>Dan v letu kot decimalno število (območje od 001 do 366).</td>
         </tr>
         <tr>
           <td><code class="code1">%k</code></td>
           <td>
-            Hodina jako desetinné číslo s použitím 24hodinového formátu (rozsah 0 až 23). Viz také
+            Ura kot decimalno število z uporabo 24-urnega formata (območje od 0 do 23). Glejte tudi
             <code class="code1">%H</code> .
           </td>
         </tr>
         <tr>
           <td><code class="code1">%l</code></td>
           <td>
-            Hodina jako desetinné číslo s použitím 12hodinového formátu (rozsah 1 až 12). Viz také
+            Ura kot decimalno število z uporabo 12-urnega formata (območje od 1 do 12). Glejte tudi
             <code class="code1">%I</code> .
           </td>
         </tr>
         <tr>
           <td><code class="code1">%m</code></td>
-          <td>Měsíc jako desetinné číslo (rozsah 01 až 12).</td>
+          <td>Mesec kot decimalno število (območje od 01 do 12).</td>
         </tr>
         <tr>
           <td><code class="code1">%n</code></td>
-          <td>Měsíc jako desetinné číslo (rozsah 1 až 12).</td>
+          <td>Mesec kot decimalno število (območje od 1 do 12).</td>
         </tr>
         <tr>
           <td><code class="code1">%M</code></td>
-          <td>Minuta jako desetinné číslo (rozsah 00 až 59).</td>
+          <td>Minuta kot decimalno število (območje od 00 do 59).</td>
         </tr>
         <tr>
           <td><code class="code1">%p</code></td>
           <td>
-            Buď „AM“, nebo „PM“ podle zadané časové hodnoty. Poledne je považováno za „PM“ a půlnoc za „AM“.
+            Bodisi »AM« ali »PM« glede na podano časovno vrednost. Poldne se obravnava kot »PM«, polnoč pa kot
+            »AM«.
           </td>
         </tr>
         <tr>
           <td><code class="code1">%P</code></td>
-          <td>Jako <code class="code1">%p</code> , ale malými písmeny („am“ nebo „pm“).</td>
+          <td>
+            Kot <code class="code1">%p</code> , vendar z malimi črkami (&quot;am&quot; ali &quot;pm&quot;).
+          </td>
         </tr>
         <tr>
           <td><code class="code1">%s</code></td>
-          <td>Počet sekund od epochy, 1. ledna 1970 00:00:00 +0000 (UTC).</td>
+          <td>Število sekund od epohe, 1. 1. 1970 00:00:00 +0000 (UTC).</td>
         </tr>
         <tr>
           <td><code class="code1">%S</code></td>
-          <td>Sekunda jako desetinné číslo (rozsah 00 až 59).</td>
+          <td>Sekunda kot decimalno število (območje od 00 do 59).</td>
         </tr>
         <tr>
           <td><code class="code1">%u</code></td>
           <td>
-            Den v týdnu jako desetinné číslo (rozsah 1 až 7), pondělí je 1. Viz také
+            Dan v tednu kot decimalno število (območje od 1 do 7), ponedeljek je 1. Glejte tudi
             <code class="code1">%w</code> .
           </td>
         </tr>
         <tr>
           <td><code class="code1">%V</code></td>
           <td>
-            Číslo týdne aktuálního roku podle normy ISO 8601 jako desetinné číslo (rozsah 01 až 53), kde týden
-            1 je první týden, který má v novém roce alespoň 4 dny (tj. první čtvrtek).
+            Številka tedna po standardu ISO 8601 tekočega leta kot decimalno število (območje od 01 do 53),
+            kjer je 1. teden prvi teden, ki ima vsaj 4 dni v novem letu (torej prvi četrtek).
           </td>
         </tr>
         <tr>
           <td><code class="code1">%w</code></td>
           <td>
-            Den v týdnu jako desetinné číslo (rozsah 0 až 6), neděle je 0. Viz také
+            Dan v tednu kot decimalno število (območje od 0 do 6), nedelja je 0. Glejte tudi
             <code class="code1">%u</code> .
           </td>
         </tr>
         <tr>
           <td><code class="code1">%x</code></td>
-          <td>Preferované zobrazení data pro aktuální národní prostředí bez času.</td>
+          <td>Prednostna predstavitev datuma za trenutno lokacijo brez časa.</td>
         </tr>
         <tr>
           <td><code class="code1">%X</code></td>
-          <td>Preferované zobrazení času pro aktuální lokalitu bez data.</td>
+          <td>Prednostna predstavitev časa za trenutno lokacijo brez datuma.</td>
         </tr>
         <tr>
           <td><code class="code1">%y</code></td>
-          <td>Rok jako desetinné číslo bez století (rozsah 00 až 99).</td>
+          <td>Leto kot decimalno število brez stoletja (območje od 00 do 99).</td>
         </tr>
         <tr>
           <td><code class="code1">%Y</code></td>
-          <td>Rok jako desetinné číslo včetně století.</td>
+          <td>Leto kot decimalno število, vključno s stoletjem.</td>
         </tr>
         <tr>
           <td><code class="code1">%z</code></td>
           <td>
-            Číselné časové pásmo <code class="code1">+hhmm</code> nebo <code class="code1">-hhmm</code> (tj.
-            posun v hodinách a minutách od UTC).
+            Številski časovni pas <code class="code1">+hhmm</code> ali <code class="code1">-hhmm</code> (torej
+            odmik ure in minute od UTC).
           </td>
         </tr>
         <tr>
           <td><code class="code1">%Z</code></td>
-          <td>Název nebo zkratka časového pásma.</td>
+          <td>Ime ali okrajšava časovnega pasu.</td>
         </tr>
       </tbody>
     </table>
-    <h3>Poznámky ke kompatibilitě:</h3>
+    <h3>Opombe o združljivosti:</h3>
     <ul>
-      <li><code class="code1">%c</code> - formátovaný řetězec je mírně odlišný</li>
+      <li><code class="code1">%c</code> - oblikovani niz je nekoliko drugačen</li>
       <li>
-        <code class="code1">%D</code> - neimplementováno (použijte <code class="code1">%m/%d/%y</code> nebo
+        <code class="code1">%D</code> - ni implementirano (uporabite <code class="code1">%m/%d/%y</code> ali
         <code class="code1">%d/%m/%y</code> )
       </li>
-      <li><code class="code1">%e</code> - mezera se nepřidává</li>
-      <li><code class="code1">%E</code> - neimplementováno</li>
-      <li><code class="code1">%h</code> - neimplementováno (použijte <code class="code1">%b</code> )</li>
-      <li><code class="code1">%k</code> - mezera není přidána</li>
+      <li><code class="code1">%e</code> - presledek ni dodan</li>
+      <li><code class="code1">%E</code> - ni implementirano</li>
+      <li><code class="code1">%h</code> - ni implementirano (uporabite <code class="code1">%b</code> )</li>
+      <li><code class="code1">%k</code> - presledek ni dodan</li>
       <li>
-        <code class="code1">%n</code> - jako <code class="code1">%m</code> , ale bez úvodní nuly (použijte
-        <code class="code1">\n</code> pro nový řádek)
+        <code class="code1">%n</code> - kot <code class="code1">%m</code> , vendar brez začetne ničle (za novo
+        vrstico uporabite <code class="code1">\n</code> )
       </li>
-      <li><code class="code1">%O</code> - neimplementováno</li>
+      <li><code class="code1">%O</code> - ni implementirano</li>
       <li>
-        <code class="code1">%r</code> - neimplementováno (použijte <code class="code1">%I:%M:%S %p</code> )
+        <code class="code1">%r</code> - ni implementirano (uporabite <code class="code1">%I:%M:%S %p</code> )
       </li>
       <tr>
         <td><code class="code1">${subject}</code></td>
-        <td>Předmět zprávy</td>
+        <td>Zadeva sporočila</td>
       </tr>
-      <li><code class="code1">%R</code> - neimplementováno (použijte <code class="code1">%H:%M</code> )</li>
-      <li><code class="code1">%t</code> - neimplementováno (použijte <code class="code1">\t</code> )</li>
+      <li><code class="code1">%R</code> - ni implementirano (uporabite <code class="code1">%H:%M</code> )</li>
+      <li><code class="code1">%t</code> - ni implementirano (uporabite <code class="code1">\t</code> )</li>
       <li>
-        <code class="code1">%T</code> - neimplementováno (použijte <code class="code1">%H:%M:%S</code> )
+        <code class="code1">%T</code> - ni implementirano (uporabite <code class="code1">%H:%M:%S</code> )
       </li>
-      <li><code class="code1">%U</code> - neimplementováno</li>
-      <li><code class="code1">%W</code> - neimplementováno</li>
-      <li><code class="code1">%+</code> - neimplementováno</li>
-      <li><code class="code1">%%</code> - neimplementováno (použijte <code class="code1">%</code> )</li>
+      <li><code class="code1">%U</code> - ni implementirano</li>
+      <li><code class="code1">%W</code> - ni implementirano</li>
+      <li><code class="code1">%+</code> - ni implementirano</li>
+      <li><code class="code1">%%</code> - ni implementirano (uporabite <code class="code1">%</code> )</li>
     </ul>
     <br /><br />
-    <h2 id="ext_filename_format_help">Rozšířený formát názvu souboru:</h2>
+    <h2 id="ext_filename_format_help">Razširjena oblika imena datoteke:</h2>
     <br />
     <p>
-      Rozšířené formátování názvů souborů využívá tokeny. Přesný název souboru lze vytvořit pomocí tokenů i
-      libovolného textu nebo platných znaků názvu souboru. Neplatné znaky jsou:
-      <code>| * : &lt; &gt; ? \ / &quot;</code> Anglické (en-US) tokeny jsou k dispozici v libovolném národním
-      prostředí. K dispozici jsou také tokeny specifické pro národní prostředí, které jsou uvedeny pod
-      tabulkou angličtiny.<br /><br />
-      Příklady:<br /><br />
-      <span class="notranslate"><code>${subject}-${date}-${index}</code></span> – Výchozí formát<br />
-      <span class="notranslate"><code>${prefix}_${date_custom}_${sender}</code></span> – Použít vlastní formát
-      data místo výchozího<br />
-      <span class="notranslate"><code>${subject}-GmailMsg-${date}-${index}</code></span> – S vlastním
-      textem<br /><br /><br />
+      Razširjeno oblikovanje imen datotek uporablja žetone. Natančno ime datoteke je mogoče sestaviti z
+      uporabo žetonov, pa tudi katerega koli besedila ali veljavnih znakov imena datoteke. Neveljavni znaki
+      so: <code>| * : &lt; &gt; ? \ / &quot;</code> Angleški (en-US) žetoni so na voljo v vseh jezikovnih
+      nastavitvah. Na voljo so tudi žetoni, specifični za jezikovne nastavitve, ki so navedeni pod tabelo za
+      angleščino.<br /><br />
+      Primeri:<br /><br />
+      <span class="notranslate"><code>${subject}-${date}-${index}</code></span> - Privzeta oblika<br />
+      <span class="notranslate"><code>${prefix}_${date_custom}_${sender}</code></span> – Uporabite obliko
+      datuma po meri namesto privzete<br />
+      <span class="notranslate"><code>${subject}-GmailMsg-${date}-${index}</code></span> - Z nekaj besedila po
+      meri<br /><br /><br />
     </p>
     <table class="token-table">
       <tr>
         <td>Žeton</td>
-        <td>Popis</td>
+        <td>Opis</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${subject}</code></td>
-        <td>Předmět zprávy. Délka může být omezena volbou délky předmětu.</td>
+        <td>Zadeva sporočila. Dolžina je lahko omejena z možnostjo dolžine zadeve.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${sender}</code></td>
-        <td>Jméno odesílatele zprávy.</td>
+        <td>Ime pošiljatelja sporočila.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${recipient}</code></td>
-        <td>Jméno příjemce zprávy.</td>
+        <td>Ime prejemnika sporočila.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${sender_email}</code></td>
-        <td>E-mailová adresa odesílatele zprávy.</td>
+        <td>E-poštni naslov pošiljatelja sporočila.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${recipient_email}</code></td>
-        <td>E-mailová adresa příjemce zprávy.</td>
+        <td>E-poštni naslov prejemnika sporočila.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${smart_name}</code></td>
-        <td>Příjemci, pokud je zpráva ve složce Odeslané, jinak jméno odesílatele</td>
+        <td>Prejemniki, če je sporočilo v mapi Poslano, sicer ime pošiljatelja</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${index}</code></td>
-        <td>Indexové číslo zprávy.</td>
+        <td>Indeksna številka sporočila.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${prefix}</code></td>
-        <td>Hodnota volby textu prefixu.</td>
+        <td>Vrednost možnosti predpone besedila.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${suffix}</code></td>
-        <td>Hodnota volby textu přípony.</td>
+        <td>Vrednost možnosti besedila pripone.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${date}</code></td>
-        <td>Standardní formát data. Výchozí formát je: RRRRMMMDDHHmm</td>
+        <td>Standardna oblika datuma. Privzeta oblika je: LLLLMMDDDHHmm</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${date_custom}</code></td>
-        <td>Vlastní formát data. Viz část o vlastním formátování data.</td>
+        <td>Oblika datuma po meri. Glejte razdelek o oblikovanju datuma po meri.</td>
       </tr>
     </table>
     <br />
     <table id="localized-token-table" class="token-table">
       <tr>
-        <td>Token (en-US)</td>
-        <td>Lokalizované (<span id="locale1"></span> ) Token</td>
+        <td>Žeton (en-US)</td>
+        <td>Lokalizirano (<span id="locale1"></span> ) Žeton</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${subject}</code></td>
@@ -783,20 +790,19 @@
       </tr>
     </table>
     <br />
-    <h2>Nové a experimentální předvolby (možnosti)</h2>
+    <h2>Nove in eksperimentalne nastavitve (možnosti)</h2>
     <p>
-      V dialogovém okně možností zatím nelze konfigurovat několik nových funkcí a možností. Jakmile budou tyto
-      funkce stabilizovány, budou přidány do uživatelského rozhraní.<br />
-      Abyste je mohli používat, je nutné je nastavit v editoru konfigurace. Pro přístup k editoru použijte
-      nabídku Nástroje/Možnosti a poté vyberte sekci Upřesnit. Dole se zobrazí tlačítko „Editor konfigurace“.
-      Pokud do vyhledávacího pole zadáte „importexporttoolsng“, zobrazí se vám všechna nastavení rozšíření.
-      Poté můžete podle potřeby upravit různá nastavení níže.
+      V pogovornem oknu z možnostmi je več novih funkcij in možnosti, ki jih še ni mogoče konfigurirati. Ko
+      bodo te funkcije stabilizirane, bodo dodane v uporabniški vmesnik.<br />
+      Če jih želite uporabljati, jih morate nastaviti v urejevalniku konfiguracij. Za dostop do urejevalnika
+      uporabite meni Orodja/Možnosti, nato izberite razdelek Napredno, kjer bo na dnu gumb »Urejevalnik
+      konfiguracij«. Če v iskalno vrstico vnesete »importexporttoolsng«, boste dobili vse nastavitve
+      razširitev. Nato lahko po potrebi uredite različne spodnje nastavitve.
     </p>
     <p><code class="notranslate">importexporttoolsng.export.index_date_custom_format</code></p>
     <p>
-      Tato předvolba používá stejné plné formátování, jaké se používá pro indexové soubory. Ve výchozím
-      nastavení je to prázdný řetězec. Pokud je použit formátovaný řetězec data/času, změní se formát data
-      indexu.
+      Ta nastavitev sledi enakemu polnemu oblikovanju, ki se uporablja za indeksne datoteke. Privzeto je
+      prazen niz, če pa je niz z oblikovanim nizom datuma/ure, se bo format datuma indeksa spremenil.
     </p>
     <p>
       <code class="notranslate">importexporttoolsng.export.attachments.filename_extended_format</code><br />
@@ -807,37 +813,37 @@
       </p>
     </p>
     <p>
-      Obě tyto předvolby používají stejný typ rozšířených formátů pojmenování souborů, jaké používá název
-      souboru exportovaných zpráv. První je pro externí přílohy, druhá pro vložené (inline) přílohy.
+      Obe nastavitvi uporabljata isto vrsto razširjenih oblik poimenovanja datotek, kot jih uporablja ime
+      datoteke izvoženih sporočil. Prva je za zunanje priloge, druga pa za vdelane (vrstične) priloge.
     </p>
     <p><code class="notranslate">importexporttoolsng.experimental.use_delivery_date</code></p>
     <p>
-      „Datum“ zprávy v Thunderbirdu je obvykle datum nastavené poštovním klientem odesílatele. Nastavením této
-      možnosti na „true“ se použije datum přijetí v poštovním klientovi příjemce. Toto datum bude použito jak
-      pro názvy souborů, tak pro datum v indexových souborech.
+      Običajno je »Datum« za sporočilo v Thunderbirdu datum, ki ga nastavi pošiljateljev poštni odjemalec. Če
+      to možnost nastavite na »true«, se uporabi datum prejema v prejemnikovem poštnem odjemalcu. Ta datum bo
+      uporabljen tako za imena datotek kot tudi za datum v indeksnih datotekah.
     </p>
-    <h2>Základní, globální klávesové zkratky (horké klávesy)</h2>
+    <h2>Osnovna, globalna funkcija bližnjic (hotkey)</h2>
     <p><code class="notranslate">importexporttoolsng.experimental.hot_keys</code></p>
     <p>
-      Tato nová předvolba umožňuje uživateli nastavit až 10 klávesových zkratek. Tyto zkratky mohou provádět
-      většinu funkcí ImportExportTools NG a také další funkce Thunderbirdu. Řetězec předvoleb je formátován
-      jako objekt ve formátu JSON. Formát a klávesy jsou následující:
+      Ta nova nastavitev uporabniku omogoča nastavitev do 10 bližnjic na tipkovnici. Bližnjice lahko izvajajo
+      večino funkcij ImportExportTools NG, kot tudi druge funkcije Thunderbirda. Niz nastavitev je formatiran
+      kot objekt v formatu JSON. Oblika in tipke so naslednje:
     </p>
     <p>
-      Příklad klávesových zkratek (pole objektů JSON)<br /><br />
-      <code class="notranslate">id</code> - index klíče (1-10)<br />
-      <code class="notranslate">key</code> - klíč (jeden znak)<br />
-      <code class="notranslate">keycode</code> - definice kódu klíče &#39;VK_*&#39;<br />
-      Může být zahrnut buď klíč, nebo kód klíče, ale ne obojí.<br />
-      <code class="notranslate">modifiers</code> - seznam modifikátorů kláves oddělených mezerami
+      Primeri vnosov bližnjic (niz objektov JSON)<br /><br />
+      <code class="notranslate">id</code> - ključni indeks (1-10)<br />
+      <code class="notranslate">key</code> - ključ (en sam znak)<br />
+      <code class="notranslate">keycode</code> - definira kodo tipke &#39;VK_*&#39;<br />
+      Vključen je lahko ključ ali koda ključa, ne pa oboje.<br />
+      <code class="notranslate">modifiers</code> - seznam modifikatorjev tipk, ločenih s presledki
       (&#39;control&#39;, &#39;shift&#39;, &#39;alt&#39;, &#39;accel&#39;)<br />
-      <code class="notranslate">oncommand</code> - přímý příkazový řetězec<br />
-      <code class="notranslate">contexts</code> - kontext okna, ve kterém je klávesa aktivní<br />
-      <code class="notranslate">&#39;all&#39;</code> – všechna okna v aplikaci Messenger, psaní zpráv a
-      vyhledávání<br />
-      <code class="notranslate">&#39;messenger&#39;</code> - hlavní okno messengeru a jeho potomci<br />
-      <code class="notranslate">&#39;compose&#39;</code> - okno pro psaní zprávy<br />
-      <code class="notranslate">&#39;search&#39;</code> - dialogové okno pro vyhledávání<br /><br />
+      <code class="notranslate">oncommand</code> - neposredni ukazni niz<br />
+      <code class="notranslate">contexts</code> - kontekst okna, kjer je tipka aktivna<br />
+      <code class="notranslate">&#39;all&#39;</code> - vsa okna v storitvi Messenger, Sestavi, Išči<br />
+      <code class="notranslate">&#39;messenger&#39;</code> - glavno okno programa Messenger in njegovi
+      podrejeni programi<br />
+      <code class="notranslate">&#39;compose&#39;</code> - okno za sestavljanje sporočila<br />
+      <code class="notranslate">&#39;search&#39;</code> - pogovorno okno za iskanje<br /><br />
       <code class="notranslate"
         >[{&quot;id&quot;: &quot;1&quot;, &quot;key&quot;: &quot;K&quot;, &quot;modifiers&quot;: &quot;control
         shift&quot;, &quot;oncommand&quot;: &quot;alert(&#39;Compose alert&#39;)&quot;, &quot;contexts&quot;:
@@ -866,25 +872,25 @@
       ><br />
     </p>
     <p>
-      Protože jsou zkratky nové a experimentální, přidám do repozitáře další dokumentaci. Podívejte se na
-      soubor
+      Ker so bližnjice nove in eksperimentalne, bom v repozitorij dodal tudi več dokumentacije. Preverite
+      datoteko
       <a class="link1" href="https://github.com/thundernest/import-export-tools-ng"
-        >README pro rozšíření ImportExportTools NG.</a
+        >README za razširitev ImportExportTools NG.</a
       ><br />
     </p>
     <br />
-    <h3>Verze 14.0.0: Podpora Thunderbirdu 115 - 10. července 2023</h3>
+    <h3>Različica 14.0.0: Podpora za Thunderbird 115 - 10. julij 2023</h3>
     <p>
-      Řešené funkce a problémy:<br />
+      Obravnavane funkcije in težave:<br />
       <p>
-        - Podpora pro Thunderbird 115 Supernova<br />
-        - Přepracovat a modernizovat uživatelské rozhraní Možnosti<br />
-        - Kompletní podpora tmavého režimu<br />
-        - Nový, konzistentní systém menu<br />
-        - Nové tlačítko na panelu nástrojů<br />
-        - Vylepšená nápověda, otevírá se při instalaci<br />
-        - Aktualizace exportního účtu<br /><br />
-        Díky následujícím uživatelům za návrhy na vylepšení a pomoc s testováním:<br /><br />
+        - Podpora za Thunderbird 115 Supernova<br />
+        - Preoblikujte in posodobite uporabniški vmesnik Možnosti<br />
+        - Popolna podpora za temni način<br />
+        - Nov, dosleden sistem menijev<br />
+        - Nov gumb orodne vrstice<br />
+        - Izboljšana pomoč, odpiranje ob namestitvi<br />
+        - Posodobi izvozni račun<br /><br />
+        Zahvaljujemo se naslednjim uporabnikom za predloge za izboljšave in pomoč pri testiranju:<br /><br />
         - <code class="notranslate">@kiki-ja</code><br />
         - <code class="notranslate">@tidebre67</code><br />
         - <code class="notranslate">@DenB10</code><br />
