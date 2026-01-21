@@ -186,6 +186,8 @@ function getSubjectForHdr(hdr, dirPath) {
 		var pattern = IETprefs.getCharPref("extensions.importexporttoolsng.export.filename_pattern");
 		// Name
 		var authName = formatNameForSubject(hdr.mime2DecodedAuthor, false);
+		authName = authName.replaceAll('"',"");
+		
 		if (authMaxLen > 0) {
 			authName = authName.substring(0, authMaxLen);
 		}
@@ -237,6 +239,7 @@ function getSubjectForHdr(hdr, dirPath) {
 
 		// Name
 		let authName = formatNameForSubject(hdr.mime2DecodedAuthor, false);
+		authName = authName.replaceAll('"',"");
 		if (authMaxLen > 0) {
 			authName = authName.substring(0, authMaxLen);
 		}
@@ -297,7 +300,7 @@ function getSubjectForHdr(hdr, dirPath) {
 		fname = nametoascii(fname);
 	else {
 		// Allow ',' and single quote character which is valid
-		fname = fname.replace(/[\/\\:<>*\?\"\|]/g, "_");
+		fname = fname.replace(/[\/\\:<>*\?\|]/g, "_");
 	}
 
 	if (IETprefs.getBoolPref("extensions.importexporttoolsng.export.filename_latinize")) {
