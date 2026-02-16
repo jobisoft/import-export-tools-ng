@@ -2,6 +2,18 @@
 
 ## Versions
 
+Note : Thunderbird v148 has fixed the issue  preventing PDF Export
+
+I have reconsidered my support for the release channel. With around 78k users, that's to large a group to disrupt. Also I want everyone for 
+the beta and upcoming release of v15 which is a complete rewrite of the export messages functions. It will also add new features such as PDF export with attachments. 
+
+After the next ESR release I will decide on my release policy.
+However, please check for ImportExportTools NG support before	updating Thunderbird.
+
+Christopher
+
+Fix : Remove quotes from display name for smart file names
+
 Version 14.1.15 : Maintenance Release - November 6, 2025
 
 - Truncate long attachment names on Windows 
