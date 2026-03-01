@@ -2,6 +2,8 @@
 
 ## Versions
 
+Version 14.1.17 : Maintenance Release - February 14, 2026
+
 Note : Thunderbird v148 has fixed the issue  preventing PDF Export
 
 I have reconsidered my support for the release channel. With around 78k users, that's to large a group to disrupt. Also I want everyone for 
