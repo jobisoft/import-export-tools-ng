@@ -20,18 +20,15 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Poznámky k vydaniu:</h3>
     <p>
-      <b>SÚRNE: NEAKTUALIZUJTE NA THUNDERBIRD V147, AK POTREBUJETE PODPORU EXPORTU PDF.</b><br /><br />
-      V Thunderbirde existuje základná chyba, ktorá spôsobuje pád programu pri exporte PDF. Kedy bude táto
-      chyba v Thunderbirde opravená, nie je známe.<br /><br />
-      <b>ImportExportTools NG budem odteraz aktualizovať iba pre kanál ESR.</b> V budúcnosti sa mi takéto
-      chyby nemôžu vyskytnúť. Ak potrebujete ImportExportTools NG, budete musieť zostať na kanáli ESR alebo sa
-      vrátiť späť na kanál ESR. Pokyny na vrátenie verzie čoskoro zverejním v sekcii problémov s Githubom.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problémy s ImportExportTools NG</a
-      ><br /><br />
-      Prepáč, toto je mimo mojej kontroly.<br /><br />
+      <b>Poznámka: Thunderbird v148 opravil problém s blokovaním exportu PDF</b><br /><br />
+      Prehodnotil som svoju podporu pre vydaný kanál. S približne 78 000 používateľmi je to príliš veľká
+      skupina na to, aby som ju mohol narušiť. Tiež chcem, aby sa všetci zúčastnili beta verzie a
+      pripravovanej verzie v15, ktorá predstavuje kompletné prepracovanie funkcií exportu správ. Pridá aj nové
+      funkcie, ako napríklad export PDF s prílohami.<br /><br />
+      Po ďalšom vydaní ESR sa rozhodnem o mojej politike vydávania.<br />
+      Pred aktualizáciou Thunderbirdu však skontrolujte podporu ImportExportTools NG.<br /><br />
       Christopher<br /><br />
-      - Zvýšený maximálny import mboxov na 50 GB
+      Oprava: Odstránenie úvodzoviek zo zobrazovaného názvu pre inteligentné názvy súborov<br /><br />
     </p>
     <h2 id="main_help">Prehľad a ponuky nástroja ImportExportTools NG</h2>
     <p>
@@ -148,7 +145,7 @@
           </td>
           <td>
             Exportujte správy z priečinka ako súbory vo formáte HTML (bez štruktúry/podpriečinkov).<br />
-            Prílohy sa ukladajú ako samostatné súbory. Týmto sa tiež vytvorí indexový súbor HTML so zoznamom
+            Prílohy sa ukladajú ako samostatné súbory. Vytvorí sa tým aj indexový súbor HTML so zoznamom
             každej správy.
           </td>
         </tr>
@@ -523,7 +520,7 @@
         <tr>
           <td><code class="code1">%H</code></td>
           <td>
-            Hodina ako desatinné číslo s použitím 24-hodinového formátu (rozsah 00 až 23). Pozrite si tiež
+            Hodina ako desatinné číslo s 24-hodinovým formátom (rozsah 00 až 23). Pozrite si tiež
             <code class="code1">%k</code> .
           </td>
         </tr>

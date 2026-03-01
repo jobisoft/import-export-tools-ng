@@ -20,19 +20,15 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Notas de lançamento:</h3>
     <p>
-      <b>URGENTE: NÃO ATUALIZE PARA O THUNDERBIRD V147 SE PRECISAR DE SUPORTE PARA EXPORTAÇÃO DE PDF.</b
-      ><br /><br />
-      Existe um bug central no Thunderbird que causa o seu travamento ao exportar para PDF. Não se sabe quando
-      esse bug será corrigido no Thunderbird.<br /><br />
-      <b>A partir de agora, só atualizarei o ImportExportTools NG para o canal ESR.</b> Não posso tolerar
-      erros como este no futuro. Se você precisar do ImportExportTools NG, terá que permanecer no canal ESR ou
-      reverter para ele. Publicarei as instruções de reversão na seção de problemas do Github em breve.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problemas com o ImportExportTools NG</a
-      ><br /><br />
-      Sinto muito, mas isso está fora do meu controle.<br /><br />
+      <b>Nota: O Thunderbird v148 corrigiu o problema que impedia a exportação de PDFs.</b><br /><br />
+      Reconsiderei meu apoio ao canal de lançamento. Com cerca de 78 mil usuários, é um grupo grande demais
+      para ser interrompido. Além disso, quero que todos participem do beta e do próximo lançamento da versão
+      15, que consiste em uma reescrita completa das funções de exportação de mensagens. Ela também adicionará
+      novos recursos, como a exportação de PDFs com anexos.<br /><br />
+      Após o próximo lançamento do ESR, decidirei sobre minha política de lançamentos.<br />
+      No entanto, verifique se o Thunderbird é compatível com o ImportExportTools NG antes de atualizá-lo.<br /><br />
       Christopher<br /><br />
-      - Aumentamos o limite máximo de importação de arquivos mbox para 50 GB.
+      Correção: Remover aspas do nome de exibição para nomes de arquivos inteligentes.<br /><br />
     </p>
     <h2 id="main_help">Visão geral e menus do ImportExportTools NG</h2>
     <p>
@@ -583,8 +579,8 @@
         <tr>
           <td><code class="code1">%p</code></td>
           <td>
-            &quot;AM&quot; ou &quot;PM&quot;, de acordo com o horário especificado. Meio-dia é considerado
-            &quot;PM&quot; e meia-noite, &quot;AM&quot;.
+            Pode ser &quot;AM&quot; ou &quot;PM&quot;, de acordo com o horário especificado. Meio-dia é
+            considerado &quot;PM&quot; e meia-noite é considerado &quot;AM&quot;.
           </td>
         </tr>
         <tr>
@@ -738,7 +734,7 @@
       </tr>
       <tr>
         <td class="notranslate"><code>${suffix}</code></td>
-        <td>O valor da opção de texto de sufixo.</td>
+        <td>O valor da opção de texto do sufixo.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${date}</code></td>

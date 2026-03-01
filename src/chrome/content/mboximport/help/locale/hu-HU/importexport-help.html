@@ -20,20 +20,16 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Kiadási megjegyzések:</h3>
     <p>
-      <b>SÜRGŐS: NE FRISSÍTSEN THUNDERBIRD V147-ES VÁLTOZATRA, HA PDF EXPORTÁLÁSI TÁMOGATÁSRA VAN SZÜKSÉGE.</b
+      <b>Megjegyzés: A Thunderbird v148-as verziójában kijavították a PDF-exportálást megakadályozó hibát.</b
       ><br /><br />
-      Van egy alapvető Thunderbird hiba, ami összeomlást okoz PDF exportáláskor. Nem tudni, hogy mikor
-      javítják ki a Thunderbirdben.<br /><br />
-      A <b>jövőben csak az ESR csatornához fogom frissíteni az ImportExportTools NG-t.</b> A jövőben nem
-      fordulhatnak elő ilyen hibák. Ha szükséged van az ImportExportTools NG-re, akkor az ESR csatornán kell
-      maradnod, vagy vissza kell térned az ESR csatornára. Hamarosan közzéteszem a visszaállítási utasításokat
-      a Github problémák részben.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >ImportExportTools NG problémák</a
-      ><br /><br />
-      Bocsánat, ez kívül esik az irányításomon.<br /><br />
+      Újragondoltam a kiadási csatorna támogatását. Körülbelül 78 ezer felhasználóval ez túl nagy csoport
+      ahhoz, hogy megzavarják. Azt is szeretném, ha mindenki csatlakozna a v15 béta verziójához és a közelgő
+      kiadáshoz, amely az üzenetek exportálási funkcióinak teljes átdolgozását jelenti. Új funkciókat is
+      hozzáad, például a PDF exportálást mellékletekkel.<br /><br />
+      A következő ESR kiadás után fogom eldönteni a kiadási irányelveimet.<br />
+      Azonban a Thunderbird frissítése előtt kérjük, ellenőrizze az ImportExportTools NG támogatását.<br /><br />
       Kristóf<br /><br />
-      - A maximális mbox importálás 50 GB-ra nőtt
+      Javítás: Idézőjelek eltávolítása az intelligens fájlnevek megjelenített nevéből<br /><br />
     </p>
     <h2 id="main_help">ImportExportTools NG áttekintése és menüi</h2>
     <p>
@@ -213,11 +209,11 @@
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_IndexHTML_Id.title__</td>
-          <td>HTML indexfájlt hoz létre az üzenetek mappából (üzenetek exportálása nélkül)</td>
+          <td>Létrehoz egy HTML indexfájlt az üzenetek mappából (nincs üzenetexportálás)</td>
         </tr>
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_IndexCSV_Id.title__</td>
-          <td>Létrehoz egy CSV indexfájlt az üzenetek mappájáról (nincs üzenetexportálás)</td>
+          <td>CSV indexfájlt hoz létre az üzenetek mappájából (üzenetek exportálása nélkül)</td>
         </tr>
         <tr>
           <td class="notranslate">__MSG_folderCtxMenu_Exp_SearchExport_Id.title__</td>
@@ -465,7 +461,7 @@
       elérhető a fájlnév legördülő menüiben. Az egyéni dátum a kibővített egyéni fájlnevekben használt
       ${date_custom} tokennel is használható. Az eredeti (alapértelmezett) dátumformátum:<br />
       ÉÉÉÉHHNNÓÓpp: 202011060808<br /><br />
-      Az egyéni dátumformátum az <code>strftime()</code> Unix-szerű funkcionalitásával megegyező % sorozatokat
+      Az egyéni dátumformátum a <code>strftime()</code> Unix-szerű funkcionalitásával megegyező % sorozatokat
       használ.
       <a class="link1" href="http://man7.org/linux/man-pages/man3/strftime.3.html"><code>strftime()</code></a>
       függvény JavaScript portján alapul, amely egy dátum és idő formázására szolgáló függvény.<br />
@@ -735,7 +731,7 @@
       </tr>
       <tr>
         <td class="notranslate"><code>${suffix}</code></td>
-        <td>Az utótag szöveges opció értéke.</td>
+        <td>Az utótag szöveges beállítási értéke.</td>
       </tr>
       <tr>
         <td class="notranslate"><code>${date}</code></td>

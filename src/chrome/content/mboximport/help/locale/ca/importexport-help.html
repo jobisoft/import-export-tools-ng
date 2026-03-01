@@ -20,19 +20,16 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Notes de la versió:</h3>
     <p>
-      <b>URGENT: NO ACTUALITZEU A THUNDERBIRD V147 SI NECESSITEU SUPORT PER A L&#39;EXPORTACIÓ DE PDF.</b
-      ><br /><br />
-      Hi ha un error central de Thunderbird que provoca un bloqueig en exportar PDF. Es desconeix quan es
-      corregirà això a Thunderbird.<br /><br />
-      <b>A partir d&#39;ara, només actualitzaré ImportExportTools NG per al canal ESR.</b> No podré tenir
-      errors com aquest en el futur. Si necessiteu ImportExportTools NG, haureu de romandre al canal ESR o
-      tornar al canal ESR. Aviat publicaré les instruccions de reversió a la secció de problemes de Github.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problemes d&#39;ImportExportTools NG</a
-      ><br /><br />
-      Ho sento, això està fora del meu control.<br /><br />
+      <b>Nota: Thunderbird v148 ha solucionat el problema que impedia l&#39;exportació de PDF.</b><br /><br />
+      He reconsiderat el meu suport al canal de llançament. Amb uns 78.000 usuaris, és un grup massa gran per
+      interrompre&#39;l. També vull que tothom participi a la versió beta i al proper llançament de la v15,
+      que és una reescriptura completa de les funcions d&#39;exportació de missatges. També afegirà noves
+      funcions com ara l&#39;exportació de PDF amb fitxers adjunts.<br /><br />
+      Després del proper llançament d&#39;ESR decidiré la meva política de llançaments.<br />
+      Tanmateix, comproveu si hi ha compatibilitat amb ImportExportTools NG abans d&#39;actualitzar el
+      Thunderbird.<br /><br />
       Cristòfor<br /><br />
-      - S&#39;ha augmentat la importació màxima de mbox a 50 GB
+      Correcció: Elimina les cometes del nom de visualització per als noms de fitxer intel·ligents<br /><br />
     </p>
     <h2 id="main_help">Visió general i menús d&#39;ImportExportTools NG</h2>
     <p>
@@ -364,7 +361,7 @@
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_PlainTextFormatSaveAtts_Id.title__</td>
           <td>
-            Exporta els missatges seleccionats a fitxers de text sense format, inclosos els fitxers adjunts
+            Exporta els missatges seleccionats a fitxers de text sense format, incloent-hi els fitxers adjunts
           </td>
         </tr>
         <tr>
@@ -582,7 +579,7 @@
         </tr>
         <tr>
           <td><code class="code1">%M</code></td>
-          <td>Minut com a nombre decimal (interval de 00 a 59).</td>
+          <td>Minut com a nombre decimal (rang de 00 a 59).</td>
         </tr>
         <tr>
           <td><code class="code1">%p</code></td>

@@ -20,18 +20,15 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Poznámky k vydání:</h3>
     <p>
-      <b>NALÉHAVÉ: NEAKTUALIZUJTE NA THUNDERBIRD V147, POKUD POTŘEBUJETE PODPORU EXPORTU PDF.</b><br /><br />
-      V Thunderbirdu existuje základní chyba, která způsobuje pád aplikace při exportu PDF. Kdy bude tato
-      chyba v Thunderbirdu opravena, není známo.<br /><br />
-      <b>ImportExportTools NG budu do budoucna aktualizovat pouze pro kanál ESR.</b> V budoucnu se mi takové
-      chyby nesmí vyskytovat. Pokud ImportExportTools NG potřebujete, budete muset zůstat na kanálu ESR nebo
-      se na něj vrátit. Pokyny k vrácení zpět brzy zveřejním v sekci problémů na Githubu.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problémy s NG v nástroji ImportExportTools</a
-      ><br /><br />
-      Promiň, tohle je mimo mou kontrolu.<br /><br />
+      <b>Poznámka: Thunderbird v148 opravuje problém s blokováním exportu PDF.</b><br /><br />
+      Znovu jsem zvážil svou podporu pro tento release kanál. S přibližně 78 tisíci uživateli je to příliš
+      velká skupina na to, aby to narušilo jeho fungování. Také chci, aby se všichni zúčastnili beta verze a
+      nadcházejícího vydání v15, které představuje kompletní přepracování funkcí exportu zpráv. Přidá také
+      nové funkce, jako je export PDF s přílohami.<br /><br />
+      Po dalším vydání ESR se rozhodnu o své politice vydávání.<br />
+      Před aktualizací Thunderbirdu však prosím zkontrolujte podporu ImportExportTools NG.<br /><br />
       Kryštof<br /><br />
-      - Maximální velikost importu mboxu byla zvýšena na 50 GB.
+      Oprava: Odebrání uvozovek ze zobrazovaného názvu pro inteligentní názvy souborů<br /><br />
     </p>
     <h2 id="main_help">Přehled a nabídky nástroje ImportExportTools NG</h2>
     <p>
@@ -61,13 +58,13 @@
     </p>
     <h3>Podpora:</h3>
     <p>
-      Problémy nebo požadavky na funkce prosím zasílejte do repozitáře rozšíření GitHub:
+      Problémy nebo požadavky na funkce prosím zasílejte do repozitáře rozšíření na GitHubu:
       <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
         >Problémy s ImportExportTools NG</a
       ><br /><br />
       V případě problémů s chybami uveďte následující informace, které pomohou s jejich řešením:<br />
       - Verze ImportExportTools NG<br />
-      - Verze pro Thunderbird<br />
+      - Verze Thunderbirdu<br />
       - Operační systém a jeho verze<br />
       - Výstup ladění (kopírování z ladicí konzole - přístup pomocí Ctrl-Shift-J)<br />
       - Popis kroků vedoucích k problému<br />
@@ -833,7 +830,7 @@
       (&#39;control&#39;, &#39;shift&#39;, &#39;alt&#39;, &#39;accel&#39;)<br />
       <code class="notranslate">oncommand</code> - přímý příkazový řetězec<br />
       <code class="notranslate">contexts</code> - kontext okna, ve kterém je klávesa aktivní<br />
-      <code class="notranslate">&#39;all&#39;</code> – všechna okna v aplikaci Messenger, psaní zpráv a
+      <code class="notranslate">&#39;all&#39;</code> – všechna okna v aplikaci Messenger, psaní zpráv,
       vyhledávání<br />
       <code class="notranslate">&#39;messenger&#39;</code> - hlavní okno messengeru a jeho potomci<br />
       <code class="notranslate">&#39;compose&#39;</code> - okno pro psaní zprávy<br />

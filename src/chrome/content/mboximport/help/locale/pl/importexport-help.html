@@ -20,21 +20,17 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Informacje o wydaniu:</h3>
     <p>
-      <b
-        >PILNE: NIE AKTUALIZUJ WERSJI THUNDERBIRD DO WERSJI 147, JEŚLI POTRZEBUJESZ WSPARCIA EKSPORTU DO
-        FORMATU PDF.</b
+      <b>Uwaga: w programie Thunderbird v148 naprawiono problem uniemożliwiający eksportowanie plików PDF</b
       ><br /><br />
-      Istnieje błąd w Thunderbirdzie, który powoduje awarię podczas eksportu do PDF-ów. Nie wiadomo, kiedy
-      zostanie to naprawione w Thunderbirdzie.<br /><br />
-      <b>Od teraz będę aktualizować ImportExportTools NG tylko dla kanału ESR.</b> Nie mogę pozwolić sobie na
-      takie błędy w przyszłości. Jeśli potrzebujesz ImportExportTools NG, musisz pozostać na kanale ESR lub
-      wycofać się do kanału ESR. Wkrótce opublikuję instrukcje wycofania w sekcji problemów na GitHubie.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >Problemy z ImportExportTools NG</a
-      ><br /><br />
-      Przepraszam, to nie zależy ode mnie.<br /><br />
+      Ponownie rozważyłem swoje wsparcie dla kanału wydań. Przy około 78 tysiącach użytkowników to zbyt duża
+      grupa, aby ją zakłócać. Chcę również, aby wszyscy skorzystali z wersji beta i nadchodzącej wersji v15,
+      która jest całkowicie przeprojektowaną wersją funkcji eksportu wiadomości. Doda ona również nowe
+      funkcje, takie jak eksport plików PDF z załącznikami.<br /><br />
+      Po wydaniu kolejnej wersji ESR podejmę decyzję w sprawie polityki wydawniczej.<br />
+      Przed aktualizacją Thunderbirda należy jednak sprawdzić, czy jest dostępna obsługa ImportExportTools
+      NG.<br /><br />
       Krzysztof<br /><br />
-      - Zwiększono maksymalny import mbox do 50 GB
+      Naprawiono: Usuń cudzysłowy z nazwy wyświetlanej w przypadku nazw plików inteligentnych<br /><br />
     </p>
     <h2 id="main_help">Przegląd i menu ImportExportTools NG</h2>
     <p>
@@ -597,8 +593,8 @@
         <tr>
           <td><code class="code1">%u</code></td>
           <td>
-            Dzień tygodnia w formacie dziesiętnym (zakres od 1 do 7), gdzie poniedziałek ma wartość 1. Zobacz
-            także <code class="code1">%w</code> .
+            Dzień tygodnia w formacie dziesiętnym (zakres od 1 do 7), przy czym poniedziałek ma wartość 1.
+            Zobacz także <code class="code1">%w</code> .
           </td>
         </tr>
         <tr>
@@ -829,8 +825,7 @@
     <p>
       Zazwyczaj „Data” wiadomości w Thunderbirdzie to data ustawiona przez klienta pocztowego nadawcy.
       Ustawienie tej opcji na „prawda” powoduje wykorzystanie daty otrzymania wiadomości przez klienta
-      pocztowego odbiorcy. Data ta będzie używana zarówno w nazwach plików, jak i w datach w plikach
-      indeksowych.
+      pocztowego odbiorcy. Data ta będzie używana zarówno w nazwach plików, jak i w plikach indeksowych.
     </p>
     <h2>Podstawowa, globalna funkcja skrótów klawiszowych</h2>
     <p><code class="notranslate">importexporttoolsng.experimental.hot_keys</code></p>
@@ -845,7 +840,7 @@
       <code class="notranslate">key</code> - klucz (pojedynczy znak)<br />
       <code class="notranslate">keycode</code> - kod klucza definiujący &#39;VK_*&#39;<br />
       Można dołączyć klucz lub kod klucza, ale nie oba naraz<br />
-      <code class="notranslate">modifiers</code> - lista modyfikatorów klawiszowych rozdzielonych spacją
+      <code class="notranslate">modifiers</code> – lista modyfikatorów klawiszowych rozdzielonych spacją
       (&#39;control&#39;, &#39;shift&#39;, &#39;alt&#39;, &#39;accel&#39;)<br />
       <code class="notranslate">oncommand</code> – bezpośredni ciąg poleceń<br />
       <code class="notranslate">contexts</code> - kontekst okna, w którym klucz jest aktywny<br />

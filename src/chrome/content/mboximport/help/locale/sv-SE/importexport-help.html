@@ -20,19 +20,15 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">Versionsinformation:</h3>
     <p>
-      <b>BRÅDSKANDE: UPPDATERA INTE TILL THUNDERBIRD V147 OM DU BEHÖVER PDF-EXPORTSTÖD.</b><br /><br />
-      Det finns en kärnbugg i Thunderbird som orsakar en krasch vid PDF-export. När detta kommer att vara
-      åtgärdat i Thunderbird är okänt.<br /><br />
-      <b>Jag kommer bara att uppdatera ImportExportTools NG för ESR-kanalen framöver.</b> Jag kan inte ha
-      sådana fel i framtiden. Om du behöver ImportExportTools NG måste du stanna kvar på ESR-kanalen eller
-      återställa till ESR-kanalen. Jag kommer snart att publicera instruktioner för återställning i
-      Github-problemavsnittet.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >ImportExportTools NG-problem</a
-      ><br /><br />
-      Tyvärr är detta utom min kontroll.<br /><br />
+      <b>Obs! Thunderbird v148 har åtgärdat problemet med att förhindra PDF-export</b><br /><br />
+      Jag har omprövat mitt stöd för releasekanalen. Med runt 78 000 användare är det en för stor grupp för
+      att störa. Jag vill också att alla ska vara med i betaversionen och den kommande versionen av v15, som
+      är en fullständig omskrivning av exportfunktionerna för meddelanden. Den kommer också att lägga till nya
+      funktioner som PDF-export med bilagor.<br /><br />
+      Efter nästa ESR-release kommer jag att bestämma min policy för utgivning.<br />
+      Kontrollera dock om ImportExportTools NG stöder innan du uppdaterar Thunderbird.<br /><br />
       Kristoffer<br /><br />
-      - Ökade den maximala mbox-importen till 50 GB
+      Åtgärd: Ta bort citattecken från visningsnamn för smarta filnamn<br /><br />
     </p>
     <h2 id="main_help">Översikt och menyer för ImportExportTools NG</h2>
     <p>
@@ -140,7 +136,7 @@
         <tr>
           <td class="notranslate submenu2">__MSG_folderCtxMenu_Exp_HTMLFormatCreateIndex_Id.title__</td>
           <td>
-            Exportera mappmeddelandena som HTML-formatfiler (ingen struktur/undermappar).<br />
+            Exportera mappmeddelandena som HTML-filer (ingen struktur/undermappar).<br />
             Detta skapar också en HTML-indexfil som listar varje meddelande.
           </td>
         </tr>
@@ -149,7 +145,7 @@
             __MSG_folderCtxMenu_Exp_HTMLFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            Exportera mappmeddelandena som HTML-formatfiler (ingen struktur/undermappar).<br />
+            Exportera mappmeddelandena som HTML-filer (ingen struktur/undermappar).<br />
             Bilagor sparas som separata filer. Detta skapar också en HTML-indexfil som listar varje
             meddelande.
           </td>
@@ -370,7 +366,7 @@
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_MboxFormatNewMbox_Id.title__</td>
-          <td>Exportera de valda meddelandena till en enda mbox-fil</td>
+          <td>Exportera de markerade meddelandena till en enda mbox-fil</td>
         </tr>
         <tr>
           <td class="notranslate submenu2">__MSG_msgCtxMenu_Exp_MboxFormatAppendMbox_Id.title__</td>
@@ -591,7 +587,7 @@
         <tr>
           <td><code class="code1">%u</code></td>
           <td>
-            Veckodag som decimal (intervall 1 till 7), måndag är 1. Se även <code class="code1">%w</code> .
+            Veckodag som decimaltal (intervall 1 till 7), måndag är 1. Se även <code class="code1">%w</code> .
           </td>
         </tr>
         <tr>
@@ -888,7 +884,7 @@
         - Ny knapp i verktygsfältet<br />
         - Förbättrad hjälp, öppnas vid installation<br />
         - Uppdatera exportkonto<br /><br />
-        Tack till följande användare för förslag på förbättringar och hjälp med tester:<br /><br />
+        Tack till följande användare för förslag på förbättringar och hjälp med testning:<br /><br />
         - <code class="notranslate">@kiki-ja</code><br />
         - <code class="notranslate">@tidebre67</code><br />
         - <code class="notranslate">@DenB10</code><br />

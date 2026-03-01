@@ -20,18 +20,15 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">릴리스 노트:</h3>
     <p>
-      <b>긴급: PDF 내보내기 기능이 필요한 경우 Thunderbird 버전 147로 업데이트하지 마십시오.</b><br /><br />
-      썬더버드에 PDF 내보내기 시 충돌을 일으키는 핵심 버그가 있습니다. 이 버그가 썬더버드에서 언제 수정될지는
-      알 수 없습니다.<br /><br />
-      <b>앞으로 ImportExportTools NG는 ESR 채널용으로만 업데이트할 예정입니다.</b> 이러한 오류가 발생하는 것을
-      더 이상 허용할 수 없습니다. ImportExportTools NG가 필요하신 경우 ESR 채널을 유지하시거나 ESR 채널로
-      롤백하셔야 합니다. 롤백 방법은 곧 GitHub 이슈 섹션에 게시하겠습니다.<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >ImportExportTools NG 문제</a
-      ><br /><br />
-      죄송하지만 이건 제가 어떻게 할 수 있는 일이 아닙니다.<br /><br />
+      <b>참고: Thunderbird v148에서 PDF 내보내기 방지 문제가 해결되었습니다.</b><br /><br />
+      릴리스 채널 지원에 대한 제 생각을 다시 생각해 보았습니다. 약 7만 8천 명의 사용자가 있는 대규모 그룹에
+      혼란을 초래하는 것은 위험하다고 판단했습니다. 또한 모든 사용자가 베타 버전과 곧 출시될 v15 버전을 사용할
+      수 있기를 바랍니다. v15 버전에서는 메시지 내보내기 기능이 완전히 새롭게 개선될 예정이며, 첨부 파일이
+      포함된 PDF 내보내기 기능과 같은 새로운 기능도 추가될 것입니다.<br /><br />
+      다음 ESR 릴리스 이후에 릴리스 정책을 결정할 예정입니다.<br />
+      단, 썬더버드를 업데이트하기 전에 ImportExportTools NG 지원 여부를 확인해 주십시오.<br /><br />
       크리스토퍼<br /><br />
-      - mbox 가져오기 최대 용량을 50GB로 늘렸습니다.
+      수정 사항: 스마트 파일 이름의 표시 이름에서 따옴표를 제거합니다.<br /><br />
     </p>
     <h2 id="main_help">ImportExportTools NG 개요 및 메뉴</h2>
     <p>
@@ -113,8 +110,7 @@
             __MSG_folderCtxMenu_Exp_FolderMboxFlattenedSubFolders_Id.title__
           </td>
           <td>
-            모든 하위 폴더를 포함한 전체 폴더를 각 하위 폴더별로 하나의 mbox 형식 파일로 내보내고, 최종적으로
-            하나의 폴더에 저장합니다.
+            하나의 폴더와 그 안에 있는 모든 하위 폴더를 각각 mbox 형식 파일로 나누어 하나의 폴더에 내보냅니다.
           </td>
         </tr>
         <tr>
@@ -172,7 +168,7 @@
             __MSG_folderCtxMenu_Exp_PlainTextFormatSaveAttsCreateIndex_Id.title__
           </td>
           <td>
-            첨부 파일을 포함하여 폴더의 메시지를 일반 텍스트 형식 파일로 내보냅니다.<br />
+            폴더의 메시지를 첨부 파일을 포함하여 일반 텍스트 형식 파일로 내보냅니다.<br />
             이렇게 하면 각 메시지 목록이 포함된 HTML 색인 파일도 생성됩니다.
           </td>
         </tr>
@@ -195,7 +191,7 @@
         <tr>
           <td class="notranslate submenu1">__MSG_folderCtxMenu_Exp_CSVFormat_Id.title__</td>
           <td>
-            폴더의 메시지를 첨부 파일을 제외하고 단일 CSV(쉼표로 구분된 값) 텍스트 형식 파일로 내보냅니다.<br />
+            폴더의 메시지를 첨부 파일을 제외한 단일 CSV(쉼표로 구분된 값) 텍스트 형식 파일로 내보냅니다.<br />
             이렇게 하면 각 메시지 목록이 포함된 HTML 색인 파일도 생성됩니다.
           </td>
         </tr>
@@ -273,7 +269,7 @@
         </tr>
         <tr>
           <td class="notranslate">__MSG_ctxMenu_Help.title__</td>
-          <td>도움말 메인 페이지를 엽니다.</td>
+          <td>메인 도움말 페이지를 엽니다.</td>
         </tr>
       </tbody>
     </table>
@@ -558,7 +554,7 @@
         </tr>
         <tr>
           <td><code class="code1">%n</code></td>
-          <td>월을 소수점 이하 숫자(1~12)로 입력하십시오.</td>
+          <td>월을 소수점 이하 자릿수(1~12)로 입력하십시오.</td>
         </tr>
         <tr>
           <td><code class="code1">%M</code></td>
@@ -599,8 +595,7 @@
         <tr>
           <td><code class="code1">%w</code></td>
           <td>
-            요일을 소수점(0~6)으로 나타낸 값이며, 일요일은 0입니다. <code class="code1">%u</code> 도
-            참조하십시오.
+            요일을 소수점(0~6)으로 나타내며, 일요일은 0입니다. <code class="code1">%u</code> 도 참조하십시오.
           </td>
         </tr>
         <tr>
@@ -723,7 +718,7 @@
       </tr>
       <tr>
         <td class="notranslate"><code>${date_custom}</code></td>
-        <td>사용자 지정 날짜 형식입니다. 사용자 지정 날짜 형식 섹션을 참조하세요.</td>
+        <td>사용자 지정 날짜 형식입니다. 사용자 지정 날짜 형식 섹션을 참조하십시오.</td>
       </tr>
     </table>
     <br />

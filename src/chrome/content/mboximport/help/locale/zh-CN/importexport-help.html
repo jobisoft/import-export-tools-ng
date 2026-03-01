@@ -20,15 +20,12 @@
     </table>
     <h3 id="release_notes" style="padding-left: 4px">发布说明：</h3>
     <p>
-      <b>紧急通知：如果您需要 PDF 导出支持，请勿更新至 Thunderbird V147。</b><br /><br />
-      Thunderbird 存在一个核心漏洞，会导致在导出 PDF 文件时崩溃。目前尚不清楚 Thunderbird
-      何时会修复此漏洞。<br /><br /><b
-        >今后我只会为 ESR 通道更新 ImportExportTools NG。我不能再让此类错误再次发生</b
-      >。如果您需要 ImportExportTools NG，则必须继续使用 ESR 通道或回滚到 ESR 通道。我很快会在 GitHub issues
-      部分发布回滚说明。<br /><br />
-      <a class="link1" href="https://github.com/thundernest/import-export-tools-ng/issues"
-        >ImportExportTools NG 问题</a
-      ><br /><br />抱歉，这件事我无能为力。<br /><br />克里斯托弗<br /><br />- 将最大 mbox 导入容量增加到 50GB
+      <b>注意：Thunderbird v148 已修复阻止 PDF 导出的问题。</b
+      ><br /><br />我重新考虑了对发布渠道的支持。该渠道拥有约 7.8
+      万用户，影响如此庞大的用户群体实在不妥。此外，我希望大家都能参与 v15 的 beta 测试和即将发布的正式版，v15
+      将彻底重写导出消息功能，并新增诸如导出带附件的 PDF 文件等功能。<br /><br />下一次 ESR
+      版本发布后，我将决定我的发布策略。<br />但是，请在更新 Thunderbird 之前检查 ImportExportTools NG
+      是否受支持。<br /><br />克里斯托弗<br /><br />修复：移除智能文件名显示名称中的引号<br /><br />
     </p>
     <h2 id="main_help">ImportExportTools NG 概述和菜单</h2>
     <p>
@@ -556,7 +553,7 @@
         </tr>
         <tr>
           <td><code class="code1">%x</code></td>
-          <td>当前区域设置的首选日期表示方式，不包含时间。</td>
+          <td>当前区域设置中不带时间的首选日期表示方式。</td>
         </tr>
         <tr>
           <td><code class="code1">%X</code></td>
